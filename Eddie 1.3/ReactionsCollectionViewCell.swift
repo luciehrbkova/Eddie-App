@@ -1,0 +1,20 @@
+//
+//  ReactionsCollectionViewCell.swift
+//  Eddie 1.3
+//
+//  Created by Lucie Hrbkova on 16/02/2022.
+//
+
+import UIKit
+
+class ReactionsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var foodTitle: UILabel!
+    
+    func setup(with reactions: FoodCollection) {
+        
+        //Food Categories
+        foodImage.image = reactions.foodImage
+        foodTitle.text = reactions.foodTitle
+    }
+}

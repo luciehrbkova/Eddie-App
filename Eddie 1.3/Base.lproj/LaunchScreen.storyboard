@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,54 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="toa-61-EZt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mtw-u2-Mk9">
+                                <rect key="frame" x="61.5" y="302.5" width="291" height="291"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eating Disorders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9J-rB-cg8">
+                                <rect key="frame" x="126" y="633.5" width="162" height="28"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-jk-XTu">
+                                <rect key="frame" x="162" y="661.5" width="90" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="24"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="toa-61-EZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="24a-eg-wdc"/>
+                            <constraint firstAttribute="bottom" secondItem="toa-61-EZt" secondAttribute="bottom" id="JWN-yJ-mu7"/>
+                            <constraint firstItem="N9J-rB-cg8" firstAttribute="top" secondItem="mtw-u2-Mk9" secondAttribute="bottom" constant="40" id="MOw-1N-SKj"/>
+                            <constraint firstItem="mtw-u2-Mk9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P0k-7s-HyV"/>
+                            <constraint firstItem="hV4-jk-XTu" firstAttribute="top" secondItem="N9J-rB-cg8" secondAttribute="bottom" id="bF8-vg-vmN"/>
+                            <constraint firstItem="N9J-rB-cg8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gBs-v9-OdJ"/>
+                            <constraint firstItem="mtw-u2-Mk9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gfo-5r-CKJ"/>
+                            <constraint firstItem="hV4-jk-XTu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="q0L-XP-86u"/>
+                            <constraint firstItem="toa-61-EZt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qHX-ua-pcm"/>
+                            <constraint firstItem="toa-61-EZt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xLJ-dW-CV3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackgroundGradient" width="779" height="1548"/>
+        <image name="LaunchLogo" width="291" height="291"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
