@@ -12,7 +12,7 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var recordTableView: UITableView!
     
 
-    var records = recordsDatabase
+    var records = RecordsDatabase
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,18 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = records[indexPath.row]
         let cell = recordTableView.dequeueReusableCell(withIdentifier: "RecordsTableViewCell") as! RecordsTableViewCell
-        cell.recordCellImage.image = record.image
-        cell.recordCellTitle.text = record.title
+        cell.recordMealCellImage.image = record.mealCategory?.itemImage
+        cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
+        cell.recordMealCellNote.text = record.foodNote
+        
+        cell.recordMoodCellImage.image = record.mood?.itemImage
+        cell.recordMoodCellTitle.text = "Feelings"
+        cell.recordMoodCellNote.text = record.moodNote
+        
+        
+        
+//        cell.recordCellImage.image = record.image
+//        cell.recordCellTitle.text = record.title
 //        cell.setRecord(record: record)
         return cell
     }
