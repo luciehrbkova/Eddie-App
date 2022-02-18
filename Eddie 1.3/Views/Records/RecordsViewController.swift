@@ -20,6 +20,8 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         recordTableView.delegate = self
         recordTableView.dataSource = self
 
+        //remove bottom border
+        self.recordTableView.separatorStyle = .none
     }
     
     
@@ -38,7 +40,14 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.recordMoodCellTitle.text = "Feelings"
         cell.recordMoodCellNote.text = record.moodNote
         
-        
+        cell.view1.backgroundColor = UIColor(named: "PeachSecond")
+        cell.view2.backgroundColor = UIColor(named: "PeachSecond")
+        cell.view3.backgroundColor = UIColor(named: "PeachSecond")
+        cell.view4.backgroundColor = UIColor(named: "PeachSecond")
+        cell.view1.layer.cornerRadius = 10
+        cell.view1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        cell.view4.layer.cornerRadius = 10
+        cell.view4.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
 //        cell.recordCellImage.image = record.image
 //        cell.recordCellTitle.text = record.title

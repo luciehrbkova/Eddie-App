@@ -16,6 +16,14 @@ class RecordsTableViewCell: UITableViewCell {
     @IBOutlet weak var recordMoodCellTitle: UILabel!
     @IBOutlet weak var recordMoodCellNote: UILabel!
     
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var view5: UIView!
+    
+    
+    
 //    @IBOutlet weak var recordCellImage: UIImageView!
 //    @IBOutlet weak var recordCellTitle: UILabel!
     
