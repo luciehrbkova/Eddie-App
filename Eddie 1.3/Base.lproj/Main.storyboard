@@ -17,6 +17,16 @@
                     <view key="view" contentMode="scaleToFill" id="VUd-u1-upE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V0b-uD-Doy">
+                                <rect key="frame" x="149" y="88" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NM8-cz-0Qq"/>
                         <color key="backgroundColor" name="PeachSecond"/>
                     </view>
@@ -408,7 +418,7 @@
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3e-PY-YqU">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3e-PY-YqU" userLabel="View Food">
                                                         <rect key="frame" x="0.0" y="955.66666666666674" width="408" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-jg-rWi">
@@ -608,7 +618,7 @@
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-JN-5BY">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqj-JN-5BY" userLabel="View Mood">
                                                         <rect key="frame" x="0.0" y="1457" width="408" height="68"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="clo-VJ-4ui">
@@ -624,10 +634,10 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="68" id="4gj-Ai-zfa"/>
-                                                            <constraint firstItem="clo-VJ-4ui" firstAttribute="top" secondItem="dqj-JN-5BY" secondAttribute="top" id="5Ey-8z-zEj"/>
                                                             <constraint firstAttribute="trailing" secondItem="clo-VJ-4ui" secondAttribute="trailing" constant="20" id="M5v-4q-eZ2"/>
                                                             <constraint firstAttribute="bottom" secondItem="clo-VJ-4ui" secondAttribute="bottom" id="j4F-YR-sby"/>
                                                             <constraint firstItem="clo-VJ-4ui" firstAttribute="leading" secondItem="dqj-JN-5BY" secondAttribute="leading" id="p1D-yr-zNg"/>
+                                                            <constraint firstItem="clo-VJ-4ui" firstAttribute="top" secondItem="dqj-JN-5BY" secondAttribute="top" id="sO7-g1-0mS"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -635,11 +645,11 @@
                                                 <constraints>
                                                     <constraint firstItem="7z3-x2-h61" firstAttribute="leading" secondItem="avB-JR-dkE" secondAttribute="leading" id="3Lf-0j-SQH"/>
                                                     <constraint firstAttribute="trailing" secondItem="d3e-PY-YqU" secondAttribute="trailing" id="Byl-AC-LLb"/>
+                                                    <constraint firstItem="dqj-JN-5BY" firstAttribute="top" secondItem="gnF-aX-xk9" secondAttribute="bottom" constant="8" id="I3R-HS-Oje"/>
                                                     <constraint firstItem="d3e-PY-YqU" firstAttribute="leading" secondItem="avB-JR-dkE" secondAttribute="leading" id="W6L-fX-9rt"/>
                                                     <constraint firstItem="d3e-PY-YqU" firstAttribute="top" secondItem="6X7-kX-mPi" secondAttribute="bottom" constant="8" id="aS8-cA-NHh"/>
                                                     <constraint firstAttribute="trailing" secondItem="tRe-cX-M2i" secondAttribute="trailing" id="fAw-La-ttb"/>
                                                     <constraint firstItem="dqj-JN-5BY" firstAttribute="leading" secondItem="avB-JR-dkE" secondAttribute="leading" id="hC3-iS-Fh2"/>
-                                                    <constraint firstItem="dqj-JN-5BY" firstAttribute="top" secondItem="gnF-aX-xk9" secondAttribute="bottom" constant="8" id="jhi-Y8-xwA"/>
                                                     <constraint firstAttribute="trailing" secondItem="dqj-JN-5BY" secondAttribute="trailing" id="vzc-Uj-H9a"/>
                                                     <constraint firstItem="7z3-x2-h61" firstAttribute="top" secondItem="avB-JR-dkE" secondAttribute="top" id="zxq-99-RuK"/>
                                                 </constraints>
