@@ -9,13 +9,13 @@ import UIKit
 
 class RecordsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var recordImage: UIImageView!
-    @IBOutlet weak var recordTitle: UILabel!
+    @IBOutlet weak var recordCellImage: UIImageView!
+    @IBOutlet weak var recordCellTitle: UILabel!
     
-    func setRecord(record: Record) {
-        recordImage.image = record.image
-        recordTitle.text = record.title
-    }
+//    func setRecord(record: Record) {
+//        recordCellImage.image = record.image
+//        recordCellTitle.text = record.title
+//    }
     
 
 }

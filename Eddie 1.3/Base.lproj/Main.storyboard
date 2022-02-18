@@ -1173,8 +1173,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="recordImage" destination="RwX-4j-HwQ" id="Rja-2d-NdB"/>
-                                            <outlet property="recordTitle" destination="1X1-FS-32W" id="QIe-D9-Nqt"/>
+                                            <outlet property="recordCellImage" destination="RwX-4j-HwQ" id="Rja-2d-NdB"/>
+                                            <outlet property="recordCellTitle" destination="1X1-FS-32W" id="QIe-D9-Nqt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

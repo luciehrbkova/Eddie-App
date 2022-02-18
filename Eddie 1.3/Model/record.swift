@@ -14,10 +14,10 @@ struct Record {
 
 }
 
-//let records: [Record] = [
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//
-//]
+var recordsDatabase: [Record] = [
+    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
+    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
+    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
+    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
+
+]
