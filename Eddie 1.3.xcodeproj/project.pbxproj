@@ -10,7 +10,7 @@
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
-		188C60C727C2ACAE00A9B5FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 188C60C627C2ACAE00A9B5FA /* GoogleService-Info.plist */; };
+		188C60C927C2C75000A9B5FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 188C60C827C2C75000A9B5FA /* GoogleService-Info.plist */; };
 		1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A027B7DC7100C5C0E9 /* AppDelegate.swift */; };
 		1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A227B7DC7100C5C0E9 /* SceneDelegate.swift */; };
 		1892A9A527B7DC7100C5C0E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A427B7DC7100C5C0E9 /* ViewController.swift */; };
@@ -55,7 +55,7 @@
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
-		188C60C627C2ACAE00A9B5FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		188C60C827C2C75000A9B5FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1892A99D27B7DC7100C5C0E9 /* Eddie 1.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eddie 1.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892A9A027B7DC7100C5C0E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1892A9A227B7DC7100C5C0E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 				1892A9A627B7DC7100C5C0E9 /* Main.storyboard */,
 				1892A9A927B7DC7400C5C0E9 /* Assets.xcassets */,
 				1892A9AB27B7DC7400C5C0E9 /* LaunchScreen.storyboard */,
+				188C60C827C2C75000A9B5FA /* GoogleService-Info.plist */,
 				1892A9AE27B7DC7400C5C0E9 /* Info.plist */,
-				188C60C627C2ACAE00A9B5FA /* GoogleService-Info.plist */,
 			);
 			path = "Eddie 1.3";
 			sourceTree = "<group>";
@@ -254,7 +254,6 @@
 				C0B9481E3FBCF17787F7BB89 /* Pods-Eddie 1.3.debug.xcconfig */,
 				23DC295332CB72EC10252FBD /* Pods-Eddie 1.3.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -327,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1892A9AD27B7DC7400C5C0E9 /* LaunchScreen.storyboard in Resources */,
-				188C60C727C2ACAE00A9B5FA /* GoogleService-Info.plist in Resources */,
+				188C60C927C2C75000A9B5FA /* GoogleService-Info.plist in Resources */,
 				1892A9AA27B7DC7400C5C0E9 /* Assets.xcassets in Resources */,
 				1892A9A827B7DC7100C5C0E9 /* Main.storyboard in Resources */,
 			);
