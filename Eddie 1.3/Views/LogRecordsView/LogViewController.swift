@@ -164,7 +164,7 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         collectionView.collectionViewLayout = {
             let layout = UICollectionViewFlowLayout()
             layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
-            layout.itemSize = CGSize(width: 60, height: 88)
+            layout.itemSize = CGSize(width: 60, height: 90)
             layout.scrollDirection = .horizontal
             return layout
         }()

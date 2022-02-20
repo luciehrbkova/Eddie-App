@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
+		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
+		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
 		1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A027B7DC7100C5C0E9 /* AppDelegate.swift */; };
 		1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A227B7DC7100C5C0E9 /* SceneDelegate.swift */; };
 		1892A9A527B7DC7100C5C0E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9A427B7DC7100C5C0E9 /* ViewController.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
+		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
+		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		1892A99D27B7DC7100C5C0E9 /* Eddie 1.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eddie 1.3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892A9A027B7DC7100C5C0E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1892A9A227B7DC7100C5C0E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188C60BD27BFE37E00A9B5FA /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */,
+				188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */,
+				188C60C227C017C200A9B5FA /* TestTableViewCell.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
 		1892A99427B7DC7100C5C0E9 = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +148,11 @@
 		1892A9B427B7EE4800C5C0E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				188C60BD27BFE37E00A9B5FA /* Records */,
 				18F73FB527BC6B6E00520F17 /* LogRecordsView */,
 				18F73FAE27BAE7D600520F17 /* HomeScreenViews */,
 				1892A9D127B97A2500C5C0E9 /* ProfileSettingsViews */,
 				1892A9CA27B847D100C5C0E9 /* AwardViews */,
-				1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */,
 				1892A9A427B7DC7100C5C0E9 /* ViewController.swift */,
 				1892A9B727B7EF6C00C5C0E9 /* CalendarViewController.swift */,
 				1892A9B927B7EF8800C5C0E9 /* NotificationsViewController.swift */,
@@ -152,6 +168,7 @@
 				18F73FB627BC6CBB00520F17 /* foodCollections.swift */,
 				1892A9CB27B92E9B00C5C0E9 /* notification.swift */,
 				18F73FB127BAEAF500520F17 /* homeModuleGuide.swift */,
+				188C60C027BFE63E00A9B5FA /* record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,12 +335,15 @@
 				1892A9BC27B7F0CC00C5C0E9 /* HomeViewController.swift in Sources */,
 				18F73FBF27BD7A3F00520F17 /* LunchCollectionViewCell.swift in Sources */,
 				1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */,
+				188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */,
 				18F73FBD27BC7FBC00520F17 /* BreakfastCollectionViewCell.swift in Sources */,
 				1892A9C627B83CD900C5C0E9 /* AwardCollectionViewCell.swift in Sources */,
+				188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */,
 				1892A9CC27B92E9B00C5C0E9 /* notification.swift in Sources */,
 				1892A9C227B7F20800C5C0E9 /* RecordsViewController.swift in Sources */,
 				1892A9DE27BAB1C000C5C0E9 /* PdfViewController.swift in Sources */,
 				18F73FC727BD7B5F00520F17 /* PlacesCollectionViewCell.swift in Sources */,
+				188C60C127BFE63E00A9B5FA /* record.swift in Sources */,
 				18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,12 +59,11 @@ let snackOptions: [FoodCollection] = [
 ]
 
 let treatsOptions: [FoodCollection] = [
-    FoodCollection(foodTitle: "Chocolate bar", foodImage: #imageLiteral(resourceName: "Chocolate bar")),
     FoodCollection(foodTitle: "Cake", foodImage: #imageLiteral(resourceName: "Cake")),
     FoodCollection(foodTitle: "Crisps", foodImage: #imageLiteral(resourceName: "Crisps")),
     FoodCollection(foodTitle: "Cookies", foodImage: #imageLiteral(resourceName: "Cookies")),
-    FoodCollection(foodTitle: "Chocolate bar", foodImage: #imageLiteral(resourceName: "Pudding")),
-    FoodCollection(foodTitle: "Pudding", foodImage: #imageLiteral(resourceName: "Chocolate bar"))
+    FoodCollection(foodTitle: "Pudding", foodImage: #imageLiteral(resourceName: "Pudding")),
+    FoodCollection(foodTitle: "Choco bar", foodImage: #imageLiteral(resourceName: "Chocolate bar"))
 ]
 
 let drinksOptions: [FoodCollection] = [
@@ -72,7 +71,7 @@ let drinksOptions: [FoodCollection] = [
     FoodCollection(foodTitle: "Tea", foodImage: #imageLiteral(resourceName: "Tea")),
     FoodCollection(foodTitle: "Juice", foodImage: #imageLiteral(resourceName: "Juice")),
     FoodCollection(foodTitle: "Milk", foodImage: #imageLiteral(resourceName: "Milk")),
-    FoodCollection(foodTitle: "Lemonade", foodImage: #imageLiteral(resourceName: "Lemonade")),
+    FoodCollection(foodTitle: "Lemo", foodImage: #imageLiteral(resourceName: "Lemonade")),
     FoodCollection(foodTitle: "Cocktail", foodImage: #imageLiteral(resourceName: "Cocktail"))
 ]
 
@@ -82,7 +81,7 @@ let places: [FoodCollection] = [
     FoodCollection(foodTitle: "Work", foodImage: #imageLiteral(resourceName: "Work")),
     FoodCollection(foodTitle: "Office", foodImage: #imageLiteral(resourceName: "Office")),
     FoodCollection(foodTitle: "Canteene", foodImage: #imageLiteral(resourceName: "Canteene")),
-    FoodCollection(foodTitle: "Restaurant", foodImage: #imageLiteral(resourceName: "Restaurant")),
+    FoodCollection(foodTitle: "Bistro", foodImage: #imageLiteral(resourceName: "Restaurant")),
     FoodCollection(foodTitle: "Friend's place", foodImage: #imageLiteral(resourceName: "Friend's place")),
     FoodCollection(foodTitle: "Party", foodImage: #imageLiteral(resourceName: "Party")),
     FoodCollection(foodTitle: "Park", foodImage: #imageLiteral(resourceName: "Park")),
