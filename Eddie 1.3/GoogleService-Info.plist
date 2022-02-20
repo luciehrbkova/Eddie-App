@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>208138226649-snorttr8dtef2i6f9sv6cp4qhb83c7od.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.208138226649-snorttr8dtef2i6f9sv6cp4qhb83c7od</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBjjD9j8Scfkxtf6H7prpx-Oi7iFH2ce7g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>208138226649</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.lucieweb.Eddie-1-3</string>
+	<key>PROJECT_ID</key>
+	<string>eddie-app-b9536</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eddie-app-b9536.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:208138226649:ios:00729fab2997fdc63ce7c8</string>
+</dict>
+</plist>
