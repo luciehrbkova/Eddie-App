@@ -7,6 +7,14 @@
 
 import UIKit
 
+struct input {
+    var category: String?
+    var meal: String?
+    var note: String?
+}
+
+var recordInput = input(category: nil, meal: nil, note: nil)
+
 class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -133,8 +141,10 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.foodCategoryCollectionView {
             print(foodCategories[indexPath.row].foodTitle)
+            recordInput.category = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
             print(breakfastOptions[indexPath.row].foodTitle)
+            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
         } else if collectionView == self.lunchOptionsCollectionView {
             print(lunchOrDinnerOptions[indexPath.row].foodTitle)
         } else if collectionView == self.snackOptionsCollectionView {
