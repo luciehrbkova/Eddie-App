@@ -25,6 +25,7 @@ class MotivationViewController: UIViewController, UITableViewDelegate, UITableVi
         // Set Database------------------
         database.setDatabase()
         database.readPosts(reloadedTableView: self.tableView)
+        
     }
     
     @IBAction func addPost(_ sender: Any) {
@@ -62,6 +63,10 @@ class MotivationViewController: UIViewController, UITableViewDelegate, UITableVi
             textField.placeholder = "Type something"
             return false
         }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.becomeFirstResponder()
     }
     
 }
