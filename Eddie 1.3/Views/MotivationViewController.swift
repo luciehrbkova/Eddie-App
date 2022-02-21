@@ -6,53 +6,30 @@
 //
 
 import UIKit
-import FirebaseDatabase
+//import FirebaseDatabase
 
 class MotivationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var ref: DatabaseReference?
-    var databaseHandle: DatabaseHandle?
-    var postData = [String]()
+    let database = DatabaseManager()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         // Set Delegates-----------------
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
         // Set Database------------------
-        ref = Database.database().reference()
-        
-        //Retreive the posts and listen for changes (.childAdded)
-        databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
-            // Code to executed when a child is added under "Posts"
-            // Tak the value from the snapsot and added it into postData array
-            // Try to convert the value of the data to a string
-            let post = snapshot.value as? String
-            // conditional bonding testing if there is data
-            if let actualPost = post {
-                //Append data to our post data Array
-                self.postData.append(actualPost)
-                // Reload the table view
-                self.tableView.reloadData()
-            }
-        })
-        
-        
-        
+        database.setDatabase()
+        database.readPosts(reloadedTableView: self.tableView)
     }
     
     @IBAction func addPost(_ sender: Any) {
-        //TODO: Post the data to firebase
-        //create automatically child by id
         if textField.text != "" {
-            ref?.child("Posts").childByAutoId().setValue(textField.text)
+            database.addPost(input: textField.text!)
             print(textField.text!)
             textField.text?.removeAll()
         }
@@ -62,12 +39,12 @@ class MotivationViewController: UIViewController, UITableViewDelegate, UITableVi
     
 // TableView Delegates methods-------------------------------------------------
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        postData.count
+        database.postData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
-        cell.textLabel?.text = postData.reversed()[indexPath.row]
+        cell.textLabel?.text = database.postData.reversed()[indexPath.row]
         return cell
     }
     
