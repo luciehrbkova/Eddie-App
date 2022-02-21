@@ -12,7 +12,7 @@ class LogCollectionViewCell: UICollectionViewCell {
     //Food Categories
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodTitle: UILabel!
-    
+
 
     func setup(with foodCategories: FoodCollection) {
         
@@ -21,5 +21,4 @@ class LogCollectionViewCell: UICollectionViewCell {
         foodTitle.text = foodCategories.foodTitle
     }
     
-   
 }

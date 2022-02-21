@@ -14,17 +14,13 @@ struct input {
 }
 
 var recordInput = input(category: nil, meal: nil, note: nil)
-var actualValue = String()
 
-class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
-    
+class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate {
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var textFieldFood: UITextField!
-    @IBOutlet weak var textFieldMood: UITextField!
-    @IBOutlet var generalView: UIView!
-    
-    
+    @IBOutlet weak var noteFood: UITextView!
+    @IBOutlet weak var noteMood: UITextView!
+    @IBOutlet weak var logButton: UIButton!
     // all CollectViews
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
     @IBOutlet weak var breakfastOptionsCollectionView: UICollectionView!
@@ -37,9 +33,9 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     @IBOutlet weak var reactionCollectionView: UICollectionView!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //declare DataSouce + Delegate
         foodCategoryCollectionView.dataSource = self
         foodCategoryCollectionView.delegate = self
@@ -59,9 +55,9 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         moodCollectionView.delegate = self
         reactionCollectionView.dataSource = self
         reactionCollectionView.delegate = self
-        // textFields
-        textFieldFood.delegate = self
-        textFieldMood.delegate = self
+        //textView
+        noteFood.delegate = self
+        noteMood.delegate = self
         
         //style CollectView Layout
         styleCollectionViewLayout(collectionView: foodCategoryCollectionView)
@@ -74,27 +70,17 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         styleCollectionViewLayout(collectionView: moodCollectionView)
         styleCollectionViewLayout(collectionView: reactionCollectionView)
         
+        //TextFields
+
         
     }
-
-    @IBAction func logButton(_ sender: Any) {
-        textFieldFood.endEditing(true)
-        textFieldMood.endEditing(true)
-        if textFieldFood.text != "" {
-            recordInput.note = textFieldFood.text
-        }
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        print("category: \(recordInput.category)")
+        print("meal: \(recordInput.meal)")
+        print("note: \(recordInput.note)")
         
-        print("category: \(String(describing: recordInput.category))")
-        print("meal: \(String(describing: recordInput.meal))")
-        print("note: \(String(describing: recordInput.note))")
     }
-    
-    
-    @IBAction func clearButton(_ sender: Any) {
-//        super.viewWillAppear(true)
-    }
-    
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.foodCategoryCollectionView {
@@ -164,66 +150,14 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.foodCategoryCollectionView {
-            let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            if foodCategories[indexPath.row].foodTitle == actualValue {
-                cell.backgroundColor = .white
-                actualValue = "nil"
-                print(actualValue)
-//                print(foodCategories[indexPath.row].foodTitle)
-            } else {
-                cell.backgroundColor = .systemGray6
-                actualValue = foodCategories[indexPath.row].foodTitle
-                print(actualValue)
-            }
-            
-            recordInput.category = foodCategories[indexPath.row].foodTitle
-        } else if collectionView == self.breakfastOptionsCollectionView {
-            let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            cell.backgroundColor = .systemGray6
-            print(breakfastOptions[indexPath.row].foodTitle)
-            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
-        } else if collectionView == self.lunchOptionsCollectionView {
-            let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            cell.backgroundColor = .systemGray6
-            print(lunchOrDinnerOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.snackOptionsCollectionView {
-            print(snackOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.treatsOptionsCollectionView {
-            print(treatsOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.drinksOptionsCollectionView {
-            print(drinksOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.placesCollectionView {
-            print( places[indexPath.row].foodTitle)
-        } else if collectionView == self.moodCollectionView {
-            print(moods[indexPath.row].foodTitle)
-        } else if collectionView == self.reactionCollectionView {
-            print(reactions[indexPath.row].foodTitle)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if collectionView == self.foodCategoryCollectionView {
-            let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
             print(foodCategories[indexPath.row].foodTitle)
             recordInput.category = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
-            let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
             print(breakfastOptions[indexPath.row].foodTitle)
             recordInput.meal = breakfastOptions[indexPath.row].foodTitle
         } else if collectionView == self.lunchOptionsCollectionView {
-            let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
             print(lunchOrDinnerOptions[indexPath.row].foodTitle)
         } else if collectionView == self.snackOptionsCollectionView {
             print(snackOptions[indexPath.row].foodTitle)
@@ -239,7 +173,6 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             print(reactions[indexPath.row].foodTitle)
         }
     }
-    
     
     
     //STYLE COLLECTION VIEWS___________________________________________
@@ -259,56 +192,67 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         }()
     }
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView == noteFood {
+            //clear text
+            if(noteFood.text == "\n" ) {
+                noteFood.resignFirstResponder()
+                return false
+            }
+        } else if textView == noteMood {
+            if(noteMood.text == "\n" ) {
+                noteMood.resignFirstResponder()
+                return false
+            }
+        }
+        return true
+    }
     
-//    func loadData() {
-//        // code to load data from network, and refresh the interface
-//        self.foodCategoryCollectionView.reloadData()
+    private func textShouldEndEditing(_ textView: UITextView) -> Bool{
+        if textView == noteFood {
+            //clear text
+            return true
+        } else if textView == noteMood {
+            //clear text
+            return true
+        }
+        return false
+    }
+    
+//    func textViewDidEndEditing(_ textView: UITextView) -> Bool {
+//        if textView == noteFood {
+//            if noteFood.text != "" {
+//                noteFood.resignFirstResponder()
+//                return true
+//            }
+//        } else if textView == noteMood {
+//            if noteMood.text != "" {
+//                noteMood.resignFirstResponder()
+//                return true
+//            }
+//        }
+//        return false
 //    }
     
-    //Textfields Delegate Methods_________________________________________________
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == textFieldFood {
-            textFieldFood.endEditing(true)
-            print(textFieldFood.text!)
-            return true
-        } else if textField == textFieldMood {
-            textFieldMood.endEditing(true)
-            print(textFieldMood.text!)
-            return true
-        }
-        return false
-    }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField == textFieldFood {
-            if textFieldFood.text != "" {
-                return true
-            } else {
-                textFieldFood.placeholder = "Describe your meal"
-                return false
-            }
-        } else if textField == textFieldMood {
-            if textFieldFood.text != "" {
-                return true
-            } else {
-                textFieldFood.placeholder = "Describe your meal"
-                return false
-            }
-        }
-        return false
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == textFieldFood {
-            textFieldFood.becomeFirstResponder()
-        } else if textField == textFieldMood {
-            textFieldMood.becomeFirstResponder()
-        }
-        
-    }
     
 }
 
+extension UITextView {
 
+    func withDoneButton(toolBarHeight: CGFloat = 44) {
+        guard UIDevice.current.userInterfaceIdiom == .phone else {
+            print("Adding Done button to the keyboard makes sense only on iPhones")
+            return
+        }
+        
+        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: toolBarHeight))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(endEditing))
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        inputAccessoryView = toolBar
+    }
 
-
+}
