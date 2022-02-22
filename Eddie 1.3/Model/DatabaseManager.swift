@@ -43,4 +43,19 @@ class DatabaseManager {
         ref?.child("Posts").childByAutoId().setValue(input)
     }
     
+    func addRecord(mealCategoryTitle: String?, mealCategoryImage: String?,
+                   breakfastMealTitle: String?, breakfastMealImage: String?, foodNote: String?) {
+        
+        ref?.child("Records").childByAutoId().setValue([
+            "mealCategory" : [  "itemTitle": mealCategoryTitle,
+                                "itemImage": mealCategoryImage  ],
+            "breakfastMeal" : [ "itemTitle": breakfastMealTitle,
+                                "itemImage": breakfastMealImage ],
+            "foodNote": foodNote ?? "nil" ])
+        
+        //later use this key to set Status node
+//        ref?.child("Records").child(key).child(moodNote).setValue.( /// set the rest of values)
+//
+    }
+    
 }

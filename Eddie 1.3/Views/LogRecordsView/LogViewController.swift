@@ -8,13 +8,21 @@
 import UIKit
 
 struct input {
-    var category: String?
-    var meal: String?
+    var category: inputDetail
+    var meal: inputDetail
     var note: String?
 }
+struct inputDetail {
+    var detailTitle: String?
+    var deatilImage: String?
+}
+// "#imageLiteral(resourceName: 'Breakfast')"
 
-var recordInput = input(category: nil, meal: nil, note: nil)
-var actualValue = String()
+var recordInput = input(category: inputDetail(detailTitle: nil, deatilImage: nil),
+                        meal: inputDetail(detailTitle: nil, deatilImage: nil),
+                        note: nil)
+
+var chosenValue = String()
 
 class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
@@ -23,6 +31,8 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     @IBOutlet weak var textFieldFood: UITextField!
     @IBOutlet weak var textFieldMood: UITextField!
     @IBOutlet var generalView: UIView!
+    
+    let database = DatabaseManager()
     
     
     // all CollectViews
@@ -74,6 +84,9 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         styleCollectionViewLayout(collectionView: moodCollectionView)
         styleCollectionViewLayout(collectionView: reactionCollectionView)
         
+        // Set Database------------------
+        database.setDatabase()
+        
         
     }
 
@@ -84,9 +97,14 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             recordInput.note = textFieldFood.text
         }
         
-        print("category: \(String(describing: recordInput.category))")
-        print("meal: \(String(describing: recordInput.meal))")
-        print("note: \(String(describing: recordInput.note))")
+        database.addRecord(mealCategoryTitle: recordInput.category.detailTitle,
+                           mealCategoryImage: recordInput.category.deatilImage,
+                           breakfastMealTitle: recordInput.meal.detailTitle,
+                           breakfastMealImage: recordInput.meal.deatilImage,
+                           foodNote: recordInput.note)
+    
+        
+        
     }
     
     
@@ -170,25 +188,37 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
             cell.layer.cornerRadius = 10
             cell.layer.masksToBounds = true
-            if foodCategories[indexPath.row].foodTitle == actualValue {
+            
+            if foodCategories[indexPath.row].foodTitle == chosenValue {
                 cell.backgroundColor = .white
-                actualValue = "nil"
-                print(actualValue)
-//                print(foodCategories[indexPath.row].foodTitle)
+                chosenValue = "nil"
+                print(chosenValue)
             } else {
                 cell.backgroundColor = .systemGray6
-                actualValue = foodCategories[indexPath.row].foodTitle
-                print(actualValue)
+                chosenValue = foodCategories[indexPath.row].foodTitle
+                print(chosenValue)
             }
+            recordInput.category.detailTitle = chosenValue
+            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
             
-            recordInput.category = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
             let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
             cell.layer.cornerRadius = 10
             cell.layer.masksToBounds = true
-            cell.backgroundColor = .systemGray6
-            print(breakfastOptions[indexPath.row].foodTitle)
-            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
+            
+            if breakfastOptions[indexPath.row].foodTitle == chosenValue {
+                cell.backgroundColor = .white
+                chosenValue = "nil"
+                print(chosenValue)
+            } else {
+                cell.backgroundColor = .systemGray6
+                chosenValue = breakfastOptions[indexPath.row].foodTitle
+                print(chosenValue)
+            }
+            
+            recordInput.meal.detailTitle = chosenValue
+            recordInput.meal.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+
         } else if collectionView == self.lunchOptionsCollectionView {
             let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
             cell.layer.cornerRadius = 10
@@ -215,12 +245,12 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
             cell.backgroundColor = .white
             print(foodCategories[indexPath.row].foodTitle)
-            recordInput.category = foodCategories[indexPath.row].foodTitle
+//            recordInput.category = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
             let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
             cell.backgroundColor = .white
             print(breakfastOptions[indexPath.row].foodTitle)
-            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
+//            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
         } else if collectionView == self.lunchOptionsCollectionView {
             let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
             cell.backgroundColor = .white
