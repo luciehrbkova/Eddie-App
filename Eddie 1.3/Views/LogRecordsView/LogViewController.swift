@@ -7,9 +7,34 @@
 
 import UIKit
 
-class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+struct input {
+    var category: inputDetail
+    var meal: inputDetail
+    var note: String?
+}
+struct inputDetail {
+    var detailTitle: String?
+    var deatilImage: String?
+}
+// "#imageLiteral(resourceName: 'Breakfast')"
+
+var recordInput = input(category: inputDetail(detailTitle: nil, deatilImage: nil),
+                        meal: inputDetail(detailTitle: nil, deatilImage: nil),
+                        note: nil)
+
+var chosenValue = String()
+
+class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+    
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var textFieldFood: UITextField!
+    @IBOutlet weak var textFieldMood: UITextField!
+    @IBOutlet var generalView: UIView!
+    
+    let database = DatabaseManager()
+    
+    
     // all CollectViews
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
     @IBOutlet weak var breakfastOptionsCollectionView: UICollectionView!
@@ -24,118 +49,266 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //declare DataSouce + Delegate
-        foodCategoryCollectionView.dataSource = self
-        foodCategoryCollectionView.delegate = self
-        breakfastOptionsCollectionView.dataSource = self
-        breakfastOptionsCollectionView.delegate = self
-        lunchOptionsCollectionView.dataSource = self
-        lunchOptionsCollectionView.delegate = self
-        snackOptionsCollectionView.dataSource = self
-        snackOptionsCollectionView.delegate = self
-        treatsOptionsCollectionView.dataSource = self
-        treatsOptionsCollectionView.delegate = self
-        drinksOptionsCollectionView.dataSource = self
-        drinksOptionsCollectionView.delegate = self
-        placesCollectionView.dataSource = self
-        placesCollectionView.delegate = self
-        moodCollectionView.dataSource = self
-        moodCollectionView.delegate = self
-        reactionCollectionView.dataSource = self
-        reactionCollectionView.delegate = self
+        
+        let cvArray = [foodCategoryCollectionView,
+                       breakfastOptionsCollectionView,
+                       lunchOptionsCollectionView,
+                       snackOptionsCollectionView,
+                       treatsOptionsCollectionView,
+                       drinksOptionsCollectionView,
+                       placesCollectionView,
+                       moodCollectionView,
+                       reactionCollectionView ]
+        
+        //declare DataSouce + Delegate & style CollectView Layout
+        for cv in cvArray {
+            declareDelegateAndDataSource(cv: cv!)
+            //style CollectView Layout
+            styleCollectionViewLayout(collectionView: cv!)
+        }
+        // textFields
+        textFieldFood.delegate = self
+        textFieldMood.delegate = self
         
         
+        // Set Database------------------
+        database.setDatabase()
+        
+        
+    }
 
-        //style CollectView Layout
-        styleCollectionViewLayout(collectionView: foodCategoryCollectionView)
-        styleCollectionViewLayout(collectionView: breakfastOptionsCollectionView)
-        styleCollectionViewLayout(collectionView: lunchOptionsCollectionView)
-        styleCollectionViewLayout(collectionView: snackOptionsCollectionView)
-        styleCollectionViewLayout(collectionView: treatsOptionsCollectionView)
-        styleCollectionViewLayout(collectionView: drinksOptionsCollectionView)
-        styleCollectionViewLayout(collectionView: placesCollectionView)
-        styleCollectionViewLayout(collectionView: moodCollectionView)
-        styleCollectionViewLayout(collectionView: reactionCollectionView)
-
+    @IBAction func logButton(_ sender: Any) {
+        textFieldFood.endEditing(true)
+        textFieldMood.endEditing(true)
+        if textFieldFood.text != "" {
+            recordInput.note = textFieldFood.text
+        }
+        
+        database.addRecord(mealCategoryTitle: recordInput.category.detailTitle,
+                           mealCategoryImage: recordInput.category.deatilImage,
+                           breakfastMealTitle: recordInput.meal.detailTitle,
+                           breakfastMealImage: recordInput.meal.deatilImage,
+                           foodNote: recordInput.note)
+    
+        
         
     }
     
+    
+    @IBAction func clearButton(_ sender: Any) {
+//        super.viewWillAppear(true)
+    }
+    
+    func declareDelegateAndDataSource(cv: UICollectionView){
+        cv.dataSource = self
+        cv.delegate = self
+    }
+    
 
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.foodCategoryCollectionView {
+        switch collectionView {
+        case self.foodCategoryCollectionView :
             return foodCategories.count
-        } else if collectionView == self.breakfastOptionsCollectionView {
+        case self.breakfastOptionsCollectionView:
             return breakfastOptions.count
-        } else if collectionView == self.lunchOptionsCollectionView {
+        case self.lunchOptionsCollectionView:
             return lunchOrDinnerOptions.count
-        } else if collectionView == self.snackOptionsCollectionView {
+        case self.snackOptionsCollectionView :
             return snackOptions.count
-        } else if collectionView == self.treatsOptionsCollectionView {
+        case self.treatsOptionsCollectionView:
             return treatsOptions.count
-        } else if collectionView == self.drinksOptionsCollectionView {
+        case self.drinksOptionsCollectionView:
             return drinksOptions.count
-        } else if collectionView == self.placesCollectionView {
+        case self.placesCollectionView:
             return places.count
-        } else if collectionView == self.moodCollectionView {
+        case self.moodCollectionView:
             return moods.count
-        } else if collectionView == self.reactionCollectionView {
+        case self.reactionCollectionView:
             return reactions.count
+        default:
+            return 0
         }
-        return 0
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.foodCategoryCollectionView {
+        
+        switch collectionView {
+        case self.foodCategoryCollectionView :
             let cell = foodCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "LogCollectionViewCell", for: indexPath) as! LogCollectionViewCell
             cell.setup(with: foodCategories[indexPath.row])
             return cell
-        } else if collectionView == self.breakfastOptionsCollectionView {
+        case self.breakfastOptionsCollectionView:
             let cell = breakfastOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "BreakfastCollectionViewCell", for: indexPath) as! BreakfastCollectionViewCell
             cell.setup(with: breakfastOptions[indexPath.row])
             return cell
-            
-        } else if collectionView == self.lunchOptionsCollectionView {
+        case self.lunchOptionsCollectionView:
             let cell = lunchOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "LunchCollectionViewCell", for: indexPath) as! LunchCollectionViewCell
             cell.setup(with: lunchOrDinnerOptions[indexPath.row])
             return cell
-        } else if collectionView == self.snackOptionsCollectionView {
+        case self.snackOptionsCollectionView :
             let cell = snackOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "SnackCollectionViewCell", for: indexPath) as! SnackCollectionViewCell
             cell.setup(with: snackOptions[indexPath.row])
             return cell
-        } else if collectionView == self.treatsOptionsCollectionView {
+        case self.treatsOptionsCollectionView:
             let cell = treatsOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "TreatsCollectionViewCell", for: indexPath) as! TreatsCollectionViewCell
             cell.setup(with: treatsOptions[indexPath.row])
             return cell
-        } else if collectionView == self.drinksOptionsCollectionView {
+        case self.drinksOptionsCollectionView:
             let cell = drinksOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "DrinksCollectionViewCell", for: indexPath) as! DrinksCollectionViewCell
             cell.setup(with: drinksOptions[indexPath.row])
             return cell
-            
-        } else if collectionView == self.placesCollectionView {
+        case self.placesCollectionView:
             let cell = placesCollectionView.dequeueReusableCell(withReuseIdentifier: "PlacesCollectionViewCell", for: indexPath) as! PlacesCollectionViewCell
             cell.setup(with: places[indexPath.row])
             return cell
-        } else if collectionView == self.moodCollectionView {
+        case self.moodCollectionView:
             let cell = moodCollectionView.dequeueReusableCell(withReuseIdentifier: "MoodsCollectionViewCell", for: indexPath) as! MoodsCollectionViewCell
             cell.setup(with: moods[indexPath.row])
             return cell
-        } else if collectionView == self.reactionCollectionView {
+        case self.reactionCollectionView:
             let cell = reactionCollectionView.dequeueReusableCell(withReuseIdentifier: "ReactionsCollectionViewCell", for: indexPath) as! ReactionsCollectionViewCell
             cell.setup(with: reactions[indexPath.row])
             return cell
+        default:
+            return UICollectionViewCell()
         }
-        return UICollectionViewCell()
         
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        func cellSelectionFeedback(cv: UICollectionView, collection: [FoodCollection]) {
+//            let cell : UICollectionViewCell = cv.cellForItem(at: indexPath)!
+//            cell.layer.cornerRadius = 10
+//            cell.layer.masksToBounds = true
+//            if collection[indexPath.row].foodTitle == chosenValue {
+//                cell.backgroundColor = .systemBackground
+//                chosenValue = "nil"
+//                print(chosenValue)
+//            } else {
+//                cell.backgroundColor = .systemGray6
+//                chosenValue = foodCategories[indexPath.row].foodTitle
+//                print(chosenValue)
+//            }
+//        }
+//        
+//        switch collectionView {
+//        case self.foodCategoryCollectionView :
+//            cellSelectionFeedback(cv: foodCategoryCollectionView, collection: foodCategories)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.breakfastOptionsCollectionView:
+//            cellSelectionFeedback(cv: breakfastOptionsCollectionView, collection: breakfastOptions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.lunchOptionsCollectionView:
+//            cellSelectionFeedback(cv: lunchOptionsCollectionView, collection: lunchOrDinnerOptions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.snackOptionsCollectionView :
+//            cellSelectionFeedback(cv: snackOptionsCollectionView, collection: snackOptions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.treatsOptionsCollectionView:
+//            cellSelectionFeedback(cv: treatsOptionsCollectionView, collection: treatsOptions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.drinksOptionsCollectionView:
+//            cellSelectionFeedback(cv: drinksOptionsCollectionView, collection: drinksOptions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.placesCollectionView:
+//            cellSelectionFeedback(cv: placesCollectionView, collection: places)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.moodCollectionView:
+//            cellSelectionFeedback(cv: moodCollectionView, collection: moods)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        case self.reactionCollectionView:
+//            cellSelectionFeedback(cv: reactionCollectionView, collection: reactions)
+//            recordInput.category.detailTitle = chosenValue
+//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//        default:
+//            UICollectionView()
+//        }
+        
+        
+        
+        
+        
         if collectionView == self.foodCategoryCollectionView {
-            print(foodCategories[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
+            
+            if foodCategories[indexPath.row].foodTitle == chosenValue {
+                cell.backgroundColor = .white
+                chosenValue = "nil"
+                print(chosenValue)
+            } else {
+                cell.backgroundColor = .systemGray6
+                chosenValue = foodCategories[indexPath.row].foodTitle
+                print(chosenValue)
+            }
+            recordInput.category.detailTitle = chosenValue
+            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+            
         } else if collectionView == self.breakfastOptionsCollectionView {
-            print(breakfastOptions[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
+            
+            if breakfastOptions[indexPath.row].foodTitle == chosenValue {
+                cell.backgroundColor = .white
+                chosenValue = "nil"
+                print(chosenValue)
+            } else {
+                cell.backgroundColor = .systemGray6
+                chosenValue = breakfastOptions[indexPath.row].foodTitle
+                print(chosenValue)
+            }
+            
+            recordInput.meal.detailTitle = chosenValue
+            recordInput.meal.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+
         } else if collectionView == self.lunchOptionsCollectionView {
+            let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.layer.cornerRadius = 10
+            cell.layer.masksToBounds = true
+            cell.backgroundColor = .systemGray6
+            print(lunchOrDinnerOptions[indexPath.row].foodTitle)
+        } else if collectionView == self.snackOptionsCollectionView {
+            print(snackOptions[indexPath.row].foodTitle)
+        } else if collectionView == self.treatsOptionsCollectionView {
+            print(treatsOptions[indexPath.row].foodTitle)
+        } else if collectionView == self.drinksOptionsCollectionView {
+            print(drinksOptions[indexPath.row].foodTitle)
+        } else if collectionView == self.placesCollectionView {
+            print( places[indexPath.row].foodTitle)
+        } else if collectionView == self.moodCollectionView {
+            print(moods[indexPath.row].foodTitle)
+        } else if collectionView == self.reactionCollectionView {
+            print(reactions[indexPath.row].foodTitle)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == self.foodCategoryCollectionView {
+            let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .white
+            print(foodCategories[indexPath.row].foodTitle)
+//            recordInput.category = foodCategories[indexPath.row].foodTitle
+        } else if collectionView == self.breakfastOptionsCollectionView {
+            let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .white
+            print(breakfastOptions[indexPath.row].foodTitle)
+//            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
+        } else if collectionView == self.lunchOptionsCollectionView {
+            let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .white
             print(lunchOrDinnerOptions[indexPath.row].foodTitle)
         } else if collectionView == self.snackOptionsCollectionView {
             print(snackOptions[indexPath.row].foodTitle)
@@ -153,14 +326,13 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     
+    
     //STYLE COLLECTION VIEWS___________________________________________
     func styleCollectionViewLayout(collectionView: UICollectionView) {
         //round Corners
         collectionView.layer.cornerRadius = 10
         collectionView.layer.masksToBounds = true
-        
         collectionView.backgroundColor = .systemBackground
-        
         collectionView.collectionViewLayout = {
             let layout = UICollectionViewFlowLayout()
             layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
@@ -170,4 +342,56 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         }()
     }
     
+    
+//    func loadData() {
+//        // code to load data from network, and refresh the interface
+//        self.foodCategoryCollectionView.reloadData()
+//    }
+    
+    //Textfields Delegate Methods_________________________________________________
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == textFieldFood {
+            textFieldFood.endEditing(true)
+            print(textFieldFood.text!)
+            return true
+        } else if textField == textFieldMood {
+            textFieldMood.endEditing(true)
+            print(textFieldMood.text!)
+            return true
+        }
+        return false
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField == textFieldFood {
+            if textFieldFood.text != "" {
+                return true
+            } else {
+                textFieldFood.placeholder = "Describe your meal"
+                return false
+            }
+        } else if textField == textFieldMood {
+            if textFieldFood.text != "" {
+                return true
+            } else {
+                textFieldFood.placeholder = "Describe your meal"
+                return false
+            }
+        }
+        return false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == textFieldFood {
+            textFieldFood.becomeFirstResponder()
+        } else if textField == textFieldMood {
+            textFieldMood.becomeFirstResponder()
+        }
+        
+    }
+    
 }
+
+
+
+
