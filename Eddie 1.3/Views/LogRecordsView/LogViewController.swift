@@ -8,6 +8,8 @@
 import UIKit
 
 struct input {
+    var date: String?
+    var time: String?
     var category: inputDetail
     var meal: inputDetail
     var note: String?
@@ -18,7 +20,8 @@ struct inputDetail {
 }
 // "#imageLiteral(resourceName: 'Breakfast')"
 
-var recordInput = input(category: inputDetail(detailTitle: nil, deatilImage: nil),
+var recordInput = input(date: nil, time: nil,
+                        category: inputDetail(detailTitle: nil, deatilImage: nil),
                         meal: inputDetail(detailTitle: nil, deatilImage: nil),
                         note: nil)
 
@@ -82,10 +85,10 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .none
-        date = formatter.string(from: sender.date)
+        recordInput.date = formatter.string(from: sender.date)
         formatter.dateStyle = .none
         formatter.timeStyle = .short
-        time = formatter.string(from: sender.date)
+        recordInput.time = formatter.string(from: sender.date)
     }
 
     @IBAction func logButton(_ sender: Any) {
@@ -94,14 +97,17 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         if textFieldFood.text != "" {
             recordInput.note = textFieldFood.text
         }
-        database.addRecord(mealCategoryTitle: recordInput.category.detailTitle,
+        readTime(sender: timePicker)
+        database.addRecord(recordDate: recordInput.date,
+                           recordTime: recordInput.time,
+                           mealCategoryTitle: recordInput.category.detailTitle,
                            mealCategoryImage: recordInput.category.deatilImage,
                            breakfastMealTitle: recordInput.meal.detailTitle,
                            breakfastMealImage: recordInput.meal.deatilImage,
                            foodNote: recordInput.note)
-        readTime(sender: timePicker)
-        print("this is current date: \(date)")
-        print("this is current time: \(time)")
+        
+//        print("this is current date: \(date)")
+//        print("this is current time: \(time)")
     }
     
     
