@@ -26,13 +26,13 @@ import Foundation
 import UIKit
 
 struct Record {
-    let date: String?
-    let time: String?
+    var date: String?
+    var time: String?
     var mealCategory: ItemDetail?
     var breakfastMeal: ItemDetail?
     var lunchDinMeal: ItemDetail?
-    let snackMeal: ItemDetail?
-    let treatMeal: ItemDetail?
+    var snackMeal: ItemDetail?
+    var treatMeal: ItemDetail?
     let drink: ItemDetail?
     let foodNote: String?
     let place: ItemDetail?
@@ -44,7 +44,7 @@ struct Record {
 
 struct ItemDetail {
     var itemTitle: String?
-    var itemImage: UIImage?
+    var itemImage: UIImage
 }
 
 let RecordsDatabase: [Record] = [
