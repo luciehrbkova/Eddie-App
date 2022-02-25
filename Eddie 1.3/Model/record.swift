@@ -26,9 +26,8 @@ import Foundation
 import UIKit
 
 struct Record {
-    let time: CVTimeStamp?
-//    let mealCategoryImage: UIImage?
-//    let mealCategoryString: String?
+    let date: String?
+    let time: String?
     let mealCategory: ItemDetail?
     let breakfastMeal: ItemDetail?
     let lunchDinMeal: ItemDetail?
@@ -41,7 +40,6 @@ struct Record {
     let reaction: ItemDetail?
     let moodNote: String?
 
-
 }
 
 struct ItemDetail {
@@ -50,7 +48,8 @@ struct ItemDetail {
 }
 
 let RecordsDatabase: [Record] = [
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -62,7 +61,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -74,7 +74,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -86,7 +87,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -98,7 +100,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -110,7 +113,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,
@@ -122,7 +126,8 @@ let RecordsDatabase: [Record] = [
            mood: ItemDetail(itemTitle: "Energetic", itemImage: #imageLiteral(resourceName: "Energetic")),
            reaction: nil,
            moodNote: "I have enjoyed my meal" ),
-    Record(time: nil,
+    Record(date: nil,
+           time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: #imageLiteral(resourceName: "Breakfast")),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: #imageLiteral(resourceName: "Cereals")),
            lunchDinMeal: nil,

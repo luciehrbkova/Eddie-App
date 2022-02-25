@@ -812,6 +812,7 @@
                         <outlet property="snackOptionsCollectionView" destination="tfM-mQ-gSw" id="EW4-o0-Aui"/>
                         <outlet property="textFieldFood" destination="dWa-jg-rWi" id="QJe-3g-I0f"/>
                         <outlet property="textFieldMood" destination="clo-VJ-4ui" id="854-sO-yEO"/>
+                        <outlet property="timePicker" destination="gwf-oM-xcY" id="N67-Gq-7MJ"/>
                         <outlet property="treatsOptionsCollectionView" destination="8pF-B6-Qe7" id="DWU-qy-Pg8"/>
                     </connections>
                 </viewController>

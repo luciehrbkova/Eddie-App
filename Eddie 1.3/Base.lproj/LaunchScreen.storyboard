@@ -38,16 +38,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="toa-61-EZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="24a-eg-wdc"/>
+                            <constraint firstItem="toa-61-EZt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="8Kx-R0-DkJ"/>
                             <constraint firstAttribute="bottom" secondItem="toa-61-EZt" secondAttribute="bottom" id="JWN-yJ-mu7"/>
                             <constraint firstItem="N9J-rB-cg8" firstAttribute="top" secondItem="mtw-u2-Mk9" secondAttribute="bottom" constant="40" id="MOw-1N-SKj"/>
                             <constraint firstItem="mtw-u2-Mk9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P0k-7s-HyV"/>
+                            <constraint firstAttribute="trailing" secondItem="toa-61-EZt" secondAttribute="trailing" id="WVe-jE-xhh"/>
                             <constraint firstItem="hV4-jk-XTu" firstAttribute="top" secondItem="N9J-rB-cg8" secondAttribute="bottom" id="bF8-vg-vmN"/>
                             <constraint firstItem="N9J-rB-cg8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gBs-v9-OdJ"/>
                             <constraint firstItem="mtw-u2-Mk9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gfo-5r-CKJ"/>
                             <constraint firstItem="hV4-jk-XTu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="q0L-XP-86u"/>
-                            <constraint firstItem="toa-61-EZt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qHX-ua-pcm"/>
-                            <constraint firstItem="toa-61-EZt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xLJ-dW-CV3"/>
+                            <constraint firstItem="toa-61-EZt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="wbA-n8-cnF"/>
                         </constraints>
                     </view>
                 </viewController>

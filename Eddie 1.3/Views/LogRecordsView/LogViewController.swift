@@ -22,17 +22,20 @@ var recordInput = input(category: inputDetail(detailTitle: nil, deatilImage: nil
                         meal: inputDetail(detailTitle: nil, deatilImage: nil),
                         note: nil)
 
-var chosenValue = String()
-
 class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
     
-    @IBOutlet weak var datePicker: UIDatePicker!
+
+    @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var textFieldFood: UITextField!
     @IBOutlet weak var textFieldMood: UITextField!
     @IBOutlet var generalView: UIView!
     
     let database = DatabaseManager()
+    
+    var chosenValue = String()
+    var time = String()
+    var date = String()
     
     
     // all CollectViews
@@ -70,11 +73,19 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         textFieldFood.delegate = self
         textFieldMood.delegate = self
         
-        
         // Set Database------------------
         database.setDatabase()
         
-        
+    }
+    
+    func readTime(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        date = formatter.string(from: sender.date)
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        time = formatter.string(from: sender.date)
     }
 
     @IBAction func logButton(_ sender: Any) {
@@ -83,15 +94,14 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         if textFieldFood.text != "" {
             recordInput.note = textFieldFood.text
         }
-        
         database.addRecord(mealCategoryTitle: recordInput.category.detailTitle,
                            mealCategoryImage: recordInput.category.deatilImage,
                            breakfastMealTitle: recordInput.meal.detailTitle,
                            breakfastMealImage: recordInput.meal.deatilImage,
                            foodNote: recordInput.note)
-    
-        
-        
+        readTime(sender: timePicker)
+        print("this is current date: \(date)")
+        print("this is current time: \(time)")
     }
     
     
