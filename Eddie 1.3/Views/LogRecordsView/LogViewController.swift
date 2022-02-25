@@ -113,18 +113,19 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             recordInput.note = textFieldFood.text
         }
         readTime(sender: timePicker)
-        database.addRecord(recordDate: recordInput.date,
-                           recordTime: recordInput.time,
-                           mealCategoryTitle: recordInput.category.detailTitle,
-                           mealCategoryImage: recordInput.category.deatilImage,
-                           breakfastMealTitle: recordInput.meal.detailTitle,
-                           breakfastMealImage: recordInput.meal.deatilImage,
-                           foodNote: recordInput.note)
+//        database.addRecord(recordDate: recordInput.date,
+//                           recordTime: recordInput.time,
+//                           mealCategoryTitle: recordInput.category.detailTitle,
+//                           mealCategoryImage: recordInput.category.deatilImage,
+//                           breakfastMealTitle: recordInput.meal.detailTitle,
+//                           breakfastMealImage: recordInput.meal.deatilImage,
+//                           foodNote: recordInput.note)
         
 //        print("this is current date: \(date)")
 //        print("this is current time: \(time)")
         print("This bitch")
         print(record.mealCategory?.itemTitle)
+        print(record.mealCategory?.itemImage)
         print(record.breakfastMeal?.itemTitle)
     }
     
@@ -232,13 +233,12 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         case self.foodCategoryCollectionView :
             cellSelectionFeedback(cv: foodCategoryCollectionView, collection: foodCategories, actualValue: &currentCategory)
             record.mealCategory?.itemTitle = currentCategory
-//            recordInput.category.detailTitle = chosenValue
             if (currentCategory != nil){
-//                record.mealCategory?.itemImage =  #imageLiteral(resourceName: "\(currentCategory)")
+                record.mealCategory?.itemImage = " #imageLiteral(resourceName: \"Breakfast\")"
             } else  {
                 record.mealCategory?.itemImage =  nil
             }
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
+//            recordInput.category.deatilImage = #imageLiteral(resourceName: "\(currentCategory)")
             print("This is record.meal.category: \(record.mealCategory?.itemTitle)")
         case self.breakfastOptionsCollectionView:
             cellSelectionFeedback(cv: breakfastOptionsCollectionView, collection: breakfastOptions, actualValue: &currentBreakfast)
@@ -344,8 +344,9 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if collectionView == self.foodCategoryCollectionView {
             let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
+            cell.backgroundColor = .systemBackground
             print(foodCategories[indexPath.row].foodTitle)
+            record.mealCategory?.itemTitle = foodCategories[indexPath.row].foodTitle
 //            recordInput.category = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
             let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
