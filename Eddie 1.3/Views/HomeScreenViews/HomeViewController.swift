@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var weekDaysStack: UIStackView!
+    
     @IBOutlet weak var moduleGuideCollectionView: UICollectionView!
     
     
