@@ -26,19 +26,19 @@ import Foundation
 import UIKit
 
 struct Record {
-    let date: String?
-    let time: String?
+    var date: String?
+    var time: String?
     var mealCategory: ItemDetail?
     var breakfastMeal: ItemDetail?
-    let lunchDinMeal: ItemDetail?
-    let snackMeal: ItemDetail?
-    let treatMeal: ItemDetail?
-    let drink: ItemDetail?
-    let foodNote: String?
-    let place: ItemDetail?
-    let mood: ItemDetail?
-    let reaction: ItemDetail?
-    let moodNote: String?
+    var lunchDinMeal: ItemDetail?
+    var snackMeal: ItemDetail?
+    var treatMeal: ItemDetail?
+    var drink: ItemDetail?
+    var foodNote: String?
+    var place: ItemDetail?
+    var mood: ItemDetail?
+    var reaction: ItemDetail?
+    var moodNote: String?
 
 }
 

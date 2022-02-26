@@ -43,22 +43,33 @@ class DatabaseManager {
         ref?.child("Posts").childByAutoId().setValue(input)
     }
     
-    func addRecord(recordDate: String?,
-                   recordTime: String?,
-                   mealCategoryTitle: String?,
-                   mealCategoryImage: String?,
-                   breakfastMealTitle: String?,
-                   breakfastMealImage: String?,
-                   foodNote: String?) {
+    func addRecord(recordDate: String?, recordTime: String?,
+                   mealCategoryTitle: String?, mealCategoryImage: String?,
+                   breakfastMealTitle: String?, breakfastMealImage: String?,
+                   lunchDinMealTitle: String?, lunchDinMealImage: String?,
+                   snackMealTitle: String?, snackMealImage: String?,
+                   treatMealTitle: String?, treatMealImage: String?,
+                   drinkTitle: String?, drinkImage: String?,
+                   foodNote: String?,
+                   placeTitle: String?, placeImage: String?,
+                   moodTitle: String?, moodImage: String?,
+                   reactionTitle: String?, reactionImage: String?,
+                   moodNote: String?) {
         
         ref?.child("Records").childByAutoId().setValue([
-            "date": recordDate,
-            "time": recordTime,
-            "mealCategory" : [  "itemTitle": mealCategoryTitle,
-                                "itemImage": mealCategoryImage  ],
-            "breakfastMeal" : [ "itemTitle": breakfastMealTitle,
-                                "itemImage": breakfastMealImage ],
-            "foodNote": foodNote ?? "nil" ])
+            "date": recordDate!,
+            "time": recordTime!,
+            "mealCategory" : [  "itemTitle": mealCategoryTitle, "itemImage": mealCategoryImage  ],
+            "breakfastMeal" : [ "itemTitle": breakfastMealTitle, "itemImage": breakfastMealImage ],
+            "lunchDinnerMeal" : [ "itemTitle": lunchDinMealTitle, "itemImage": lunchDinMealImage ],
+            "snackMeal" : [ "itemTitle": snackMealTitle, "itemImage": snackMealImage ],
+            "treatMeal" : [ "itemTitle": treatMealTitle, "itemImage": treatMealImage ],
+            "drink" : [ "itemTitle": drinkTitle,"itemImage": drinkImage ],
+            "foodNote": foodNote ?? "nil" ,
+            "place" : [ "itemTitle": placeTitle, "itemImage": placeImage ],
+            "mood" : [ "itemTitle": moodTitle, "itemImage": moodImage ],
+            "reaction" : [ "itemTitle": reactionTitle, "itemImage": reactionImage ],
+            "moodNote": moodNote ?? "nil" ,])
         
         //later use this key to set Status node
 //        ref?.child("Records").child(key).child(moodNote).setValue.( /// set the rest of values)
