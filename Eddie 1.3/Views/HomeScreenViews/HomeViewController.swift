@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var moduleGuideCollectionView: UICollectionView!
     
     
@@ -17,6 +18,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         moduleGuideCollectionView.dataSource = self
         moduleGuideCollectionView.delegate = self
@@ -33,6 +36,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        
         
     }
     

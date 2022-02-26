@@ -834,7 +834,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
-                                        <color key="backgroundColor" name="GreenSecond"/>
+                                        <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yIH-AV-wDc"/>
                                         </constraints>
@@ -994,7 +994,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" name="GreenMain"/>
                                         <constraints>
                                             <constraint firstItem="DrQ-2E-l9p" firstAttribute="top" secondItem="XNb-Fs-2Mg" secondAttribute="bottom" constant="8" symbolic="YES" id="3qb-TE-PR0"/>
                                             <constraint firstAttribute="trailing" secondItem="Nem-rP-1fo" secondAttribute="trailing" constant="20" id="6Qe-49-EHZ"/>
@@ -1018,7 +1017,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="GreenSecond"/>
                                 <constraints>
                                     <constraint firstItem="5wR-vD-ZlC" firstAttribute="top" secondItem="6Qk-Ii-EPi" secondAttribute="top" constant="56" id="0dD-bM-86v"/>
                                     <constraint firstItem="S1K-gN-Ban" firstAttribute="trailing" secondItem="MKP-zi-sdd" secondAttribute="trailing" id="3o0-5R-7nE"/>
@@ -1077,6 +1076,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="moduleGuideCollectionView" destination="b66-Dc-YFV" id="Zgr-Jl-2B1"/>
+                        <outlet property="scrollView" destination="6Qk-Ii-EPi" id="OH2-Wp-gzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1W-EH-GVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
