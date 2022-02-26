@@ -1445,7 +1445,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6kP-fw-OgG">
-                                <rect key="frame" x="20" y="64" width="369" height="744"/>
+                                <rect key="frame" x="20" y="64" width="369" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gr2-rb-v7U">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
@@ -1794,6 +1794,21 @@
                                             <constraint firstItem="rA2-Ng-cPL" firstAttribute="top" secondItem="gMa-hs-eLB" secondAttribute="top" id="uoV-CL-yLD"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c0-1E-6d1">
+                                        <rect key="frame" x="0.0" y="744" width="369" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="369" id="dAA-Qa-6sM"/>
+                                            <constraint firstAttribute="height" constant="48" id="pQ3-N9-tkM"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KU2-dv-BY2">
+                                        <rect key="frame" x="0.0" y="792" width="369" height="22"/>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Delete" image="trash" catalog="system">
+                                            <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -2050,6 +2065,7 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="progressCircle" width="318" height="318"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="GreenMain">
             <color red="0.3580000102519989" green="0.88300001621246338" blue="0.67400002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
