@@ -43,7 +43,8 @@ class DatabaseManager {
         ref?.child("Posts").childByAutoId().setValue(input)
     }
     
-    func addRecord(recordDate: String?, recordTime: String?,
+    func addRecord(userID: String,
+                   recordDate: String?, recordTime: String?,
                    mealCategoryTitle: String?, mealCategoryImage: String?,
                    breakfastMealTitle: String?, breakfastMealImage: String?,
                    lunchDinMealTitle: String?, lunchDinMealImage: String?,
@@ -57,6 +58,7 @@ class DatabaseManager {
                    moodNote: String?) {
         
         ref?.child("Records").childByAutoId().setValue([
+            "userID": userID,
             "date": recordDate!,
             "time": recordTime!,
             "mealCategory" : [  "itemTitle": mealCategoryTitle, "itemImage": mealCategoryImage  ],

@@ -5,27 +5,11 @@
 //  Created by Lucie Hrbkova on 18/02/2022.
 //
 
-//import Foundation
-//import UIKit
-//
-//struct Record {
-//    var image: UIImage
-//    var title: String
-//
-//}
-//
-//var recordsDatabase: [Record] = [
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//    Record(image: #imageLiteral(resourceName: "Breakfast"), title: "Breakfast"),
-//
-//]
-
 import Foundation
 import UIKit
 
 struct Record {
+    var userID: String
     var date: String?
     var time: String?
     var mealCategory: ItemDetail?
@@ -49,7 +33,8 @@ struct ItemDetail {
 }
 
 let RecordsDatabase: [Record] = [
-    Record(date: nil,
+    Record(userID: "1",
+           date: nil,
            time: nil,
            mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: " #imageLiteral(resourceName: \"Breakfast\")"),
            breakfastMeal: ItemDetail(itemTitle: "Cereals", itemImage: " #imageLiteral(resourceName: \"Breakfast\")"),

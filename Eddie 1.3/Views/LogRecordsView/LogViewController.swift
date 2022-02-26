@@ -7,25 +7,11 @@
 
 import UIKit
 
-struct input {
-    var date: String?
-    var time: String?
-    var category: inputDetail
-    var meal: inputDetail
-    var note: String?
-}
-struct inputDetail {
-    var detailTitle: String?
-    var deatilImage: String?
-}
 // "#imageLiteral(resourceName: 'Breakfast')"
+let user = User(email: "luca@gmail.com", username: "Lucie", password: "pass")
 
-var recordInput = input(date: nil, time: nil,
-                        category: inputDetail(detailTitle: nil, deatilImage: nil),
-                        meal: inputDetail(detailTitle: nil, deatilImage: nil),
-                        note: nil)
-
-var record = Record(date: nil, time: nil,
+var record = Record(userID: user.userID,
+                    date: nil, time: nil,
                     mealCategory: ItemDetail(itemTitle: nil, itemImage: nil),
                     breakfastMeal: ItemDetail(itemTitle: nil, itemImage: nil),
                     lunchDinMeal: ItemDetail(itemTitle: nil, itemImage: nil),
@@ -40,8 +26,6 @@ var record = Record(date: nil, time: nil,
 
 class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
-    
-
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var textFieldFood: UITextField!
     @IBOutlet weak var textFieldMood: UITextField!
@@ -49,7 +33,6 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     let database = DatabaseManager()
     
-//    var chosenValue = String()
     var time = String()
     var date = String()
     var currentCategory: String? = ""
@@ -123,7 +106,8 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
             record.moodNote = textFieldMood.text
         }
         readTime(sender: timePicker)
-        database.addRecord(recordDate: record.date, recordTime: record.time,
+        database.addRecord(userID: record.userID,
+                           recordDate: record.date, recordTime: record.time,
                            mealCategoryTitle: record.mealCategory?.itemTitle, mealCategoryImage: record.mealCategory?.itemImage,
                            breakfastMealTitle: record.breakfastMeal?.itemTitle, breakfastMealImage: record.breakfastMeal?.itemImage,
                            lunchDinMealTitle: record.lunchDinMeal?.itemTitle, lunchDinMealImage: record.lunchDinMeal?.itemImage,
