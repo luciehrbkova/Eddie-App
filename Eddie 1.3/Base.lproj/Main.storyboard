@@ -834,6 +834,17 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzT-2H-zxD">
+                                                <rect key="frame" x="181" y="13" width="67" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="didTapButton:" destination="Na2-Se-BdQ" eventType="touchUpInside" id="tu7-Hh-VEZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yIH-AV-wDc"/>
@@ -841,20 +852,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-vD-ZlC">
                                         <rect key="frame" x="0.0" y="56" width="428" height="400"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressCircle" translatesAutoresizingMaskIntoConstraints="NO" id="My7-Qq-zMN">
-                                                <rect key="frame" x="54" y="40" width="320" height="320"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="320" id="Con-ri-bk8"/>
-                                                    <constraint firstAttribute="width" constant="320" id="weN-jN-PL4"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="aEk-MK-MrG"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="dZM-CC-deK"/>
-                                            <constraint firstItem="My7-Qq-zMN" firstAttribute="centerX" secondItem="5wR-vD-ZlC" secondAttribute="centerX" id="hK2-2W-HP0"/>
-                                            <constraint firstItem="My7-Qq-zMN" firstAttribute="centerY" secondItem="5wR-vD-ZlC" secondAttribute="centerY" id="xQL-4t-D09"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-gN-Ban">
@@ -1017,7 +1016,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" name="GreenSecond"/>
                                 <constraints>
                                     <constraint firstItem="5wR-vD-ZlC" firstAttribute="top" secondItem="6Qk-Ii-EPi" secondAttribute="top" constant="56" id="0dD-bM-86v"/>
                                     <constraint firstItem="S1K-gN-Ban" firstAttribute="trailing" secondItem="MKP-zi-sdd" secondAttribute="trailing" id="3o0-5R-7nE"/>
@@ -1075,8 +1073,11 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeView" destination="mTm-DC-Z2I" id="R9C-Eo-NWn"/>
                         <outlet property="moduleGuideCollectionView" destination="b66-Dc-YFV" id="Zgr-Jl-2B1"/>
                         <outlet property="scrollView" destination="6Qk-Ii-EPi" id="OH2-Wp-gzF"/>
+                        <outlet property="testButton" destination="tzT-2H-zxD" id="Tb0-lA-5aQ"/>
+                        <outlet property="viewProgress" destination="5wR-vD-ZlC" id="eRo-Vj-7TW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1W-EH-GVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2135,7 +2136,6 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="progressCircle" width="318" height="318"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="GreenMain">
