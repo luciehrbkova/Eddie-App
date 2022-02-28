@@ -201,8 +201,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         if (currentLevel == 1) {
             if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
+                let handler = {self.performSegue(withIdentifier: "L1M1Segue", sender: self)}
+                handler()
             } else if (moduleGuides1[indexPath.row].moduleTitle == "2/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
+                let handler = {self.performSegue(withIdentifier: "L1M2Segue", sender: self)}
+                handler()
             } else if (moduleGuides1[indexPath.row].moduleTitle == "3/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
             } else if (moduleGuides1[indexPath.row].moduleTitle == "4/5") {
@@ -213,6 +217,26 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
 //        moduleGuides1[indexPath.row].moduleImage = UIImage(systemName: "checkmark.circle")! 
         // send data to database
+    }
+    
+    // _______Segue settings (target + data)__________________________________________
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "L1M1Segue" {
+            // get a reference to the second view controller
+            let targetViewController = segue.destination as! L1M1ViewController
+            // set a variable in the second view controller with the data to pass
+            targetViewController.receivedData = "password"
+            
+        } else if segue.identifier == "L1M2Segue" {
+            // get a reference to the second view controller
+            let targetViewController = segue.destination as! L1M2ViewController
+            // set a variable in the second view controller with the data to pass
+            targetViewController.receivedData = "password"
+        } else if segue.identifier == "avatarSegue" {
+            let targetViewController = segue.destination as! AvatarViewController
+            targetViewController.receivedData = "avatar"
+        }
     }
 
 }
