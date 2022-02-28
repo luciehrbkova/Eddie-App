@@ -9,11 +9,17 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
+    // Outlets_________________
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var moduleGuideCollectionView: UICollectionView!
     @IBOutlet weak var viewProgress: UIView!
+    @IBOutlet weak var quoteView: UIView!
+    @IBOutlet weak var quoteTextView: UITextView!
+    
+    //Variables________________
+    var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
+    var quote: String = "“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.” \n \n ― Roy T. Bennett, The Light in the Heart"
     
     //testButton
     @IBOutlet weak var testButton: UIButton!
@@ -23,8 +29,18 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     private let label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "Motivation"
+        label.font = .systemFont(ofSize: 14, weight: .light)
+        label.textColor = .gray
+        label.numberOfLines = 7
+//        label.layer.backgroundColor = UIColor.red.cgColor
         return label
+    }()
+    
+    let foxImage: UIImageView = {
+        let foximage = UIImageView()
+//        foximage.layer.backgroundColor = UIColor.green.cgColor
+        foximage.contentMode = .scaleAspectFit
+        return foximage
     }()
 
     override func viewDidLoad() {
@@ -37,6 +53,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         //style CollectView
         moduleGuideCollectionView.layer.cornerRadius = 10
         moduleGuideCollectionView.layer.masksToBounds = true
+        moduleGuideCollectionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         //style CollectView Layout
         moduleGuideCollectionView.collectionViewLayout = {
             let layout = UICollectionViewFlowLayout()
@@ -45,20 +62,28 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        // style + content Quote
+        quoteView.layer.cornerRadius = 10
+        quoteView.layer.masksToBounds = true
+        quoteTextView.text = quote
         
     }
     
     
     @IBAction func didTapButton(_ sender: Any) {
         if (nextProgressStep == 1) {
-            animateProgress(from: 0, value: 1/3)
+            animateProgress(from: 0, value: 0.33)
             nextProgressStep = 2
+            progressStepMade(image: "fox2.png", motivation: "Lucie, \n congratulation to your first achievement of the day!")
+//            foxImage.image = UIImage(named: "fox2.png")
         } else if (nextProgressStep == 2) {
-            animateProgress(from: 1/3, value: 2/3)
+            animateProgress(from: 0.33 , value: 0.66)
             nextProgressStep = 3
+            progressStepMade(image: "fox3.png", motivation: "Lucie, \n you are amazing! \n Keep going!")
         } else if (nextProgressStep == 3) {
-            animateProgress(from: 2/3, value: 1)
+            animateProgress(from: 0.66, value: 1)
             nextProgressStep = 1
+            progressStepMade(image: "fox4.png", motivation: "Lucie, \n you made it!!! \n have a nice evening")
         }
         
     }
@@ -76,7 +101,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func createProgressCircle() {
         //middle of the view
-        let positionX = viewProgress.center.x - 10
+        let positionX = viewProgress.center.x - 7
         let positionY = viewProgress.center.y - 60 //radius
         
         let circlePath = UIBezierPath(arcCenter: .zero, radius: 160,
@@ -86,7 +111,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         circleShadow.lineWidth = 15
         circleShadow.position =  CGPoint(x: positionX, y: positionY)
         circleShadow.fillColor = UIColor.clear.cgColor
-        circleShadow.strokeColor = UIColor.systemGray6.cgColor
+        circleShadow.strokeColor = UIColor.white.cgColor
         viewProgress.layer.addSublayer(circleShadow)
         
         circleProgress.path = circlePath.cgPath
@@ -98,10 +123,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         viewProgress.layer.addSublayer(circleProgress)
         
         //end circle___________________________
-        label.sizeToFit()
+        // add fox
+        viewProgress.addSubview(foxImage)
         viewProgress.addSubview(label)
-        label.center = viewProgress.center
+        foxImage.image = UIImage(named: "fox1.png")
+        foxImage.frame = CGRect(x: homeView.frame.size.width/2 - 70, y: 220, width: 140, height: 110)
+        label.frame = CGRect(x: 90 ,y: 100, width: homeView.frame.size.width - 180, height: 120)
+        label.text = motivation
+//        label.center = viewProgress.center
     }
+    
+    func progressStepMade(image: String, motivation: String) {
+        let imagestring: String = image
+        foxImage.image = UIImage(named: imagestring)
+        label.text = motivation
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return moduleGuides1.count

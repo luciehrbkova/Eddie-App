@@ -719,7 +719,9 @@
                                                                 </constraints>
                                                                 <color key="tintColor" name="GreenMain"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                                    <color key="baseBackgroundColor" name="GreenMain"/>
+                                                                </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="logButton:" destination="W9F-TR-BHB" eventType="touchUpInside" id="2E7-vR-JiB"/>
                                                                 </connections>
@@ -836,16 +838,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzT-2H-zxD">
-                                                <rect key="frame" x="181" y="13" width="67" height="31"/>
+                                                <rect key="frame" x="192" y="14" width="46" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="play.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="didTapButton:" destination="Na2-Se-BdQ" eventType="touchUpInside" id="tu7-Hh-VEZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="PeachSecond"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yIH-AV-wDc"/>
                                         </constraints>
@@ -939,10 +942,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrQ-2E-l9p">
                                                 <rect key="frame" x="20" y="295" width="388" height="240"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-2Y-eLz">
-                                                        <rect key="frame" x="8" y="8" width="372" height="224"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-2Y-eLz">
+                                                        <rect key="frame" x="16" y="16" width="356" height="208"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <string key="text">“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.”
+― Roy T. Bennett, The Light in the Heart</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -950,11 +954,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="aLg-2Y-eLz" firstAttribute="top" secondItem="DrQ-2E-l9p" secondAttribute="top" constant="8" id="DZ6-yG-Bwn"/>
-                                                    <constraint firstItem="aLg-2Y-eLz" firstAttribute="leading" secondItem="DrQ-2E-l9p" secondAttribute="leading" constant="8" id="Nem-YZ-VC2"/>
-                                                    <constraint firstAttribute="bottom" secondItem="aLg-2Y-eLz" secondAttribute="bottom" constant="8" id="ShU-SJ-twI"/>
+                                                    <constraint firstItem="aLg-2Y-eLz" firstAttribute="top" secondItem="DrQ-2E-l9p" secondAttribute="top" constant="16" id="DZ6-yG-Bwn"/>
+                                                    <constraint firstItem="aLg-2Y-eLz" firstAttribute="leading" secondItem="DrQ-2E-l9p" secondAttribute="leading" constant="16" id="Nem-YZ-VC2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="aLg-2Y-eLz" secondAttribute="bottom" constant="16" id="ShU-SJ-twI"/>
                                                     <constraint firstAttribute="height" constant="240" id="e7B-6L-gZc"/>
-                                                    <constraint firstAttribute="trailing" secondItem="aLg-2Y-eLz" secondAttribute="trailing" constant="8" id="nf4-Am-ehe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aLg-2Y-eLz" secondAttribute="trailing" constant="16" id="nf4-Am-ehe"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lOD-1F-cpV">
@@ -1075,6 +1079,8 @@
                     <connections>
                         <outlet property="homeView" destination="mTm-DC-Z2I" id="R9C-Eo-NWn"/>
                         <outlet property="moduleGuideCollectionView" destination="b66-Dc-YFV" id="Zgr-Jl-2B1"/>
+                        <outlet property="quoteTextView" destination="aLg-2Y-eLz" id="Xgh-Cj-db6"/>
+                        <outlet property="quoteView" destination="DrQ-2E-l9p" id="ysQ-Tl-bGc"/>
                         <outlet property="scrollView" destination="6Qk-Ii-EPi" id="OH2-Wp-gzF"/>
                         <outlet property="testButton" destination="tzT-2H-zxD" id="Tb0-lA-5aQ"/>
                         <outlet property="viewProgress" destination="5wR-vD-ZlC" id="eRo-Vj-7TW"/>
@@ -2135,6 +2141,7 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="trash" catalog="system" width="121" height="128"/>
