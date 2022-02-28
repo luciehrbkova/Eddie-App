@@ -7,6 +7,8 @@
 
 import UIKit
 
+var currentLevel: Int = 1
+
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // Outlets_________________
@@ -63,6 +65,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        
         // style + content Quote
         quoteView.layer.cornerRadius = 10
         quoteView.layer.masksToBounds = true
@@ -160,13 +163,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == moduleGuideCollectionView) {
-            return moduleGuides1.count
+            if (currentLevel == 1) {
+                return moduleGuides1.count
+            }; return 0
         } else if (collectionView == homeAwardCollectionView) {
             return homeAwards.count
         } else {
             return 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -194,6 +198,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (currentLevel == 1) {
+            if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "2/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "3/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "4/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "5/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            }
+        }
 //        moduleGuides1[indexPath.row].moduleImage = UIImage(systemName: "checkmark.circle")! 
         // send data to database
     }
