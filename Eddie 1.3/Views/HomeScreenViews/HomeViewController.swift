@@ -201,12 +201,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         if (currentLevel == 1) {
             if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
-                let handler = {self.performSegue(withIdentifier: "L1M1Segue", sender: self)}
-                handler()
+//                let handler = {self.performSegue(withIdentifier: "L1M1Segue", sender: self)}
+//                handler()
             } else if (moduleGuides1[indexPath.row].moduleTitle == "2/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
-                let handler = {self.performSegue(withIdentifier: "L1M2Segue", sender: self)}
-                handler()
+//                let handler = {self.performSegue(withIdentifier: "L1M2Segue", sender: self)}
+//                handler()
             } else if (moduleGuides1[indexPath.row].moduleTitle == "3/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
             } else if (moduleGuides1[indexPath.row].moduleTitle == "4/5") {
