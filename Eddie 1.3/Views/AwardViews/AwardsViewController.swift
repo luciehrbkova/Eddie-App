@@ -24,6 +24,7 @@ class AwardsViewController: UIViewController {
         //style CollectView
         awardCollectionView.layer.cornerRadius = 10
         awardCollectionView.layer.masksToBounds = true
+        awardCollectionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
 
         //style CollectView Layout
         awardCollectionView.collectionViewLayout = {

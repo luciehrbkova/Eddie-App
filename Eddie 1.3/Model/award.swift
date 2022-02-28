@@ -37,3 +37,9 @@ let awards: [Award] = [
     
 
 ]
+
+let homeAwards: [Award] = [
+    Award(awardTitle: "medal", awardImage: #imageLiteral(resourceName: "AwardMedal"), awardsNumber: 1),
+    Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2),
+    Award(awardTitle: "bravery", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 3),
+]

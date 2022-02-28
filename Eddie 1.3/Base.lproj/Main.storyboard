@@ -930,7 +930,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="Hed-az-AgD" secondAttribute="trailing" constant="18" id="qUL-mA-m65"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
-                                                        <color key="backgroundColor" name="GreenMain"/>
+                                                        <color key="backgroundColor" name="PeachMain"/>
                                                         <size key="customSize" width="141" height="181"/>
                                                         <connections>
                                                             <outlet property="moduleGuideIcon" destination="FrR-Ap-wML" id="E05-5Q-dp0"/>
@@ -974,13 +974,41 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nnu-CH-Ly4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AwardCollectionViewCell" id="pdQ-Hf-eOY" customClass="AwardCollectionViewCell" customModule="Eddie_1_3" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="134"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ez-G4-F9d">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kw3-6W-7RM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="134"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ni-Ca-7Xc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="101"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgB-EA-baz">
+                                                                    <rect key="frame" x="8" y="109" width="80" height="17"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="17" id="Z1g-Ua-3Kc"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="8Ni-Ca-7Xc" firstAttribute="top" secondItem="kw3-6W-7RM" secondAttribute="top" id="FXU-SY-JX2"/>
+                                                                <constraint firstAttribute="trailing" secondItem="FgB-EA-baz" secondAttribute="trailing" constant="8" id="HzL-yl-8hZ"/>
+                                                                <constraint firstItem="FgB-EA-baz" firstAttribute="leading" secondItem="kw3-6W-7RM" secondAttribute="leading" constant="8" id="RFz-v0-gks"/>
+                                                                <constraint firstItem="FgB-EA-baz" firstAttribute="top" secondItem="8Ni-Ca-7Xc" secondAttribute="bottom" constant="8" id="SfY-zH-PoW"/>
+                                                                <constraint firstItem="8Ni-Ca-7Xc" firstAttribute="leading" secondItem="kw3-6W-7RM" secondAttribute="leading" id="X6O-Ls-bh0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="8Ni-Ca-7Xc" secondAttribute="trailing" id="gMW-Fe-kl0"/>
+                                                                <constraint firstItem="FgB-EA-baz" firstAttribute="bottom" secondItem="kw3-6W-7RM" secondAttribute="bottomMargin" id="svy-y9-Tbt"/>
+                                                            </constraints>
                                                         </collectionViewCellContentView>
+                                                        <size key="customSize" width="96" height="134"/>
+                                                        <connections>
+                                                            <outlet property="awardDateLabel" destination="FgB-EA-baz" id="h95-xe-wyO"/>
+                                                            <outlet property="awardImageView" destination="8Ni-Ca-7Xc" id="aaC-Wf-Sby"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -1049,7 +1077,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tMV-RH-rCa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GreenSecond"/>
                         <constraints>
                             <constraint firstItem="6Qk-Ii-EPi" firstAttribute="leading" secondItem="tMV-RH-rCa" secondAttribute="leading" id="4pX-sP-r0x"/>
                             <constraint firstItem="6Qk-Ii-EPi" firstAttribute="trailing" secondItem="tMV-RH-rCa" secondAttribute="trailing" id="acR-UF-9bg"/>
@@ -1077,6 +1105,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="homeAwardCollectionView" destination="lOD-1F-cpV" id="0oc-kT-ct1"/>
                         <outlet property="homeView" destination="mTm-DC-Z2I" id="R9C-Eo-NWn"/>
                         <outlet property="moduleGuideCollectionView" destination="b66-Dc-YFV" id="Zgr-Jl-2B1"/>
                         <outlet property="quoteTextView" destination="aLg-2Y-eLz" id="Xgh-Cj-db6"/>
@@ -1245,7 +1274,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RYp-Yy-7dV">
-                                <rect key="frame" x="20" y="154.33333333333337" width="388" height="250"/>
+                                <rect key="frame" x="20" y="154.33333333333337" width="408" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="AyL-Do-0tC"/>
@@ -1312,7 +1341,7 @@
                             <constraint firstItem="w4z-9f-6go" firstAttribute="leading" secondItem="fVA-Ya-1Eo" secondAttribute="leading" constant="20" id="kwk-q6-4r6"/>
                             <constraint firstItem="G6n-gy-Wqc" firstAttribute="leading" secondItem="RYp-Yy-7dV" secondAttribute="leading" id="m41-YI-2dE"/>
                             <constraint firstItem="RYp-Yy-7dV" firstAttribute="top" secondItem="w4z-9f-6go" secondAttribute="bottom" constant="20" id="ox5-fk-Ht9"/>
-                            <constraint firstItem="fVA-Ya-1Eo" firstAttribute="trailing" secondItem="RYp-Yy-7dV" secondAttribute="trailing" constant="20" id="pAB-9j-PKx"/>
+                            <constraint firstItem="fVA-Ya-1Eo" firstAttribute="trailing" secondItem="RYp-Yy-7dV" secondAttribute="trailing" id="pAB-9j-PKx"/>
                             <constraint firstItem="fVA-Ya-1Eo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G6n-gy-Wqc" secondAttribute="trailing" symbolic="YES" id="uj4-Sp-Man"/>
                         </constraints>
                     </view>
@@ -2150,6 +2179,9 @@
         </namedColor>
         <namedColor name="GreenSecond">
             <color red="0.8399999737739563" green="0.99299997091293335" blue="0.79400002956390381" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PeachMain">
+            <color red="1" green="0.60199999809265137" blue="0.55400002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PeachSecond">
             <color red="1" green="0.87599998712539673" blue="0.7720000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

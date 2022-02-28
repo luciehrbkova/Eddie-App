@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var moduleGuideCollectionView: UICollectionView!
+    @IBOutlet weak var homeAwardCollectionView: UICollectionView!
     @IBOutlet weak var viewProgress: UIView!
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteTextView: UITextView!
@@ -45,7 +46,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
+//        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
         createProgressCircle()
         moduleGuideCollectionView.dataSource = self
@@ -66,6 +67,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         quoteView.layer.cornerRadius = 10
         quoteView.layer.masksToBounds = true
         quoteTextView.text = quote
+        
+        //award
+        homeAwardCollectionView.dataSource = self
+        homeAwardCollectionView.delegate = self
+        //style CollectView
+        homeAwardCollectionView.layer.cornerRadius = 10
+        homeAwardCollectionView.layer.masksToBounds = true
+        homeAwardCollectionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        
+        //style CollectView Layout
+        homeAwardCollectionView.collectionViewLayout = {
+            let layout = UICollectionViewFlowLayout()
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            layout.itemSize = CGSize(width: 72, height: 100)
+            layout.scrollDirection = .horizontal
+            return layout
+        }()
         
     }
     
@@ -141,16 +159,38 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return moduleGuides1.count
+        if (collectionView == moduleGuideCollectionView) {
+            return moduleGuides1.count
+        } else if (collectionView == homeAwardCollectionView) {
+            return homeAwards.count
+        } else {
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = moduleGuideCollectionView.dequeueReusableCell(withReuseIdentifier: "ModuleGuideCollectionViewCell", for: indexPath) as! ModuleGuideCollectionViewCell
-        cell.setup(with: moduleGuides1[indexPath.row])
-        // style
-        cell.layer.cornerRadius = 8
-        cell.layer.masksToBounds = true
-        return cell
+        if (collectionView == moduleGuideCollectionView) {
+            let cell = moduleGuideCollectionView.dequeueReusableCell(withReuseIdentifier: "ModuleGuideCollectionViewCell", for: indexPath) as! ModuleGuideCollectionViewCell
+            cell.setup(with: moduleGuides1[indexPath.row])
+            // style
+            cell.layer.cornerRadius = 8
+            cell.layer.masksToBounds = true
+            //set the peach cell gradient
+            let cellView = UIView(frame: view.frame)
+            cellView.backgroundColor = UIColor(patternImage:UIImage(named:"PeachGradient.png")!)
+            cell.backgroundView = cellView
+            return cell
+        } else if (collectionView == homeAwardCollectionView) {
+            let cell = homeAwardCollectionView.dequeueReusableCell(withReuseIdentifier: "AwardCollectionViewCell", for: indexPath) as! AwardCollectionViewCell
+            // returns the cell
+            cell.setup(with: homeAwards[indexPath.row])
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -161,19 +201,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 }
 
 // Gradient Extension
-extension UIView {
-    func addGradient(colors: [UIColor] = [.blue, .white], locations: [NSNumber] = [0, 2], startPoint: CGPoint = CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), type: CAGradientLayerType = .radial){
-        let gradient = CAGradientLayer()
-        gradient.frame.size = self.frame.size
-        gradient.frame.origin = CGPoint(x: 0.0, y: 0.0)
-        // Iterates through the colors array and casts the individual elements to cgColor
-        // Alternatively, one could use a CGColor Array in the first place or do this cast in a for-loop
-        gradient.colors = colors.map{ $0.cgColor }
-        gradient.locations = locations
-        gradient.startPoint = startPoint
-        gradient.endPoint = endPoint
-        // Insert the new layer at the bottom-most position
-        // This way we won't cover any other elements
-        self.layer.insertSublayer(gradient, at: 0)
-    }
-}
+//extension UIView {
+//    func addGradient(colors: [UIColor] = [.blue, .white], locations: [NSNumber] = [0, 2], startPoint: CGPoint = CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), type: CAGradientLayerType = .radial){
+//        let gradient = CAGradientLayer()
+//        gradient.frame.size = self.frame.size
+//        gradient.frame.origin = CGPoint(x: 0.0, y: 0.0)
+//        // Iterates through the colors array and casts the individual elements to cgColor
+//        // Alternatively, one could use a CGColor Array in the first place or do this cast in a for-loop
+//        gradient.colors = colors.map{ $0.cgColor }
+//        gradient.locations = locations
+//        gradient.startPoint = startPoint
+//        gradient.endPoint = endPoint
+//        // Insert the new layer at the bottom-most position
+//        // This way we won't cover any other elements
+//        self.layer.insertSublayer(gradient, at: 0)
+//    }
+//}
