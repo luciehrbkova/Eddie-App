@@ -1,5 +1,5 @@
 //
-//  L1M1ViewController.swift
+//  L1M5ViewController.swift
 //  Eddie 1.3
 //
 //  Created by Lucie Hrbkova on 28/02/2022.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class L1M1ViewController: UIViewController {
-
+class L1M5ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
     
 
@@ -21,8 +21,8 @@ class L1M1ViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         Get the new view controller using segue.destination.
-         Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     */
 
