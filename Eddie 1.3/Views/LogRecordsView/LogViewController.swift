@@ -7,33 +7,43 @@
 
 import UIKit
 
-struct input {
-    var category: inputDetail
-    var meal: inputDetail
-    var note: String?
-}
-struct inputDetail {
-    var detailTitle: String?
-    var deatilImage: String?
-}
 // "#imageLiteral(resourceName: 'Breakfast')"
+let user = User(email: "luca@gmail.com", username: "Lucie", password: "pass")
 
-var recordInput = input(category: inputDetail(detailTitle: nil, deatilImage: nil),
-                        meal: inputDetail(detailTitle: nil, deatilImage: nil),
-                        note: nil)
-
-var chosenValue = String()
+var record = Record(userID: user.userID,
+                    date: nil, time: nil,
+                    mealCategory: ItemDetail(itemTitle: nil, itemImage: nil),
+                    breakfastMeal: ItemDetail(itemTitle: nil, itemImage: nil),
+                    lunchDinMeal: ItemDetail(itemTitle: nil, itemImage: nil),
+                    snackMeal: ItemDetail(itemTitle: nil, itemImage: nil),
+                    treatMeal: ItemDetail(itemTitle: nil, itemImage: nil),
+                    drink: ItemDetail(itemTitle: nil, itemImage: nil),
+                    foodNote: nil,
+                    place: ItemDetail(itemTitle: nil, itemImage: nil),
+                    mood: ItemDetail(itemTitle: nil, itemImage: nil),
+                    reaction: ItemDetail(itemTitle: nil, itemImage: nil),
+                    moodNote: nil)
 
 class LogViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
     
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var textFieldFood: UITextField!
     @IBOutlet weak var textFieldMood: UITextField!
     @IBOutlet var generalView: UIView!
     
     let database = DatabaseManager()
     
+    var time = String()
+    var date = String()
+    var currentCategory: String? = ""
+    var currentBreakfast: String? = ""
+    var currentLunch: String? = ""
+    var currentSnack: String? = ""
+    var currentTreat: String? = ""
+    var currentDrink: String? = ""
+    var currentPlace: String? = ""
+    var currentMood: String? = ""
+    var currentReaction: String? = ""
     
     // all CollectViews
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
@@ -70,28 +80,45 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
         textFieldFood.delegate = self
         textFieldMood.delegate = self
         
-        
         // Set Database------------------
         database.setDatabase()
         
-        
+    }
+    
+    func readTime(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        record.date = formatter.string(from: sender.date)
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        record.time = formatter.string(from: sender.date)
     }
 
     @IBAction func logButton(_ sender: Any) {
         textFieldFood.endEditing(true)
+        
         textFieldMood.endEditing(true)
-        if textFieldFood.text != "" {
-            recordInput.note = textFieldFood.text
+        if (textFieldFood.text != "") {
+            record.foodNote = textFieldFood.text
         }
-        
-        database.addRecord(mealCategoryTitle: recordInput.category.detailTitle,
-                           mealCategoryImage: recordInput.category.deatilImage,
-                           breakfastMealTitle: recordInput.meal.detailTitle,
-                           breakfastMealImage: recordInput.meal.deatilImage,
-                           foodNote: recordInput.note)
-    
-        
-        
+        if (textFieldMood.text != "") {
+            record.moodNote = textFieldMood.text
+        }
+        readTime(sender: timePicker)
+        database.addRecord(userID: record.userID,
+                           recordDate: record.date, recordTime: record.time,
+                           mealCategoryTitle: record.mealCategory?.itemTitle, mealCategoryImage: record.mealCategory?.itemImage,
+                           breakfastMealTitle: record.breakfastMeal?.itemTitle, breakfastMealImage: record.breakfastMeal?.itemImage,
+                           lunchDinMealTitle: record.lunchDinMeal?.itemTitle, lunchDinMealImage: record.lunchDinMeal?.itemImage,
+                           snackMealTitle: record.snackMeal?.itemTitle, snackMealImage: record.snackMeal?.itemImage,
+                           treatMealTitle: record.treatMeal?.itemTitle, treatMealImage: record.treatMeal?.itemImage,
+                           drinkTitle: record.drink?.itemTitle, drinkImage: record.drink?.itemImage,
+                           foodNote: record.foodNote,
+                           placeTitle: record.place?.itemTitle, placeImage: record.place?.itemImage,
+                           moodTitle: record.mood?.itemTitle, moodImage: record.mood?.itemImage,
+                           reactionTitle: record.reaction?.itemTitle, reactionImage: record.reaction?.itemImage,
+                           moodNote: record.moodNote)
     }
     
     
@@ -179,149 +206,118 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        func cellSelectionFeedback(cv: UICollectionView, collection: [FoodCollection]) {
-//            let cell : UICollectionViewCell = cv.cellForItem(at: indexPath)!
-//            cell.layer.cornerRadius = 10
-//            cell.layer.masksToBounds = true
-//            if collection[indexPath.row].foodTitle == chosenValue {
-//                cell.backgroundColor = .systemBackground
-//                chosenValue = "nil"
-//                print(chosenValue)
-//            } else {
-//                cell.backgroundColor = .systemGray6
-//                chosenValue = foodCategories[indexPath.row].foodTitle
-//                print(chosenValue)
-//            }
-//        }
-//        
-//        switch collectionView {
-//        case self.foodCategoryCollectionView :
-//            cellSelectionFeedback(cv: foodCategoryCollectionView, collection: foodCategories)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.breakfastOptionsCollectionView:
-//            cellSelectionFeedback(cv: breakfastOptionsCollectionView, collection: breakfastOptions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.lunchOptionsCollectionView:
-//            cellSelectionFeedback(cv: lunchOptionsCollectionView, collection: lunchOrDinnerOptions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.snackOptionsCollectionView :
-//            cellSelectionFeedback(cv: snackOptionsCollectionView, collection: snackOptions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.treatsOptionsCollectionView:
-//            cellSelectionFeedback(cv: treatsOptionsCollectionView, collection: treatsOptions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.drinksOptionsCollectionView:
-//            cellSelectionFeedback(cv: drinksOptionsCollectionView, collection: drinksOptions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.placesCollectionView:
-//            cellSelectionFeedback(cv: placesCollectionView, collection: places)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.moodCollectionView:
-//            cellSelectionFeedback(cv: moodCollectionView, collection: moods)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        case self.reactionCollectionView:
-//            cellSelectionFeedback(cv: reactionCollectionView, collection: reactions)
-//            recordInput.category.detailTitle = chosenValue
-//            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-//        default:
-//            UICollectionView()
-//        }
-        
-        
-        
-        
-        
-        if collectionView == self.foodCategoryCollectionView {
-            let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
+        func cellSelectionFeedback(cv: UICollectionView, collection: [FoodCollection], actualValue: inout String?) {
+            let cell : UICollectionViewCell = cv.cellForItem(at: indexPath)!
             cell.layer.cornerRadius = 10
             cell.layer.masksToBounds = true
-            
-            if foodCategories[indexPath.row].foodTitle == chosenValue {
-                cell.backgroundColor = .white
-                chosenValue = "nil"
-                print(chosenValue)
+            if collection[indexPath.row].foodTitle == actualValue {
+                cell.backgroundColor = .systemBackground
+                actualValue = "nil"
+                print(actualValue)
             } else {
                 cell.backgroundColor = .systemGray6
-                chosenValue = foodCategories[indexPath.row].foodTitle
-                print(chosenValue)
+                actualValue = collection[indexPath.row].foodTitle
+                print(actualValue)
             }
-            recordInput.category.detailTitle = chosenValue
-            recordInput.category.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-            
-        } else if collectionView == self.breakfastOptionsCollectionView {
-            let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            
-            if breakfastOptions[indexPath.row].foodTitle == chosenValue {
-                cell.backgroundColor = .white
-                chosenValue = "nil"
-                print(chosenValue)
-            } else {
-                cell.backgroundColor = .systemGray6
-                chosenValue = breakfastOptions[indexPath.row].foodTitle
-                print(chosenValue)
+        }
+        
+        switch collectionView {
+        case self.foodCategoryCollectionView :
+            cellSelectionFeedback(cv: foodCategoryCollectionView, collection: foodCategories, actualValue: &currentCategory)
+            record.mealCategory?.itemTitle = currentCategory
+            if (currentCategory != nil){
+                record.mealCategory?.itemImage = "#imageLiteral(resourceName: '\(currentCategory!)')"
             }
-            
-            recordInput.meal.detailTitle = chosenValue
-            recordInput.meal.deatilImage = "#imageLiteral(resourceName: '\(chosenValue)')"
-
-        } else if collectionView == self.lunchOptionsCollectionView {
-            let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.layer.cornerRadius = 10
-            cell.layer.masksToBounds = true
-            cell.backgroundColor = .systemGray6
-            print(lunchOrDinnerOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.snackOptionsCollectionView {
-            print(snackOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.treatsOptionsCollectionView {
-            print(treatsOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.drinksOptionsCollectionView {
-            print(drinksOptions[indexPath.row].foodTitle)
-        } else if collectionView == self.placesCollectionView {
-            print( places[indexPath.row].foodTitle)
-        } else if collectionView == self.moodCollectionView {
-            print(moods[indexPath.row].foodTitle)
-        } else if collectionView == self.reactionCollectionView {
-            print(reactions[indexPath.row].foodTitle)
+        case self.breakfastOptionsCollectionView:
+            cellSelectionFeedback(cv: breakfastOptionsCollectionView, collection: breakfastOptions, actualValue: &currentBreakfast)
+            record.breakfastMeal?.itemTitle = currentBreakfast
+            if (currentBreakfast != nil){
+                record.breakfastMeal?.itemImage = "#imageLiteral(resourceName: '\(currentBreakfast!)')"
+            }
+        case self.lunchOptionsCollectionView:
+            cellSelectionFeedback(cv: lunchOptionsCollectionView, collection: lunchOrDinnerOptions, actualValue: &currentLunch)
+            record.lunchDinMeal?.itemTitle = currentLunch
+            if (currentLunch != nil) {
+                record.lunchDinMeal?.itemImage = "#imageLiteral(resourceName: '\(currentLunch!)')"
+            }
+        case self.snackOptionsCollectionView :
+            cellSelectionFeedback(cv: snackOptionsCollectionView, collection: snackOptions, actualValue: &currentSnack)
+            record.snackMeal?.itemTitle = currentSnack
+            if (currentSnack != nil) {
+                record.snackMeal?.itemImage = "#imageLiteral(resourceName: '\(currentSnack!)')"
+            }
+        case self.treatsOptionsCollectionView:
+            cellSelectionFeedback(cv: treatsOptionsCollectionView, collection: treatsOptions, actualValue: &currentTreat)
+            record.treatMeal?.itemTitle = currentTreat
+            if (currentTreat != nil) {
+                record.treatMeal?.itemImage = "#imageLiteral(resourceName: '\(currentTreat!)')"
+            }
+        case self.drinksOptionsCollectionView:
+            cellSelectionFeedback(cv: drinksOptionsCollectionView, collection: drinksOptions, actualValue: &currentDrink)
+            record.drink?.itemTitle = currentDrink
+            if (currentDrink != nil) {
+                record.drink?.itemImage = "#imageLiteral(resourceName: '\(currentDrink!)')"
+            }
+        case self.placesCollectionView:
+            cellSelectionFeedback(cv: placesCollectionView, collection: places, actualValue: &currentPlace)
+            record.place?.itemTitle = currentPlace
+            if (currentPlace != nil){
+                record.place?.itemImage = "#imageLiteral(resourceName: '\(currentPlace!)')"
+            }
+        case self.moodCollectionView:
+            cellSelectionFeedback(cv: moodCollectionView, collection: moods, actualValue: &currentMood)
+            record.mood?.itemTitle = currentMood
+            if (currentMood != nil) {
+                record.mood?.itemImage = "#imageLiteral(resourceName: '\(currentMood!)')"
+            }
+        case self.reactionCollectionView:
+            cellSelectionFeedback(cv: reactionCollectionView, collection: reactions, actualValue: &currentReaction)
+            record.reaction?.itemTitle = currentReaction
+            if (currentReaction != nil) {
+                record.reaction?.itemImage = "#imageLiteral(resourceName: '\(currentReaction!)')"
+            }
+        default:
+            UICollectionView()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if collectionView == self.foodCategoryCollectionView {
             let cell : UICollectionViewCell = foodCategoryCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
-            print(foodCategories[indexPath.row].foodTitle)
-//            recordInput.category = foodCategories[indexPath.row].foodTitle
+            cell.backgroundColor = .systemBackground
+            record.mealCategory?.itemTitle = foodCategories[indexPath.row].foodTitle
         } else if collectionView == self.breakfastOptionsCollectionView {
             let cell : UICollectionViewCell = breakfastOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
-            print(breakfastOptions[indexPath.row].foodTitle)
-//            recordInput.meal = breakfastOptions[indexPath.row].foodTitle
+            cell.backgroundColor = .systemBackground
+            record.breakfastMeal?.itemTitle = breakfastOptions[indexPath.row].foodTitle
         } else if collectionView == self.lunchOptionsCollectionView {
             let cell : UICollectionViewCell = lunchOptionsCollectionView.cellForItem(at: indexPath)!
-            cell.backgroundColor = .white
-            print(lunchOrDinnerOptions[indexPath.row].foodTitle)
+            cell.backgroundColor = .systemBackground
+            record.lunchDinMeal?.itemTitle = lunchOrDinnerOptions[indexPath.row].foodTitle
         } else if collectionView == self.snackOptionsCollectionView {
-            print(snackOptions[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = snackOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.snackMeal?.itemTitle = snackOptions[indexPath.row].foodTitle
         } else if collectionView == self.treatsOptionsCollectionView {
-            print(treatsOptions[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = treatsOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.treatMeal?.itemTitle = treatsOptions[indexPath.row].foodTitle
         } else if collectionView == self.drinksOptionsCollectionView {
-            print(drinksOptions[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = drinksOptionsCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.drink?.itemTitle = drinksOptions[indexPath.row].foodTitle
         } else if collectionView == self.placesCollectionView {
-            print( places[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = placesCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.place?.itemTitle = places[indexPath.row].foodTitle
         } else if collectionView == self.moodCollectionView {
-            print(moods[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = moodCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.mood?.itemTitle = moods[indexPath.row].foodTitle
         } else if collectionView == self.reactionCollectionView {
-            print(reactions[indexPath.row].foodTitle)
+            let cell : UICollectionViewCell = reactionCollectionView.cellForItem(at: indexPath)!
+            cell.backgroundColor = .systemBackground
+            record.reaction?.itemTitle = reactions[indexPath.row].foodTitle
         }
     }
     

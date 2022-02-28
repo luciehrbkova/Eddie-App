@@ -10,10 +10,13 @@ import UIKit
 class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var recordTableView: UITableView!
+    let database = DatabaseManager()
     
 
-    var records = RecordsDatabase
+//    var records = RecordsDatabase
 
+//    var records = [Record]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,21 +25,30 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         //remove bottom border
         self.recordTableView.separatorStyle = .none
+        
+        // Set Database------------------
+        database.setDatabase()
+        database.readRecords(reloadedTableView: self.recordTableView)
+        
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return records.count
+//        return records.count
+        print(database.records.count)
+        return database.records.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let record = records[indexPath.row]
+        let record = database.records[indexPath.row]
         let cell = recordTableView.dequeueReusableCell(withIdentifier: "RecordsTableViewCell") as! RecordsTableViewCell
-        cell.recordMealCellImage.image = record.mealCategory?.itemImage
+//        cell.recordMealCellImage.image = record.mealCategory?.itemImage
+//        cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
         cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
         cell.recordMealCellNote.text = record.foodNote
         
-        cell.recordMoodCellImage.image = record.mood?.itemImage
+//        cell.recordMoodCellImage.image = record.mood?.itemImage
         cell.recordMoodCellTitle.text = "Feelings"
         cell.recordMoodCellNote.text = record.moodNote
         
