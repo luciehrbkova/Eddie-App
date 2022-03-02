@@ -835,28 +835,28 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-NF-Hw6">
-                                        <rect key="frame" x="0.0" y="2000" width="414" height="500"/>
+                                        <rect key="frame" x="0.0" y="2060" width="414" height="500"/>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="hcz-2g-Rz4"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lU-C1-knh">
-                                        <rect key="frame" x="0.0" y="2500" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="2560" width="414" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="wpf-1g-Szn"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-vW-LF3">
-                                        <rect key="frame" x="0.0" y="2700" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="2760" width="414" height="400"/>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="DHo-RG-2U2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1il-2N-GXJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2060"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flz-ez-Yvp">
                                                 <rect key="frame" x="20" y="16" width="374" height="21"/>
@@ -876,131 +876,184 @@
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Study 1: Deborah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-fa-3Nw">
-                                                <rect key="frame" x="20" y="148" width="173.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-su-39y">
-                                                <rect key="frame" x="20" y="176.5" width="374" height="220"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-Ut-aEf">
+                                                <rect key="frame" x="20" y="140" width="374" height="320"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deborah 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8G-eB-wVX">
+                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="hCN-Ea-EUE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Knf-Qm-L3Q">
+                                                        <rect key="frame" x="16" y="45" width="342" height="250"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="smz-rP-atw"/>
+                                                        </constraints>
+                                                        <string key="text">Deborah, a 25 year old architect had recently been discharged from hospital where she had been treated for anorexia nervosa. Her weight was now within the normal range for her age and
+height. However, she still found her thoughts to be preoccupied with food, eating and weight.
+She started starving herself all day while at work, then by evening, when she was at home alone, she would have such strong cravings for food that she would binge, sometimes for 2-3 hours, vomiting when she felt her stomach tense and uncomfortable. She had told none of her family or friends about her problems because she felt so ashamed.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="220" id="ZB8-sl-NzA"/>
+                                                    <constraint firstItem="Knf-Qm-L3Q" firstAttribute="leading" secondItem="lxq-Ut-aEf" secondAttribute="leading" constant="16" id="0nj-91-8kw"/>
+                                                    <constraint firstItem="Knf-Qm-L3Q" firstAttribute="top" secondItem="H8G-eB-wVX" secondAttribute="bottom" constant="8" symbolic="YES" id="IZn-x1-uBs"/>
+                                                    <constraint firstItem="H8G-eB-wVX" firstAttribute="top" secondItem="lxq-Ut-aEf" secondAttribute="top" constant="16" id="OoZ-uP-WLI"/>
+                                                    <constraint firstItem="H8G-eB-wVX" firstAttribute="leading" secondItem="lxq-Ut-aEf" secondAttribute="leading" constant="16" id="P0L-3b-9lL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Knf-Qm-L3Q" secondAttribute="trailing" constant="16" id="cnu-TU-kqo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H8G-eB-wVX" secondAttribute="trailing" constant="16" id="dox-4Q-D3x"/>
+                                                    <constraint firstAttribute="height" constant="320" id="za1-eS-DbP"/>
                                                 </constraints>
-                                                <mutableString key="text">Deborah, a 25 year old architect had recently been discharged from hospital where she had been treated for anorexia nervosa. Her weight was now within the normal range for her age and height. However, she still found her thoughts to be preoccupied with food, eating and weight.She started starving herself all day while at work, then by evening, when she was at home alone, she would have such strong cravings for food that she would binge, sometimes for 2-3 hours, vomiting when she felt her stomach tense and uncomfortable. She had told none of her familyor friends about her problems because she felt so ashamed.</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Study 2: George" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joV-tc-b5X">
-                                                <rect key="frame" x="20" y="440.5" width="374" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="IlV-9w-b3N"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jb-IQ-eeO">
-                                                <rect key="frame" x="20" y="469.5" width="374" height="220"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZl-Gg-zGi">
+                                                <rect key="frame" x="20" y="496" width="374" height="380"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="George" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-Zj-v8m">
+                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="NW9-Dr-tN1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yax-UK-TWj">
+                                                        <rect key="frame" x="16" y="45" width="342" height="320"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="320" id="xME-JG-Oda"/>
+                                                        </constraints>
+                                                        <string key="text">George had always been teased at school for being "fat". At the age of 15 years, he had started
+himself on a strict diet in order to lose some weight and make himself feel better. He initially lost weight, but his parents continually expressed anxiety over his restricted intake, so he started
+eating apparently "normally" again with his parents but would secretly go off to the toilet as
+soon after a meal as possible and make himself sick. As time went on, he began bingeing and
+vomiting whenever he had the house to himself. Often up to 6 times per day. His parents,
+unaware of what was going on, were relieved to see him eating "proper" meals but were worried
+by his apparent change in personality from a happy-go-lucky child into a moody, irritable and
+secretive adolescent who seemed to have no friends and never went out if he could help it.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="220" id="TrO-wm-3WQ"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="f6Q-sF-qjV"/>
+                                                    <constraint firstItem="yax-UK-TWj" firstAttribute="leading" secondItem="lZl-Gg-zGi" secondAttribute="leading" constant="16" id="5cv-Wx-SSs"/>
+                                                    <constraint firstAttribute="height" constant="380" id="9cE-fa-L3F"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="C12-oz-V6r"/>
+                                                    <constraint firstItem="kdh-Zj-v8m" firstAttribute="leading" secondItem="lZl-Gg-zGi" secondAttribute="leading" constant="16" id="H0D-nU-aWY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kdh-Zj-v8m" secondAttribute="trailing" constant="16" id="OGd-KV-Oz0"/>
+                                                    <constraint firstItem="kdh-Zj-v8m" firstAttribute="top" secondItem="lZl-Gg-zGi" secondAttribute="top" constant="16" id="UL2-Pm-P7t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yax-UK-TWj" secondAttribute="trailing" constant="16" id="mVW-Pg-9Tf"/>
+                                                    <constraint firstItem="yax-UK-TWj" firstAttribute="top" secondItem="kdh-Zj-v8m" secondAttribute="bottom" constant="8" symbolic="YES" id="sOQ-3D-EAW"/>
                                                 </constraints>
-                                                <mutableString key="text">George had always been teased at school for being "fat". At the age of 15 years, he had started himself on a strict diet in order to lose some weight and make himself feel better. He initially lost weight, but his parents continually expressed anxiety over his restricted intake, so he started eating apparently "normally" again with his parents but would secretly go off to the toilet as soon after a meal as possible and make himself sick. As time went on, he began bingeing and vomiting whenever he had the house to himself. Often up to 6 times per day. His parents,unaware of what was going on, were relieved to see him eating "proper" meals but were worried by his apparent change in personality from a happy-go-lucky child into a moody, irritable and secretive adolescent who seemed to have no friends and never went out if he could help it.</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Study 3: Paul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvV-gw-ATa">
-                                                <rect key="frame" x="20" y="733.5" width="374" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Pt1-kl-Dq8"/>
-                                                    <constraint firstAttribute="height" constant="21" id="eqt-T5-6nC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVu-RW-sdT">
-                                                <rect key="frame" x="20" y="762.5" width="374" height="220"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GQ-ZA-Ptz">
+                                                <rect key="frame" x="20" y="912" width="374" height="350"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jill 37" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12F-bQ-zMR">
+                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="5fY-Os-x8I"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DiJ-BW-HSD">
+                                                        <rect key="frame" x="16" y="45" width="342" height="290"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="290" id="j3T-Ie-hoP"/>
+                                                        </constraints>
+                                                        <string key="text">Jill was a 37 year old housewife and mother of three. She spent most of her day running after
+the children, looking after her frail mother and keeping the house in order. Her husband often
+worked away from home and she didn't have many friends in the area, so she didn't tend to go
+out much. She felt very alone and unhappy. She didn't sit down with her family at meal times
+just picking at food as she went from task to task. However, when the children had gone to bed
+and she was alone in front of the television, she often used to consume several packets of
+chocolate biscuits as she felt food comforted her. Guilt over her actions made her vomit
+afterwards. She was now 3 stone overweight but felt too miserable to do anything about it.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="220" id="2iS-u6-w71"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="kMQ-65-76H"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="pxs-g2-Rfe"/>
+                                                    <constraint firstItem="DiJ-BW-HSD" firstAttribute="top" secondItem="12F-bQ-zMR" secondAttribute="bottom" constant="8" symbolic="YES" id="4oj-jw-Vxh"/>
+                                                    <constraint firstItem="DiJ-BW-HSD" firstAttribute="leading" secondItem="1GQ-ZA-Ptz" secondAttribute="leading" constant="16" id="5G9-sa-Dxv"/>
+                                                    <constraint firstAttribute="height" constant="350" id="LPm-7R-Gxu"/>
+                                                    <constraint firstItem="12F-bQ-zMR" firstAttribute="top" secondItem="1GQ-ZA-Ptz" secondAttribute="top" constant="16" id="eHX-bH-4wx"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="ffp-UB-flT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="12F-bQ-zMR" secondAttribute="trailing" constant="16" id="gsN-p1-fYc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DiJ-BW-HSD" secondAttribute="trailing" constant="16" id="k1o-hX-kMN"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="n4q-2p-KVM"/>
+                                                    <constraint firstItem="12F-bQ-zMR" firstAttribute="leading" secondItem="1GQ-ZA-Ptz" secondAttribute="leading" constant="16" id="tdS-Mv-PNo"/>
                                                 </constraints>
-                                                <mutableString key="text">Paul was a 21 year old student of law when he developed bulimia. On returning home from lectures he would stop off at the supermarket and buy bread, biscuits and confectionery, often consuming most of it before he got back to his flat. He had tried inducing vomiting but had found himself unable to do so. Instead, he took 20-30 laxative tablets after each binge and did frequent exercise to burn off the rest. He felt permanently exhausted and found it hard to concentrate on his lectures, often falling asleep during them. His preoccupations with food made studying hard and eventually he dropped out of university after failing his second yearexams.</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Study 4: Jill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnV-S3-T1H">
-                                                <rect key="frame" x="20" y="1026.5" width="374" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="2CJ-3H-m51"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Q3o-11-3ej"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="SwO-Ke-mjG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-ic-ltI">
-                                                <rect key="frame" x="20" y="1055.5" width="374" height="220"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-e7-8l6">
+                                                <rect key="frame" x="20" y="1298" width="374" height="330"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I2-K3-COi">
+                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="l0F-bP-SV8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JBD-P7-yf5">
+                                                        <rect key="frame" x="16" y="45" width="342" height="270"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="270" id="cRA-kK-bJI"/>
+                                                        </constraints>
+                                                        <string key="text">Paul was a 21 year old student of law when he developed bulimia. On returning home from
+lectures he would stop off at the supermarket and buy bread, biscuits and confectionery, often
+consuming most of it before he got back to his flat. He had tried inducing vomiting but had
+found himself unable to do so. Instead, he took 20-30 laxative tablets after each binge and did
+frequent exercise to burn off the rest. He felt permanently exhausted and found it hard to
+concentrate on his lectures, often falling asleep during them. His preoccupations with food
+made studying hard and eventually he dropped out of university after failing his second year
+exams.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="DCa-my-IqN"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="J9J-ac-gGM"/>
-                                                    <constraint firstAttribute="height" constant="220" id="n6N-xO-J0u"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="vLe-v2-rRL"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="1iE-Rs-eQW"/>
+                                                    <constraint firstItem="JBD-P7-yf5" firstAttribute="leading" secondItem="TXY-e7-8l6" secondAttribute="leading" constant="16" id="5av-Un-aak"/>
+                                                    <constraint firstItem="4I2-K3-COi" firstAttribute="top" secondItem="TXY-e7-8l6" secondAttribute="top" constant="16" id="6ey-ao-g3c"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="DeA-LH-HVO"/>
+                                                    <constraint firstItem="4I2-K3-COi" firstAttribute="leading" secondItem="TXY-e7-8l6" secondAttribute="leading" constant="16" id="fye-K9-ETY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4I2-K3-COi" secondAttribute="trailing" constant="16" id="iZI-Qu-S6G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JBD-P7-yf5" secondAttribute="trailing" constant="16" id="k7R-ll-klj"/>
+                                                    <constraint firstAttribute="height" constant="330" id="p2m-Pt-mTu"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="wCe-Oj-f6g"/>
+                                                    <constraint firstItem="JBD-P7-yf5" firstAttribute="top" secondItem="4I2-K3-COi" secondAttribute="bottom" constant="8" symbolic="YES" id="wwf-wD-0Hj"/>
                                                 </constraints>
-                                                <mutableString key="text">Jill was a 37 year old housewife and mother of three. She spent most of her day running after the children, looking after her frail mother and keeping the house in order. Her husband often worked away from home and she didn't have many friends in the area, so she didn't tend to go out much. She felt very alone and unhappy. She didn't sit down with her family at meal times just picking at food as she went from task to task. However, when the children had gone to bed and she was alone in front of the television, she often used to consume several packets of chocolate biscuits as she felt food comforted her. Guilt over her actions made her vomitafterwards. She was now 3 stone overweight but felt too miserable to do anything about it.</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Study 5: Ann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-Ms-1ts">
-                                                <rect key="frame" x="20" y="1319.5" width="374" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="BAp-8j-teu"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="FEY-vf-CHa"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Tx2-ty-55V"/>
-                                                    <constraint firstAttribute="height" constant="21" id="xxg-PG-VKD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQc-oM-BPb">
-                                                <rect key="frame" x="20" y="1348.5" width="374" height="220"/>
-                                                <color key="backgroundColor" name="GreenSecond"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="JfE-i7-YAn"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="PVQ-Nn-cOx"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="dZl-sB-D0C"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="220" id="kfQ-Tv-xxl"/>
-                                                    <constraint firstAttribute="height" constant="220" id="mb4-v0-KOi"/>
-                                                </constraints>
-                                                <mutableString key="text">Ann was a 20 year old unemployed secretary. She had developed bulimia 10 months previously following a split with her fianc  and had been unable to work since due to a combination of depression and her chaotic eating pattern. She was now in severe financial debt as a result of buying food, clothes and beauty products on credit, in order to make herself "feel better". She would never try on clothes in the shops as she couldn't bear exposing her body to others in the changing rooms nor seeing herself in the numerous mirrors. Unfortunately, she couldn't face the shop assistants to take back the ones she didn't like, so they hung in her wardrobe untouched. She felt comforted when she bought things, although she knew she couldn't afford to pay for them when the bills came through.</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                            </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8l-Iv-8ZN">
-                                                <rect key="frame" x="20" y="1612.5" width="374" height="140"/>
+                                                <rect key="frame" x="20" y="1672" width="374" height="140"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="140" id="gK5-Z5-tk4"/>
+                                                    <constraint firstAttribute="height" constant="140" id="r68-KN-NNQ"/>
                                                 </constraints>
-                                                <string key="text">Do you recognise yourself in any of these descriptions? Perhaps no particular case fits you exactly but there may be parts from Deborah, George, Jill, Paul or Ann's stories that are familiar to you.</string>
+                                                <string key="text">Do you recognise yourself in any of these descriptions? 
+Perhaps no particular case fits you exactly but there may be parts from Deborah, George, Jill or Paul's stories that are familiar to you.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-0r-b8O">
-                                                <rect key="frame" x="20" y="1796.5" width="374" height="64"/>
+                                                <rect key="frame" x="20" y="1856" width="374" height="64"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-oD-sMo">
                                                         <rect key="frame" x="16" y="16" width="342" height="32"/>
@@ -1048,52 +1101,31 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="ru4-fa-3Nw" firstAttribute="top" secondItem="mct-mY-4JO" secondAttribute="bottom" constant="44" id="02e-0H-sAu"/>
-                                            <constraint firstItem="uvV-gw-ATa" firstAttribute="top" secondItem="0jb-IQ-eeO" secondAttribute="bottom" constant="44" id="3uN-hs-DQN"/>
-                                            <constraint firstItem="HNa-ic-ltI" firstAttribute="top" secondItem="JnV-S3-T1H" secondAttribute="bottom" constant="8" id="5Y5-DR-ATQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="joV-tc-b5X" secondAttribute="trailing" constant="20" id="5qo-fr-tTR"/>
-                                            <constraint firstItem="mQc-oM-BPb" firstAttribute="top" secondItem="zqt-Ms-1ts" secondAttribute="bottom" constant="8" symbolic="YES" id="8u6-e1-lES"/>
+                                            <constraint firstItem="lZl-Gg-zGi" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="2qE-p6-RXC"/>
+                                            <constraint firstAttribute="trailing" secondItem="TXY-e7-8l6" secondAttribute="trailing" constant="20" symbolic="YES" id="6LE-m7-0XO"/>
                                             <constraint firstItem="mct-mY-4JO" firstAttribute="top" secondItem="Flz-ez-Yvp" secondAttribute="bottom" constant="44" id="Bhj-3P-ukp"/>
-                                            <constraint firstItem="joV-tc-b5X" firstAttribute="top" secondItem="1KL-su-39y" secondAttribute="bottom" constant="44" id="Bik-yC-J02"/>
-                                            <constraint firstItem="zqt-Ms-1ts" firstAttribute="top" secondItem="HNa-ic-ltI" secondAttribute="bottom" constant="44" id="Ecr-Ce-Iac"/>
-                                            <constraint firstAttribute="trailing" secondItem="mQc-oM-BPb" secondAttribute="trailing" constant="20" symbolic="YES" id="GN1-a8-dCt"/>
-                                            <constraint firstAttribute="trailing" secondItem="1KL-su-39y" secondAttribute="trailing" constant="20" symbolic="YES" id="HBO-gk-BMP"/>
-                                            <constraint firstItem="HNa-ic-ltI" firstAttribute="top" secondItem="JnV-S3-T1H" secondAttribute="bottom" constant="8" symbolic="YES" id="IzN-Sn-caG"/>
+                                            <constraint firstItem="Q8l-Iv-8ZN" firstAttribute="top" secondItem="TXY-e7-8l6" secondAttribute="bottom" constant="44" id="IVJ-Vn-cnN"/>
                                             <constraint firstAttribute="trailing" secondItem="5lH-0r-b8O" secondAttribute="trailing" constant="20" symbolic="YES" id="Jvf-7q-FUQ"/>
-                                            <constraint firstItem="0jb-IQ-eeO" firstAttribute="top" secondItem="joV-tc-b5X" secondAttribute="bottom" constant="8" symbolic="YES" id="KLg-37-azf"/>
                                             <constraint firstItem="5lH-0r-b8O" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="L4l-3l-xqs"/>
-                                            <constraint firstItem="joV-tc-b5X" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="M4u-id-a23"/>
-                                            <constraint firstAttribute="trailing" secondItem="xVu-RW-sdT" secondAttribute="trailing" constant="20" symbolic="YES" id="N4z-Pm-wSt"/>
-                                            <constraint firstItem="mQc-oM-BPb" firstAttribute="top" secondItem="zqt-Ms-1ts" secondAttribute="bottom" constant="8" id="PBZ-iL-By8"/>
-                                            <constraint firstItem="1KL-su-39y" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="PsJ-AN-slA"/>
-                                            <constraint firstAttribute="trailing" secondItem="JnV-S3-T1H" secondAttribute="trailing" constant="20" symbolic="YES" id="RJs-se-q7d"/>
+                                            <constraint firstItem="1GQ-ZA-Ptz" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="MPQ-nM-fln"/>
+                                            <constraint firstItem="1GQ-ZA-Ptz" firstAttribute="top" secondItem="lZl-Gg-zGi" secondAttribute="bottom" constant="36" id="Ohh-Nb-abx"/>
                                             <constraint firstItem="Flz-ez-Yvp" firstAttribute="top" secondItem="1il-2N-GXJ" secondAttribute="top" constant="16" id="RMe-5b-tbS"/>
-                                            <constraint firstItem="ru4-fa-3Nw" firstAttribute="leading" secondItem="mct-mY-4JO" secondAttribute="leading" id="U45-zf-0xA"/>
-                                            <constraint firstAttribute="trailing" secondItem="HNa-ic-ltI" secondAttribute="trailing" constant="20" symbolic="YES" id="VwV-Sg-ch4"/>
-                                            <constraint firstItem="1KL-su-39y" firstAttribute="top" secondItem="ru4-fa-3Nw" secondAttribute="bottom" constant="8" symbolic="YES" id="WMa-82-OYo"/>
+                                            <constraint firstItem="lxq-Ut-aEf" firstAttribute="top" secondItem="mct-mY-4JO" secondAttribute="bottom" constant="36" id="RYZ-f0-PS6"/>
+                                            <constraint firstItem="TXY-e7-8l6" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="UYE-tM-S8F"/>
                                             <constraint firstItem="Q8l-Iv-8ZN" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="YRv-Ni-bdG"/>
-                                            <constraint firstItem="JnV-S3-T1H" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="ZWR-48-uU7"/>
-                                            <constraint firstAttribute="trailing" secondItem="uvV-gw-ATa" secondAttribute="trailing" constant="20" symbolic="YES" id="aeE-i4-dsE"/>
                                             <constraint firstItem="Flz-ez-Yvp" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" id="bGY-mI-hvO"/>
                                             <constraint firstAttribute="trailing" secondItem="Q8l-Iv-8ZN" secondAttribute="trailing" constant="20" symbolic="YES" id="cbP-CN-EdN"/>
-                                            <constraint firstAttribute="height" constant="2000" id="dGI-7T-tW3"/>
-                                            <constraint firstItem="xVu-RW-sdT" firstAttribute="top" secondItem="uvV-gw-ATa" secondAttribute="bottom" constant="8" id="eAq-R7-Onv"/>
+                                            <constraint firstAttribute="height" constant="2060" id="dGI-7T-tW3"/>
+                                            <constraint firstAttribute="trailing" secondItem="lxq-Ut-aEf" secondAttribute="trailing" constant="20" symbolic="YES" id="daw-DT-4f5"/>
+                                            <constraint firstItem="lxq-Ut-aEf" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="eK1-AZ-Sax"/>
+                                            <constraint firstAttribute="trailing" secondItem="lZl-Gg-zGi" secondAttribute="trailing" constant="20" symbolic="YES" id="fup-Mi-Fpm"/>
                                             <constraint firstAttribute="trailing" secondItem="mct-mY-4JO" secondAttribute="trailing" constant="20" id="fvT-8R-Zf4"/>
                                             <constraint firstAttribute="trailing" secondItem="Flz-ez-Yvp" secondAttribute="trailing" constant="20" id="fz6-Cs-eiC"/>
                                             <constraint firstItem="mct-mY-4JO" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="j0o-LB-mDs"/>
-                                            <constraint firstItem="uvV-gw-ATa" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="j9o-Bb-cbR"/>
-                                            <constraint firstAttribute="trailing" secondItem="zqt-Ms-1ts" secondAttribute="trailing" constant="20" symbolic="YES" id="mi5-KN-JRk"/>
-                                            <constraint firstItem="HNa-ic-ltI" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="oYw-8g-vDH"/>
                                             <constraint firstItem="5lH-0r-b8O" firstAttribute="top" secondItem="Q8l-Iv-8ZN" secondAttribute="bottom" constant="44" id="qnK-4G-SWn"/>
-                                            <constraint firstItem="Q8l-Iv-8ZN" firstAttribute="top" secondItem="mQc-oM-BPb" secondAttribute="bottom" constant="44" id="qyL-Q4-cY3"/>
-                                            <constraint firstItem="xVu-RW-sdT" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="rRs-2d-IZg"/>
-                                            <constraint firstItem="mQc-oM-BPb" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="teU-9v-rzY"/>
-                                            <constraint firstItem="0jb-IQ-eeO" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="v38-RR-ym2"/>
-                                            <constraint firstItem="mQc-oM-BPb" firstAttribute="top" secondItem="zqt-Ms-1ts" secondAttribute="bottom" constant="8" symbolic="YES" id="viJ-Np-FK9"/>
-                                            <constraint firstItem="JnV-S3-T1H" firstAttribute="top" secondItem="xVu-RW-sdT" secondAttribute="bottom" constant="44" id="w7t-jT-25k"/>
-                                            <constraint firstAttribute="trailing" secondItem="0jb-IQ-eeO" secondAttribute="trailing" constant="20" symbolic="YES" id="wxP-KV-1Pe"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ru4-fa-3Nw" secondAttribute="trailing" constant="20" symbolic="YES" id="yM7-Au-V6u"/>
-                                            <constraint firstItem="zqt-Ms-1ts" firstAttribute="leading" secondItem="1il-2N-GXJ" secondAttribute="leading" constant="20" symbolic="YES" id="zL2-SZ-4Kf"/>
+                                            <constraint firstAttribute="trailing" secondItem="1GQ-ZA-Ptz" secondAttribute="trailing" constant="20" symbolic="YES" id="yJC-Yg-kgS"/>
+                                            <constraint firstItem="lZl-Gg-zGi" firstAttribute="top" secondItem="lxq-Ut-aEf" secondAttribute="bottom" constant="36" id="yzk-gL-u0H"/>
+                                            <constraint firstItem="TXY-e7-8l6" firstAttribute="top" secondItem="1GQ-ZA-Ptz" secondAttribute="bottom" constant="36" id="zuZ-3M-CXL"/>
                                         </constraints>
                                     </view>
                                 </subviews>
