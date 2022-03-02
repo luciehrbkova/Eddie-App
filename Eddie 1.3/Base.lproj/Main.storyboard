@@ -1175,7 +1175,8 @@ but not all the above.</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="330" id="amy-Sh-CUa"/>
                                                 </constraints>
-                                                <mutableString key="text">Some people binge only occasionally and their eating disorder does not significantly interfere with their lives. For others, the problem can be more consuming. They may binge and vomit/purge several times a day, be unable to hold down a job, be severely physically run down, feel emotionally out of control and socially isolated. Obviously there is a continuum between a "normal" eating pattern and that of someone with a severe form of bulimia nervosa. See appendix e) for more information on Body Mass Index.</mutableString>
+                                                <string key="text">Some people binge only occasionally and their eating disorder does not significantly interfere with their lives. For others, the problem can be more consuming. They may binge and vomit/purge several times a day, be unable to hold down a job, be severely physically run down, feel emotionally out of control and socially isolated. 
+Obviously there is a continuum between a "normal" eating pattern and that of someone with a severe form of bulimia nervosa. See appendix e) for more information on Body Mass Index.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1258,14 +1259,67 @@ but not all the above.</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lU-C1-knh">
-                                        <rect key="frame" x="0.0" y="3860" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="3860" width="414" height="1500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What does bulimia mean to YOU?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-dN-AGY">
+                                                <rect key="frame" x="20" y="153" width="374" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="cyZ-B9-XOM"/>
+                                                    <constraint firstAttribute="height" constant="23" id="oCx-Ii-Smn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyN-3p-cRa">
+                                                <rect key="frame" x="20" y="220" width="374" height="200"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-fu-e40">
+                                                        <rect key="frame" x="16" y="16" width="342" height="142"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="di5-7a-IbI"/>
+                                                        </constraints>
+                                                        <string key="text">- Is it consuming all your thinking time?- Does your day revolve around food?- Are you too ashamed to talk to others about it?- Do you need it to cope with the stresses of daily life?- Has it led to you becoming socially isolated?- Has it affected your physical health?</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ug0-fu-e40" secondAttribute="trailing" constant="16" id="4ez-dv-6yj"/>
+                                                    <constraint firstAttribute="height" constant="200" id="Pjh-Dw-Ozg"/>
+                                                    <constraint firstItem="Ug0-fu-e40" firstAttribute="top" secondItem="gyN-3p-cRa" secondAttribute="top" constant="16" id="aeP-ix-LcI"/>
+                                                    <constraint firstItem="Ug0-fu-e40" firstAttribute="leading" secondItem="gyN-3p-cRa" secondAttribute="leading" constant="16" id="ijd-vR-Qd2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homework" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-UJ-yD5">
+                                                <rect key="frame" x="20" y="66" width="374" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Oz4-ki-8nW"/>
+                                                    <constraint firstAttribute="height" constant="21" id="yxc-sf-1D8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" name="GreenMain"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="wpf-1g-Szn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rvc-UJ-yD5" secondAttribute="trailing" constant="20" symbolic="YES" id="1rd-zd-Gty"/>
+                                            <constraint firstItem="gyN-3p-cRa" firstAttribute="leading" secondItem="6lU-C1-knh" secondAttribute="leading" constant="20" symbolic="YES" id="9Vp-as-DoF"/>
+                                            <constraint firstAttribute="trailing" secondItem="NHp-dN-AGY" secondAttribute="trailing" constant="20" id="Imf-2U-Mlt"/>
+                                            <constraint firstAttribute="trailing" secondItem="gyN-3p-cRa" secondAttribute="trailing" constant="20" symbolic="YES" id="JGf-JD-Jvg"/>
+                                            <constraint firstItem="Rvc-UJ-yD5" firstAttribute="leading" secondItem="6lU-C1-knh" secondAttribute="leading" constant="20" symbolic="YES" id="LPy-PH-kSh"/>
+                                            <constraint firstItem="NHp-dN-AGY" firstAttribute="top" secondItem="Rvc-UJ-yD5" secondAttribute="bottom" constant="66" id="NUg-g5-QGh"/>
+                                            <constraint firstItem="NHp-dN-AGY" firstAttribute="leading" secondItem="6lU-C1-knh" secondAttribute="leading" constant="20" id="YkS-23-DJB"/>
+                                            <constraint firstItem="Rvc-UJ-yD5" firstAttribute="top" secondItem="6lU-C1-knh" secondAttribute="top" constant="66" id="az7-zO-tiC"/>
+                                            <constraint firstItem="gyN-3p-cRa" firstAttribute="top" secondItem="NHp-dN-AGY" secondAttribute="bottom" constant="44" id="liu-Uk-X9Q"/>
+                                            <constraint firstAttribute="height" constant="1500" id="wpf-1g-Szn"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-vW-LF3">
-                                        <rect key="frame" x="0.0" y="4060" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="5360" width="414" height="400"/>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="DHo-RG-2U2"/>
