@@ -834,27 +834,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4f-kn-P2J">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-NF-Hw6">
-                                        <rect key="frame" x="0.0" y="2060" width="414" height="500"/>
-                                        <color key="backgroundColor" name="PeachSecond"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="hcz-2g-Rz4"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lU-C1-knh">
-                                        <rect key="frame" x="0.0" y="2560" width="414" height="200"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="wpf-1g-Szn"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-vW-LF3">
-                                        <rect key="frame" x="0.0" y="2760" width="414" height="400"/>
-                                        <color key="backgroundColor" name="PeachSecond"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="DHo-RG-2U2"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1il-2N-GXJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2060"/>
                                         <subviews>
@@ -1126,6 +1105,111 @@ Perhaps no particular case fits you exactly but there may be parts from Deborah,
                                             <constraint firstAttribute="trailing" secondItem="1GQ-ZA-Ptz" secondAttribute="trailing" constant="20" symbolic="YES" id="yJC-Yg-kgS"/>
                                             <constraint firstItem="lZl-Gg-zGi" firstAttribute="top" secondItem="lxq-Ut-aEf" secondAttribute="bottom" constant="36" id="yzk-gL-u0H"/>
                                             <constraint firstItem="TXY-e7-8l6" firstAttribute="top" secondItem="1GQ-ZA-Ptz" secondAttribute="bottom" constant="36" id="zuZ-3M-CXL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OO-NF-Hw6">
+                                        <rect key="frame" x="0.0" y="2060" width="414" height="1800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BULIMIA MEANS DIFFERENT THINGS TO DIFFERENT PEOPLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TA-dD-juo">
+                                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="EvK-yV-CDw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The symptoms can vary in type and severity. Below is the currently accepted definition used by Psychiatrists and Psychologists:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYB-RA-1vo">
+                                                <rect key="frame" x="20" y="150" width="374" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="yos-op-uFv"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLg-5W-TJW">
+                                                <rect key="frame" x="20" y="264" width="374" height="520"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criteria for Bulimia Nervosa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1e-wv-hy7">
+                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="X0o-lp-5eP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FaL-4d-YeU">
+                                                        <rect key="frame" x="16" y="45" width="342" height="470"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="470" id="I1n-uh-VuO"/>
+                                                        </constraints>
+                                                        <string key="text">A. You must have recurrent episodes of binge-eating. This means rapid consumption of a large amount of food in a discrete period of time, usually less than two hours        
+B. During the eating binges you should feel a loss of control over your behaviour 
+C. You should regularly engage in either self-induced vomiting, use of laxatives, strict dieting, fasting or rigorous exercising in order to counteract the effects of your binge
+eating 
+D. You should have a minimum average of two binge-eating episodes per week for at least three months 
+E. You should have marked anxious over-concern with body shape and weight.
+ This is what the 'experts' say you are supposed to do in order to have Bulimia Nervosa.
+Remember these are not all the features of Bulimia Nervosa, you may have other symptoms
+but not all the above.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="FaL-4d-YeU" secondAttribute="trailing" constant="16" id="A8Q-kV-3I2"/>
+                                                    <constraint firstItem="H1e-wv-hy7" firstAttribute="top" secondItem="hLg-5W-TJW" secondAttribute="top" constant="16" id="Btj-Ru-5uk"/>
+                                                    <constraint firstAttribute="height" constant="520" id="FAa-2n-qY9"/>
+                                                    <constraint firstItem="FaL-4d-YeU" firstAttribute="leading" secondItem="hLg-5W-TJW" secondAttribute="leading" constant="16" id="IUk-2T-9Au"/>
+                                                    <constraint firstItem="FaL-4d-YeU" firstAttribute="top" secondItem="H1e-wv-hy7" secondAttribute="bottom" constant="8" symbolic="YES" id="T3U-Kj-kui"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H1e-wv-hy7" secondAttribute="trailing" constant="16" id="qP8-63-yJF"/>
+                                                    <constraint firstItem="H1e-wv-hy7" firstAttribute="leading" secondItem="hLg-5W-TJW" secondAttribute="leading" constant="16" id="scY-7b-ubf"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maE-YX-E6D">
+                                                <rect key="frame" x="20" y="820" width="374" height="253"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="253" id="amy-Sh-CUa"/>
+                                                </constraints>
+                                                <string key="text">Some people binge only occasionally and their eating disorder does not significantly interfere with their lives. For others, the problem can be more consuming. They may binge and vomit/purge several times a day, be unable to hold down a job, be severely physically run down, feel emotionally out of control and socially isolated.Obviously there is a continuum between a "normal" eating pattern and that of someone with a severe form of bulimia nervosa. See appendix e) for more information on Body Mass Index.</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="PeachSecond"/>
+                                        <constraints>
+                                            <constraint firstItem="hLg-5W-TJW" firstAttribute="leading" secondItem="7OO-NF-Hw6" secondAttribute="leading" constant="20" symbolic="YES" id="5ij-bs-0ec"/>
+                                            <constraint firstItem="qYB-RA-1vo" firstAttribute="top" secondItem="6TA-dD-juo" secondAttribute="bottom" constant="36" id="7jL-e2-pRu"/>
+                                            <constraint firstAttribute="trailing" secondItem="maE-YX-E6D" secondAttribute="trailing" constant="20" symbolic="YES" id="DTZ-Hr-bag"/>
+                                            <constraint firstItem="qYB-RA-1vo" firstAttribute="leading" secondItem="7OO-NF-Hw6" secondAttribute="leading" constant="20" symbolic="YES" id="FOS-9J-ByC"/>
+                                            <constraint firstItem="6TA-dD-juo" firstAttribute="top" secondItem="7OO-NF-Hw6" secondAttribute="top" constant="64" id="MG9-Vc-ONB"/>
+                                            <constraint firstItem="maE-YX-E6D" firstAttribute="leading" secondItem="7OO-NF-Hw6" secondAttribute="leading" constant="20" symbolic="YES" id="NDR-jc-iwz"/>
+                                            <constraint firstItem="maE-YX-E6D" firstAttribute="top" secondItem="hLg-5W-TJW" secondAttribute="bottom" constant="36" id="Uwr-P2-zaa"/>
+                                            <constraint firstItem="6TA-dD-juo" firstAttribute="leading" secondItem="7OO-NF-Hw6" secondAttribute="leading" constant="20" symbolic="YES" id="YCc-an-3hx"/>
+                                            <constraint firstItem="hLg-5W-TJW" firstAttribute="top" secondItem="qYB-RA-1vo" secondAttribute="bottom" constant="44" id="c2u-S4-Ydz"/>
+                                            <constraint firstAttribute="height" constant="1800" id="hcz-2g-Rz4"/>
+                                            <constraint firstAttribute="trailing" secondItem="qYB-RA-1vo" secondAttribute="trailing" constant="20" symbolic="YES" id="hrL-ZY-9VW"/>
+                                            <constraint firstAttribute="trailing" secondItem="6TA-dD-juo" secondAttribute="trailing" constant="20" symbolic="YES" id="tKi-6E-ers"/>
+                                            <constraint firstAttribute="trailing" secondItem="hLg-5W-TJW" secondAttribute="trailing" constant="20" symbolic="YES" id="wp0-Gi-fFZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lU-C1-knh">
+                                        <rect key="frame" x="0.0" y="3860" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="wpf-1g-Szn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-vW-LF3">
+                                        <rect key="frame" x="0.0" y="4060" width="414" height="400"/>
+                                        <color key="backgroundColor" name="PeachSecond"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="DHo-RG-2U2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2473,14 +2557,14 @@ Perhaps no particular case fits you exactly but there may be parts from Deborah,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar0" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-d1-QM8">
-                                <rect key="frame" x="139" y="124" width="136" height="150"/>
+                                <rect key="frame" x="139" y="124" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1Dq-1u-OZn"/>
                                     <constraint firstAttribute="width" constant="150" id="cNh-Vs-w9W"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yaa-Gx-gNZ">
-                                <rect key="frame" x="20" y="310" width="374" height="566"/>
+                                <rect key="frame" x="20" y="310" width="388" height="566"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxf-ji-T3q">
                                     <size key="itemSize" width="128" height="128"/>
