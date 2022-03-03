@@ -37,6 +37,11 @@
 		1892A9E327BABA7100C5C0E9 /* AvatarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9E227BABA7100C5C0E9 /* AvatarCollectionViewCell.swift */; };
 		1892A9E527BAC12B00C5C0E9 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9E427BAC12B00C5C0E9 /* AvatarViewController.swift */; };
 		18A3539927CA995E00B112C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3539827CA995E00B112C3 /* User.swift */; };
+		18A353A027CD607C00B112C3 /* L1M1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3539F27CD607C00B112C3 /* L1M1ViewController.swift */; };
+		18A353A427CD6B7B00B112C3 /* L1M2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A353A327CD6B7B00B112C3 /* L1M2ViewController.swift */; };
+		18C1618F27CD7C8100A0E1A7 /* L1M3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */; };
+		18C1619127CD7C9E00A0E1A7 /* L1M4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */; };
+		18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */; };
 		18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FAF27BAE82600520F17 /* ModuleGuideCollectionViewCell.swift */; };
 		18F73FB227BAEAF500520F17 /* homeModuleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FB127BAEAF500520F17 /* homeModuleGuide.swift */; };
 		18F73FB727BC6CBB00520F17 /* foodCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FB627BC6CBB00520F17 /* foodCollections.swift */; };
@@ -86,6 +91,11 @@
 		1892A9E227BABA7100C5C0E9 /* AvatarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCollectionViewCell.swift; sourceTree = "<group>"; };
 		1892A9E427BAC12B00C5C0E9 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		18A3539827CA995E00B112C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		18A3539F27CD607C00B112C3 /* L1M1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M1ViewController.swift; sourceTree = "<group>"; };
+		18A353A327CD6B7B00B112C3 /* L1M2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M2ViewController.swift; sourceTree = "<group>"; };
+		18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M3ViewController.swift; sourceTree = "<group>"; };
+		18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M4ViewController.swift; sourceTree = "<group>"; };
+		18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M5ViewController.swift; sourceTree = "<group>"; };
 		18F73FAF27BAE82600520F17 /* ModuleGuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F73FB127BAEAF500520F17 /* homeModuleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModuleGuide.swift; sourceTree = "<group>"; };
 		18F73FB627BC6CBB00520F17 /* foodCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodCollections.swift; sourceTree = "<group>"; };
@@ -162,6 +172,7 @@
 		1892A9B427B7EE4800C5C0E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18A3539E27CD605B00B112C3 /* Level1 */,
 				188C60BD27BFE37E00A9B5FA /* Records */,
 				18F73FB527BC6B6E00520F17 /* LogRecordsView */,
 				18F73FAE27BAE7D600520F17 /* HomeScreenViews */,
@@ -226,6 +237,18 @@
 				1892A9E427BAC12B00C5C0E9 /* AvatarViewController.swift */,
 			);
 			path = AvatarViews;
+			sourceTree = "<group>";
+		};
+		18A3539E27CD605B00B112C3 /* Level1 */ = {
+			isa = PBXGroup;
+			children = (
+				18A3539F27CD607C00B112C3 /* L1M1ViewController.swift */,
+				18A353A327CD6B7B00B112C3 /* L1M2ViewController.swift */,
+				18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */,
+				18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */,
+				18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */,
+			);
+			path = Level1;
 			sourceTree = "<group>";
 		};
 		18F73FAE27BAE7D600520F17 /* HomeScreenViews */ = {
@@ -393,6 +416,7 @@
 				1892A9C427B7F22A00C5C0E9 /* AwardsViewController.swift in Sources */,
 				18F73FB227BAEAF500520F17 /* homeModuleGuide.swift in Sources */,
 				1892A9D827B9AFA500C5C0E9 /* AlertMessage.swift in Sources */,
+				18A353A427CD6B7B00B112C3 /* L1M2ViewController.swift in Sources */,
 				1892A9B827B7EF6C00C5C0E9 /* CalendarViewController.swift in Sources */,
 				18F73FC527BD7B2200520F17 /* DrinksCollectionViewCell.swift in Sources */,
 				1892A9E027BAB23C00C5C0E9 /* RemindersViewController.swift in Sources */,
@@ -403,6 +427,7 @@
 				18F73FBB27BC703B00520F17 /* LogCollectionViewCell.swift in Sources */,
 				1892A9BE27B7F10500C5C0E9 /* MotivationViewController.swift in Sources */,
 				1892A9C027B7F1AB00C5C0E9 /* LogViewController.swift in Sources */,
+				18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */,
 				1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */,
 				18F73FC327BD7AEC00520F17 /* TreatsCollectionViewCell.swift in Sources */,
 				18A3539927CA995E00B112C3 /* User.swift in Sources */,
@@ -416,6 +441,8 @@
 				18F73FBF27BD7A3F00520F17 /* LunchCollectionViewCell.swift in Sources */,
 				1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */,
 				188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */,
+				18C1618F27CD7C8100A0E1A7 /* L1M3ViewController.swift in Sources */,
+				18A353A027CD607C00B112C3 /* L1M1ViewController.swift in Sources */,
 				18F73FBD27BC7FBC00520F17 /* BreakfastCollectionViewCell.swift in Sources */,
 				1892A9C627B83CD900C5C0E9 /* AwardCollectionViewCell.swift in Sources */,
 				188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */,
@@ -424,6 +451,7 @@
 				1892A9DE27BAB1C000C5C0E9 /* PdfViewController.swift in Sources */,
 				18F73FC727BD7B5F00520F17 /* PlacesCollectionViewCell.swift in Sources */,
 				188C60C127BFE63E00A9B5FA /* record.swift in Sources */,
+				18C1619127CD7C9E00A0E1A7 /* L1M4ViewController.swift in Sources */,
 				18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

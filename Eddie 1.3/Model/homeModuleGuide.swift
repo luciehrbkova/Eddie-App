@@ -11,6 +11,8 @@ import UIKit
 struct ModuleGuide {
     let moduleTitle: String
     var moduleImage: UIImage
+//    let level: Int
+//    let handler: (() -> Void)
 }
 
 

@@ -17,4 +17,10 @@ class ModuleGuideCollectionViewCell: UICollectionViewCell {
         moduleGuideIcon.image = moduleGuides1.moduleImage
     }
     
+//    
+//    @IBAction func goToModulePressed(_sender: Any) {
+//        addButtonTapAction?()
+//    }
+//    
+//    var addButtonTapAction : (() -> ())?
 }
