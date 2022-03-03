@@ -1366,7 +1366,12 @@ Obviously there is a continuum between a "normal" eating pattern and that of som
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="Kvz-8E-0NI"/>
                                                 </constraints>
-                                                <string key="text">Disadvantages of your eating disorder may spring to mind very easily: - tiredness- social isolation- dental decay- low mood/irritability- financial strains</string>
+                                                <string key="text">Disadvantages of your eating disorder may spring to mind very easily: 
+- tiredness
+- social isolation
+- dental decay
+- low mood/irritability
+- financial strains</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1389,7 +1394,11 @@ Obviously there is a continuum between a "normal" eating pattern and that of som
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Yag-3m-8Ec"/>
                                                         </constraints>
-                                                        <string key="text">12345</string>
+                                                        <string key="text">1
+2
+3
+4
+5</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1435,7 +1444,11 @@ Obviously there is a continuum between a "normal" eating pattern and that of som
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="3ga-me-Le9"/>
                                                         </constraints>
-                                                        <string key="text">12345</string>
+                                                        <string key="text">1
+2
+3
+4
+5</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1469,7 +1482,11 @@ Obviously there is a continuum between a "normal" eating pattern and that of som
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="280" id="1GG-Mk-Rcc"/>
                                                 </constraints>
-                                                <string key="text">Advantages may be less obvious to you and in some cases they may no longer actually be present. However, they have almost certainly been there at sometime. Take some time to think about them.The examples below may help you get started:- as a means of coping with day-to-day stresses- as a comfort when you feel alone or misunderstood- to blank out family expectations of perfection</string>
+                                                <string key="text">Advantages may be less obvious to you and in some cases they may no longer actually be present. However, they have almost certainly been there at sometime. Take some time to think about them.
+The examples below may help you get started:
+- as a means of coping with day-to-day stresses
+- as a comfort when you feel alone or misunderstood
+- to blank out family expectations of perfection</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
