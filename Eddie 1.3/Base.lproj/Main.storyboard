@@ -2320,8 +2320,202 @@ Once these guidelines have been put into practice for some time, you will then b
                                                     <constraint firstAttribute="trailing" secondItem="zjJ-Ht-YFC" secondAttribute="trailing" constant="16" id="tn8-mQ-70v"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-2K-MMI">
-                                                <rect key="frame" x="20" y="2416" width="374" height="64"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-uj-nLc">
+                                                <rect key="frame" x="20" y="1108" width="374" height="110"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-A7-THd">
+                                                        <rect key="frame" x="16" y="16" width="342" height="85"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="85" id="zT4-w3-ukg"/>
+                                                        </constraints>
+                                                        <string key="text">6. Only have planned food in the house, don't stock up too far ahead. If you feel you are at risk of buying too much food, carry as little money as possible.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ehh-A7-THd" secondAttribute="trailing" constant="16" id="4bw-EV-xxW"/>
+                                                    <constraint firstItem="Ehh-A7-THd" firstAttribute="leading" secondItem="8Ic-uj-nLc" secondAttribute="leading" constant="16" id="ASD-iT-1Sf"/>
+                                                    <constraint firstAttribute="height" constant="110" id="Ad8-Ep-Fot"/>
+                                                    <constraint firstItem="Ehh-A7-THd" firstAttribute="top" secondItem="8Ic-uj-nLc" secondAttribute="top" constant="16" id="vsi-lW-NA2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ph-O9-X5e">
+                                                <rect key="frame" x="20" y="1234" width="374" height="140"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bMh-5Z-MMW">
+                                                        <rect key="frame" x="16" y="16" width="342" height="110"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="Kif-Db-iqD"/>
+                                                        </constraints>
+                                                        <string key="text">7. Identify the times at which you are most likely to over eat, using your recent experience and the evidence provided by your diary. Then plan alternative activities making sure they are not compatible with eating such as meeting a friend, exercising or taking a bath.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="bMh-5Z-MMW" firstAttribute="leading" secondItem="3ph-O9-X5e" secondAttribute="leading" constant="16" id="6bL-U9-FWC"/>
+                                                    <constraint firstItem="bMh-5Z-MMW" firstAttribute="top" secondItem="3ph-O9-X5e" secondAttribute="top" constant="16" id="Vxv-9e-USy"/>
+                                                    <constraint firstAttribute="height" constant="140" id="caP-sN-bMG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bMh-5Z-MMW" secondAttribute="trailing" constant="16" id="z4b-kw-Ohw"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwW-Pr-0rp">
+                                                <rect key="frame" x="20" y="1390" width="374" height="130"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-pZ-EFk">
+                                                        <rect key="frame" x="16" y="13" width="342" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="4c9-tP-Dd2"/>
+                                                        </constraints>
+                                                        <string key="text">8. Whenever possible, avoid areas where food is kept. Try to keep out of the kitchen between meals and plan what you will do at the end of each meal. If necessary, get out of the house completely - the washing-up can wait.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZSE-pZ-EFk" firstAttribute="leading" secondItem="nwW-Pr-0rp" secondAttribute="leading" constant="16" id="0eL-pM-9IZ"/>
+                                                    <constraint firstItem="ZSE-pZ-EFk" firstAttribute="top" secondItem="nwW-Pr-0rp" secondAttribute="top" constant="13" id="7BS-t6-quM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZSE-pZ-EFk" secondAttribute="trailing" constant="16" id="Abn-Te-H0X"/>
+                                                    <constraint firstAttribute="height" constant="130" id="Ga1-1z-LTA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-k4-gSg">
+                                                <rect key="frame" x="20" y="1536" width="374" height="160"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WFF-ib-hVD">
+                                                        <rect key="frame" x="16" y="16" width="342" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="s7A-bN-ne9"/>
+                                                        </constraints>
+                                                        <string key="text">9. Don't weigh yourself more than once a week. If possible, stop weighing yourself altogether. Don't try to lose weight while you are trying to learn new eating habits. Once you are eating normally you may reduce weight by cutting down the quantity you eat at each meal rather than skipping meals. Remember, gradual changes in weight are best.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="1du-YQ-6v2"/>
+                                                    <constraint firstItem="WFF-ib-hVD" firstAttribute="top" secondItem="iGC-k4-gSg" secondAttribute="top" constant="16" id="aWe-Hy-lnN"/>
+                                                    <constraint firstItem="WFF-ib-hVD" firstAttribute="leading" secondItem="iGC-k4-gSg" secondAttribute="leading" constant="16" id="fUR-SG-IhQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WFF-ib-hVD" secondAttribute="trailing" constant="16" id="zUV-i2-HEP"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atM-SU-SjV">
+                                                <rect key="frame" x="20" y="1712" width="374" height="140"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-DF-FRP">
+                                                        <rect key="frame" x="16" y="16" width="342" height="110"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="iY8-1m-N3q"/>
+                                                        </constraints>
+                                                        <string key="text">10. If you are thinking too much about your shape and weight, it may be because you are anxious or depressed. You tend to feel fat when things are not going well. Can you identify any current problems and do something positive to try and solve or at least minimise them?</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="5yg-57-cm8"/>
+                                                    <constraint firstItem="aQf-DF-FRP" firstAttribute="leading" secondItem="atM-SU-SjV" secondAttribute="leading" constant="16" id="C4g-tk-9cl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aQf-DF-FRP" secondAttribute="trailing" constant="16" id="KOk-Lj-YE3"/>
+                                                    <constraint firstItem="aQf-DF-FRP" firstAttribute="top" secondItem="atM-SU-SjV" secondAttribute="top" constant="16" id="k7o-jz-cWI"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjF-vT-dRZ">
+                                                <rect key="frame" x="20" y="1868" width="374" height="95"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="11. Use exercise. Regular exercise increases metabolic rate and helps suppress appetite, particularly carbohydrate craving." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSU-tR-ySa">
+                                                        <rect key="frame" x="16" y="16" width="342" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="Z5Q-1B-n6H"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="eSU-tR-ySa" secondAttribute="trailing" constant="16" id="JG8-Dc-snr"/>
+                                                    <constraint firstItem="eSU-tR-ySa" firstAttribute="top" secondItem="OjF-vT-dRZ" secondAttribute="top" constant="16" id="PAt-Np-2vB"/>
+                                                    <constraint firstItem="eSU-tR-ySa" firstAttribute="leading" secondItem="OjF-vT-dRZ" secondAttribute="leading" constant="16" id="VcS-76-nAg"/>
+                                                    <constraint firstAttribute="height" constant="95" id="YzK-gt-NmC"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-EJ-HXs">
+                                                <rect key="frame" x="20" y="1979" width="374" height="95"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="12. Take particular care in the days leading up to your period. For many women food cravings increase at this time." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-jn-p1R">
+                                                        <rect key="frame" x="16" y="16" width="342" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="NrZ-gv-BY2"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="z4g-jn-p1R" firstAttribute="top" secondItem="Gdr-EJ-HXs" secondAttribute="top" constant="16" id="1No-5Q-Coe"/>
+                                                    <constraint firstItem="z4g-jn-p1R" firstAttribute="leading" secondItem="Gdr-EJ-HXs" secondAttribute="leading" constant="16" id="SPP-5v-ozN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="z4g-jn-p1R" secondAttribute="trailing" constant="16" id="Y13-uF-09b"/>
+                                                    <constraint firstAttribute="height" constant="95" id="gdN-1b-Fcm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhF-WI-fnZ">
+                                                <rect key="frame" x="20" y="2090" width="374" height="80"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="13. Avoid alcohol. It can increase cravings and reduce your control." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7d-QHH">
+                                                        <rect key="frame" x="16" y="16" width="342" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="HoQ-25-H5L"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="jgY-7d-QHH" secondAttribute="trailing" constant="16" id="22V-u2-eh2"/>
+                                                    <constraint firstAttribute="height" constant="80" id="P4w-IW-fHn"/>
+                                                    <constraint firstItem="jgY-7d-QHH" firstAttribute="top" secondItem="OhF-WI-fnZ" secondAttribute="top" constant="16" id="bKP-T6-224"/>
+                                                    <constraint firstItem="jgY-7d-QHH" firstAttribute="leading" secondItem="OhF-WI-fnZ" secondAttribute="leading" constant="16" id="byG-pW-rvl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DML-n1-IbF">
+                                                <rect key="frame" x="20" y="2186" width="374" height="95"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="14. Set aside some time daily to reflect on how you are coping. If some of your strategies are not working, try others." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-Z1-wMU">
+                                                        <rect key="frame" x="16" y="16" width="342" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="9CL-dB-J0i"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="Inl-Z1-wMU" firstAttribute="leading" secondItem="DML-n1-IbF" secondAttribute="leading" constant="16" id="HhV-Vx-OQD"/>
+                                                    <constraint firstItem="Inl-Z1-wMU" firstAttribute="top" secondItem="DML-n1-IbF" secondAttribute="top" constant="16" id="dDM-OZ-k1m"/>
+                                                    <constraint firstAttribute="height" constant="95" id="dLE-WI-fcn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Inl-Z1-wMU" secondAttribute="trailing" constant="16" id="wut-6F-ZkE"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-2K-MMI">
+                                                <rect key="frame" x="20" y="2521" width="374" height="64"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-Kg-OnH">
                                                         <rect key="frame" x="16" y="16" width="342" height="32"/>
@@ -2367,15 +2561,14 @@ Once these guidelines have been put into practice for some time, you will then b
                                                     <constraint firstItem="Xky-Kg-OnH" firstAttribute="leading" secondItem="bWB-2K-MMI" secondAttribute="leading" constant="16" id="eYX-b5-8QD"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-uj-nLc">
-                                                <rect key="frame" x="20" y="1108" width="374" height="110"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-cJ-gSI">
+                                                <rect key="frame" x="20" y="2297" width="374" height="90"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-A7-THd">
-                                                        <rect key="frame" x="16" y="16" width="342" height="85"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="14. Set aside some time daily to reflect on how you are coping. If some of your strategies are not working, try others." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1p8-kq-SEl">
+                                                        <rect key="frame" x="16" y="16" width="342" height="65"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="85" id="zT4-w3-ukg"/>
+                                                            <constraint firstAttribute="height" constant="65" id="ofy-BP-jSN"/>
                                                         </constraints>
-                                                        <string key="text">6. Only have planned food in the house, don't stock up too far ahead. If you feel you are at risk of buying too much food, carry as little money as possible.</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2383,52 +2576,80 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Ehh-A7-THd" secondAttribute="trailing" constant="16" id="4bw-EV-xxW"/>
-                                                    <constraint firstItem="Ehh-A7-THd" firstAttribute="leading" secondItem="8Ic-uj-nLc" secondAttribute="leading" constant="16" id="ASD-iT-1Sf"/>
-                                                    <constraint firstAttribute="height" constant="110" id="Ad8-Ep-Fot"/>
-                                                    <constraint firstItem="Ehh-A7-THd" firstAttribute="top" secondItem="8Ic-uj-nLc" secondAttribute="top" constant="16" id="vsi-lW-NA2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1p8-kq-SEl" secondAttribute="trailing" constant="16" id="9kx-g3-mLs"/>
+                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="top" secondItem="haZ-cJ-gSI" secondAttribute="top" constant="16" id="cDT-19-Qzm"/>
+                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="leading" secondItem="haZ-cJ-gSI" secondAttribute="leading" constant="16" id="nFl-4F-QgH"/>
+                                                    <constraint firstAttribute="height" constant="90" id="yda-4S-7QX"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="zfn-5y-8iD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="3ph-O9-X5e" firstAttribute="top" secondItem="8Ic-uj-nLc" secondAttribute="bottom" constant="16" id="0ot-25-moS"/>
                                             <constraint firstItem="WPf-0v-4c0" firstAttribute="top" secondItem="CMT-Gh-DRJ" secondAttribute="bottom" constant="16" id="1wG-qj-Pl6"/>
                                             <constraint firstAttribute="trailing" secondItem="GWZ-xu-rTv" secondAttribute="trailing" constant="20" symbolic="YES" id="2RZ-hh-gqT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gdr-EJ-HXs" secondAttribute="trailing" constant="20" symbolic="YES" id="3Wu-2b-HZN"/>
                                             <constraint firstAttribute="trailing" secondItem="G4M-el-bgS" secondAttribute="trailing" constant="20" id="51C-Cs-D8j"/>
                                             <constraint firstItem="HQF-VA-Mh4" firstAttribute="top" secondItem="G4M-el-bgS" secondAttribute="bottom" constant="44" id="7QG-cP-9IN"/>
                                             <constraint firstItem="8Ic-uj-nLc" firstAttribute="top" secondItem="D3T-wD-YCb" secondAttribute="bottom" constant="21" id="7Tv-xi-a8J"/>
+                                            <constraint firstItem="3ph-O9-X5e" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="7u9-pH-ivz"/>
                                             <constraint firstItem="bWB-2K-MMI" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="85D-Rp-DGV"/>
+                                            <constraint firstItem="iGC-k4-gSg" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="9eU-3Y-z1M"/>
+                                            <constraint firstItem="nwW-Pr-0rp" firstAttribute="top" secondItem="3ph-O9-X5e" secondAttribute="bottom" constant="16" id="B83-IM-2w0"/>
                                             <constraint firstAttribute="height" constant="2600" id="BPq-HL-C2d"/>
+                                            <constraint firstItem="iGC-k4-gSg" firstAttribute="top" secondItem="nwW-Pr-0rp" secondAttribute="bottom" constant="16" id="CIL-Ud-s1o"/>
                                             <constraint firstItem="fem-lC-4eS" firstAttribute="top" secondItem="WPf-0v-4c0" secondAttribute="bottom" constant="16" id="CJC-Zi-SyG"/>
+                                            <constraint firstAttribute="trailing" secondItem="DML-n1-IbF" secondAttribute="trailing" constant="20" symbolic="YES" id="CK4-pT-m6f"/>
+                                            <constraint firstAttribute="trailing" secondItem="haZ-cJ-gSI" secondAttribute="trailing" constant="20" symbolic="YES" id="CkG-uv-yFa"/>
+                                            <constraint firstItem="haZ-cJ-gSI" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="Dmy-9x-edb"/>
+                                            <constraint firstItem="OjF-vT-dRZ" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" id="Dq7-pQ-PTz"/>
                                             <constraint firstAttribute="trailing" secondItem="D3T-wD-YCb" secondAttribute="trailing" constant="20" symbolic="YES" id="FZ9-Qb-2ge"/>
+                                            <constraint firstItem="Gdr-EJ-HXs" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="GHQ-7J-WzI"/>
                                             <constraint firstItem="WPf-0v-4c0" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="H7I-vp-qrN"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="trailing" secondItem="GWZ-xu-rTv" secondAttribute="trailing" id="Jzf-uA-KDR"/>
+                                            <constraint firstItem="OhF-WI-fnZ" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="KDV-pf-qsW"/>
                                             <constraint firstItem="fem-lC-4eS" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="MOB-Lb-qBd"/>
                                             <constraint firstAttribute="trailing" secondItem="bWB-2K-MMI" secondAttribute="trailing" constant="20" symbolic="YES" id="P00-uD-rJc"/>
                                             <constraint firstItem="CMT-Gh-DRJ" firstAttribute="trailing" secondItem="zgd-a3-yfh" secondAttribute="trailing" id="Qed-bu-VDj"/>
+                                            <constraint firstItem="Gdr-EJ-HXs" firstAttribute="top" secondItem="OjF-vT-dRZ" secondAttribute="bottom" constant="16" id="RPO-xw-bI8"/>
                                             <constraint firstItem="zgd-a3-yfh" firstAttribute="top" secondItem="HQF-VA-Mh4" secondAttribute="bottom" constant="44" id="TgC-3O-REh"/>
                                             <constraint firstItem="bWB-2K-MMI" firstAttribute="top" secondItem="9RZ-fn-axe" secondAttribute="top" constant="2416" id="Umx-5Y-xhH"/>
+                                            <constraint firstItem="atM-SU-SjV" firstAttribute="top" secondItem="iGC-k4-gSg" secondAttribute="bottom" constant="16" id="Uzy-tb-V5g"/>
                                             <constraint firstItem="HQF-VA-Mh4" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="Vop-IH-2RO"/>
                                             <constraint firstItem="8Ic-uj-nLc" firstAttribute="leading" secondItem="D3T-wD-YCb" secondAttribute="leading" id="YcH-no-C2n"/>
                                             <constraint firstAttribute="trailing" secondItem="WPf-0v-4c0" secondAttribute="trailing" constant="20" symbolic="YES" id="YkU-oa-89f"/>
+                                            <constraint firstAttribute="trailing" secondItem="nwW-Pr-0rp" secondAttribute="trailing" constant="20" symbolic="YES" id="ciE-aw-KZY"/>
                                             <constraint firstItem="G4M-el-bgS" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" id="dsy-9L-6rC"/>
+                                            <constraint firstItem="OhF-WI-fnZ" firstAttribute="top" secondItem="Gdr-EJ-HXs" secondAttribute="bottom" constant="16" id="eK5-Xe-E2r"/>
+                                            <constraint firstAttribute="trailing" secondItem="iGC-k4-gSg" secondAttribute="trailing" constant="20" symbolic="YES" id="fhm-lu-cqq"/>
                                             <constraint firstAttribute="trailing" secondItem="HQF-VA-Mh4" secondAttribute="trailing" constant="20" id="frR-rY-Y6W"/>
                                             <constraint firstAttribute="trailing" secondItem="fem-lC-4eS" secondAttribute="trailing" constant="20" symbolic="YES" id="il1-ce-DhX"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="top" secondItem="GWZ-xu-rTv" secondAttribute="bottom" constant="16" id="jeU-4e-mbq"/>
                                             <constraint firstItem="G4M-el-bgS" firstAttribute="top" secondItem="9RZ-fn-axe" secondAttribute="top" constant="16" id="jlq-Un-Axs"/>
+                                            <constraint firstItem="OjF-vT-dRZ" firstAttribute="top" secondItem="atM-SU-SjV" secondAttribute="bottom" constant="16" id="kIK-tB-BVA"/>
+                                            <constraint firstAttribute="trailing" secondItem="atM-SU-SjV" secondAttribute="trailing" constant="20" symbolic="YES" id="kNQ-qv-usY"/>
+                                            <constraint firstAttribute="trailing" secondItem="OhF-WI-fnZ" secondAttribute="trailing" constant="20" symbolic="YES" id="kc7-LJ-NUk"/>
                                             <constraint firstAttribute="trailing" secondItem="bWB-2K-MMI" secondAttribute="trailing" constant="20" symbolic="YES" id="kiG-A3-UHy"/>
+                                            <constraint firstItem="nwW-Pr-0rp" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="m4F-br-3bs"/>
+                                            <constraint firstItem="DML-n1-IbF" firstAttribute="top" secondItem="OhF-WI-fnZ" secondAttribute="bottom" constant="16" id="mDo-LS-Z82"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="top" secondItem="GWZ-xu-rTv" secondAttribute="bottom" constant="16" id="njW-PH-ha5"/>
                                             <constraint firstItem="GWZ-xu-rTv" firstAttribute="top" secondItem="fem-lC-4eS" secondAttribute="bottom" constant="16" id="oAP-oo-vYo"/>
                                             <constraint firstAttribute="trailing" secondItem="CMT-Gh-DRJ" secondAttribute="trailing" constant="20" symbolic="YES" id="oRz-Kt-AMJ"/>
                                             <constraint firstItem="bWB-2K-MMI" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="ogq-Wd-l36"/>
                                             <constraint firstItem="CMT-Gh-DRJ" firstAttribute="top" secondItem="zgd-a3-yfh" secondAttribute="bottom" constant="8" id="p6F-Be-MM3"/>
                                             <constraint firstItem="8Ic-uj-nLc" firstAttribute="trailing" secondItem="D3T-wD-YCb" secondAttribute="trailing" id="pNw-n7-wDb"/>
+                                            <constraint firstItem="DML-n1-IbF" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="s71-4k-VK8"/>
                                             <constraint firstItem="CMT-Gh-DRJ" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="sXY-5L-cgU"/>
                                             <constraint firstAttribute="trailing" secondItem="zgd-a3-yfh" secondAttribute="trailing" constant="20" symbolic="YES" id="usF-6C-UR3"/>
                                             <constraint firstItem="GWZ-xu-rTv" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="vij-6m-Xrt"/>
+                                            <constraint firstItem="haZ-cJ-gSI" firstAttribute="top" secondItem="DML-n1-IbF" secondAttribute="bottom" constant="16" id="w5D-6f-LyC"/>
                                             <constraint firstItem="zgd-a3-yfh" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="w8F-WQ-jxF"/>
+                                            <constraint firstItem="atM-SU-SjV" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="xjr-tO-Zbc"/>
                                             <constraint firstItem="CMT-Gh-DRJ" firstAttribute="leading" secondItem="zgd-a3-yfh" secondAttribute="leading" id="xl0-1r-a8Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="3ph-O9-X5e" secondAttribute="trailing" constant="20" symbolic="YES" id="yGl-Zt-heU"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="yiT-iQ-ylJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="OjF-vT-dRZ" secondAttribute="trailing" constant="20" id="zYr-f1-8BC"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="leading" secondItem="GWZ-xu-rTv" secondAttribute="leading" id="zl2-1d-OIF"/>
                                         </constraints>
                                     </view>
