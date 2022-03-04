@@ -1676,7 +1676,8 @@ The examples below may help you get started:
                                                 <string key="text">THE VICIOUS CYCLE
 
 Below is a diagram showing the VICIOUS CYCLE which, although you may not have realised it, isalmost certainly controlling the way that you eat.
-How you got into this cycle is less important than what makes you stay there.</string>
+
+How you got into this cycle is less important than what makes you stay there.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1741,7 +1742,8 @@ This is in fact wrong as strict dieting, even at normal/above normal weights ind
                                                     <constraint firstAttribute="height" constant="220" id="7Xg-Wk-0f8"/>
                                                 </constraints>
                                                 <string key="text">WHAT THEN TRIGGERS DIETING/PURGING?
-It can thus be seen how the strong drive to diet/purge after bingeing inevitably results in a starvation state which increases the chances of further bingeing and so the vicious cycle continues. The figure below shows how a typical bulimic's calorie load can vary over a day in comparison to that of someone with a more regular eating pattern.</string>
+
+It can thus be seen how the strong drive to diet/purge after bingeing inevitably results in a starvation state which increases the chances of further bingeing and so the vicious cycle continues. The figure below shows how a typical bulimic's calorie load can vary over a day in comparison to that of someone with a more regular eating pattern.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2011,11 +2013,13 @@ Possible Adverse Effects on Body:
                                                 </constraints>
                                                 <string key="text">It is important to remember that:
 
-• Recovery from bulimia nervosa involves you TAKING CONTROL of your eating rather thanletting it take control of you.
+• Recovery from bulimia nervosa involves you TAKING CONTROL of your eating rather than
+letting it take control of you.
 
 • Recovery involves RISK TAKING and CHALLENGING your previous patterns of eating.
 
-• CHANGES may seem daunting, even terrifying but try to remember how miserable you werefeeling when you initially asked for help.</string>
+• CHANGES may seem daunting, even terrifying but try to remember how miserable you were
+feeling when you initially asked for help.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2154,7 +2158,7 @@ Possible Adverse Effects on Body:
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0WF-2N-WWQ"/>
-                        <color key="backgroundColor" name="GreenSecond"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xci-y7-kOm" firstAttribute="leading" secondItem="0WF-2N-WWQ" secondAttribute="leading" id="CC0-OD-hYh"/>
                             <constraint firstItem="xci-y7-kOm" firstAttribute="trailing" secondItem="0WF-2N-WWQ" secondAttribute="trailing" id="Eyy-I0-Yq2"/>
@@ -2176,10 +2180,10 @@ Possible Adverse Effects on Body:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5x-kO-HRk">
-                                <rect key="frame" x="0.0" y="16" width="414" height="880"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-fn-axe">
-                                        <rect key="frame" x="0.0" y="18" width="414" height="2600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2700"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-el-bgS">
                                                 <rect key="frame" x="20" y="16" width="374" height="21"/>
@@ -2200,9 +2204,9 @@ Possible Adverse Effects on Body:
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-a3-yfh">
-                                                <rect key="frame" x="20" y="148" width="374" height="302"/>
+                                                <rect key="frame" x="20" y="148" width="374" height="320"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="302" id="G6f-uo-wGy"/>
+                                                    <constraint firstAttribute="height" constant="320" id="G6f-uo-wGy"/>
                                                 </constraints>
                                                 <string key="text">The PRINCIPLES OF NORMAL EATING, shown overleaf, are STEPS towards normal controlled eating that should be tested out SLOWLY and at a pace that is tolerable to you. Remember, you are more likely to take fright and give up if you try to be too ambitious too soon.
 
@@ -2212,7 +2216,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMT-Gh-DRJ">
-                                                <rect key="frame" x="20" y="458" width="374" height="130"/>
+                                                <rect key="frame" x="20" y="476" width="374" height="130"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-qQ-gSg">
                                                         <rect key="frame" x="16" y="16" width="342" height="100"/>
@@ -2234,7 +2238,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPf-0v-4c0">
-                                                <rect key="frame" x="20" y="604" width="374" height="70"/>
+                                                <rect key="frame" x="20" y="622" width="374" height="70"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="2. Try to eat in company, not alone." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3L8-hE-33L">
                                                         <rect key="frame" x="16" y="16" width="342" height="40"/>
@@ -2255,7 +2259,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fem-lC-4eS">
-                                                <rect key="frame" x="20" y="690" width="374" height="130"/>
+                                                <rect key="frame" x="20" y="708" width="374" height="130"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-TP-dMo">
                                                         <rect key="frame" x="16" y="16" width="342" height="100"/>
@@ -2278,7 +2282,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWZ-xu-rTv">
-                                                <rect key="frame" x="20" y="836" width="374" height="150"/>
+                                                <rect key="frame" x="20" y="854" width="374" height="150"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVr-eu-RKT">
                                                         <rect key="frame" x="16" y="16" width="342" height="120"/>
@@ -2300,7 +2304,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3T-wD-YCb">
-                                                <rect key="frame" x="20" y="1002" width="374" height="85"/>
+                                                <rect key="frame" x="20" y="1020" width="374" height="85"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="5. Plan your days ahead; avoid both long periods of unstructured time and over-booking." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zjJ-Ht-YFC">
                                                         <rect key="frame" x="16" y="16" width="342" height="60"/>
@@ -2321,7 +2325,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ic-uj-nLc">
-                                                <rect key="frame" x="20" y="1108" width="374" height="110"/>
+                                                <rect key="frame" x="20" y="1126" width="374" height="110"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-A7-THd">
                                                         <rect key="frame" x="16" y="16" width="342" height="85"/>
@@ -2338,17 +2342,17 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Ehh-A7-THd" secondAttribute="trailing" constant="16" id="4bw-EV-xxW"/>
                                                     <constraint firstItem="Ehh-A7-THd" firstAttribute="leading" secondItem="8Ic-uj-nLc" secondAttribute="leading" constant="16" id="ASD-iT-1Sf"/>
-                                                    <constraint firstAttribute="height" constant="110" id="Ad8-Ep-Fot"/>
+                                                    <constraint firstAttribute="height" constant="110" id="T3B-mR-loR"/>
                                                     <constraint firstItem="Ehh-A7-THd" firstAttribute="top" secondItem="8Ic-uj-nLc" secondAttribute="top" constant="16" id="vsi-lW-NA2"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ph-O9-X5e">
-                                                <rect key="frame" x="20" y="1234" width="374" height="140"/>
+                                                <rect key="frame" x="20" y="1252" width="374" height="145"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bMh-5Z-MMW">
-                                                        <rect key="frame" x="16" y="16" width="342" height="110"/>
+                                                        <rect key="frame" x="16" y="16" width="342" height="120"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="110" id="Kif-Db-iqD"/>
+                                                            <constraint firstAttribute="height" constant="120" id="Kif-Db-iqD"/>
                                                         </constraints>
                                                         <string key="text">7. Identify the times at which you are most likely to over eat, using your recent experience and the evidence provided by your diary. Then plan alternative activities making sure they are not compatible with eating such as meeting a friend, exercising or taking a bath.</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -2360,12 +2364,12 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 <constraints>
                                                     <constraint firstItem="bMh-5Z-MMW" firstAttribute="leading" secondItem="3ph-O9-X5e" secondAttribute="leading" constant="16" id="6bL-U9-FWC"/>
                                                     <constraint firstItem="bMh-5Z-MMW" firstAttribute="top" secondItem="3ph-O9-X5e" secondAttribute="top" constant="16" id="Vxv-9e-USy"/>
-                                                    <constraint firstAttribute="height" constant="140" id="caP-sN-bMG"/>
+                                                    <constraint firstAttribute="height" constant="145" id="caP-sN-bMG"/>
                                                     <constraint firstAttribute="trailing" secondItem="bMh-5Z-MMW" secondAttribute="trailing" constant="16" id="z4b-kw-Ohw"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwW-Pr-0rp">
-                                                <rect key="frame" x="20" y="1390" width="374" height="130"/>
+                                                <rect key="frame" x="20" y="1413" width="374" height="130"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-pZ-EFk">
                                                         <rect key="frame" x="16" y="13" width="342" height="100"/>
@@ -2387,7 +2391,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-k4-gSg">
-                                                <rect key="frame" x="20" y="1536" width="374" height="160"/>
+                                                <rect key="frame" x="20" y="1559" width="374" height="160"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WFF-ib-hVD">
                                                         <rect key="frame" x="16" y="16" width="342" height="130"/>
@@ -2409,12 +2413,12 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atM-SU-SjV">
-                                                <rect key="frame" x="20" y="1712" width="374" height="140"/>
+                                                <rect key="frame" x="20" y="1735" width="374" height="145"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-DF-FRP">
-                                                        <rect key="frame" x="16" y="16" width="342" height="110"/>
+                                                        <rect key="frame" x="16" y="16" width="342" height="115"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="110" id="iY8-1m-N3q"/>
+                                                            <constraint firstAttribute="height" constant="115" id="iY8-1m-N3q"/>
                                                         </constraints>
                                                         <string key="text">10. If you are thinking too much about your shape and weight, it may be because you are anxious or depressed. You tend to feel fat when things are not going well. Can you identify any current problems and do something positive to try and solve or at least minimise them?</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -2424,14 +2428,14 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="140" id="5yg-57-cm8"/>
+                                                    <constraint firstAttribute="height" constant="145" id="5yg-57-cm8"/>
                                                     <constraint firstItem="aQf-DF-FRP" firstAttribute="leading" secondItem="atM-SU-SjV" secondAttribute="leading" constant="16" id="C4g-tk-9cl"/>
                                                     <constraint firstAttribute="trailing" secondItem="aQf-DF-FRP" secondAttribute="trailing" constant="16" id="KOk-Lj-YE3"/>
                                                     <constraint firstItem="aQf-DF-FRP" firstAttribute="top" secondItem="atM-SU-SjV" secondAttribute="top" constant="16" id="k7o-jz-cWI"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjF-vT-dRZ">
-                                                <rect key="frame" x="20" y="1868" width="374" height="95"/>
+                                                <rect key="frame" x="20" y="1896" width="374" height="95"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="11. Use exercise. Regular exercise increases metabolic rate and helps suppress appetite, particularly carbohydrate craving." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSU-tR-ySa">
                                                         <rect key="frame" x="16" y="16" width="342" height="65"/>
@@ -2452,7 +2456,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdr-EJ-HXs">
-                                                <rect key="frame" x="20" y="1979" width="374" height="95"/>
+                                                <rect key="frame" x="20" y="2007" width="374" height="95"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="12. Take particular care in the days leading up to your period. For many women food cravings increase at this time." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-jn-p1R">
                                                         <rect key="frame" x="16" y="16" width="342" height="70"/>
@@ -2473,7 +2477,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhF-WI-fnZ">
-                                                <rect key="frame" x="20" y="2090" width="374" height="80"/>
+                                                <rect key="frame" x="20" y="2118" width="374" height="80"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="13. Avoid alcohol. It can increase cravings and reduce your control." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-7d-QHH">
                                                         <rect key="frame" x="16" y="16" width="342" height="50"/>
@@ -2494,7 +2498,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DML-n1-IbF">
-                                                <rect key="frame" x="20" y="2186" width="374" height="95"/>
+                                                <rect key="frame" x="20" y="2214" width="374" height="95"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="14. Set aside some time daily to reflect on how you are coping. If some of your strategies are not working, try others." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-Z1-wMU">
                                                         <rect key="frame" x="16" y="16" width="342" height="65"/>
@@ -2514,8 +2518,52 @@ Once these guidelines have been put into practice for some time, you will then b
                                                     <constraint firstAttribute="trailing" secondItem="Inl-Z1-wMU" secondAttribute="trailing" constant="16" id="wut-6F-ZkE"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-2K-MMI">
-                                                <rect key="frame" x="20" y="2521" width="374" height="64"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-cJ-gSI">
+                                                <rect key="frame" x="20" y="2325" width="374" height="95"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1p8-kq-SEl">
+                                                        <rect key="frame" x="16" y="16" width="342" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="ofy-BP-jSN"/>
+                                                        </constraints>
+                                                        <string key="text">15. Set yourself limited realistic goals, work from hour to hour rather than from day to day. One failure does not justify a succession of failures.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="1p8-kq-SEl" secondAttribute="trailing" constant="16" id="9kx-g3-mLs"/>
+                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="top" secondItem="haZ-cJ-gSI" secondAttribute="top" constant="16" id="cDT-19-Qzm"/>
+                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="leading" secondItem="haZ-cJ-gSI" secondAttribute="leading" constant="16" id="nFl-4F-QgH"/>
+                                                    <constraint firstAttribute="height" constant="95" id="yda-4S-7QX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGy-WC-EdZ">
+                                                <rect key="frame" x="20" y="2436" width="374" height="95"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="79a-Q8-Tb1">
+                                                        <rect key="frame" x="16" y="16" width="342" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="Xr5-mu-6Nx"/>
+                                                        </constraints>
+                                                        <string key="text">16. Note your successes, however modest, in your diaries. Every time your eat normally you are reinforcing your new good eating habits.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="95" id="8mX-wd-Lud"/>
+                                                    <constraint firstItem="79a-Q8-Tb1" firstAttribute="leading" secondItem="oGy-WC-EdZ" secondAttribute="leading" constant="16" id="Pck-tO-IOF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="79a-Q8-Tb1" secondAttribute="trailing" constant="16" id="kEg-lb-YN0"/>
+                                                    <constraint firstItem="79a-Q8-Tb1" firstAttribute="top" secondItem="oGy-WC-EdZ" secondAttribute="top" constant="16" id="zUs-S4-aMt"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWB-2K-MMI">
+                                                <rect key="frame" x="20" y="2597" width="374" height="64"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-Kg-OnH">
                                                         <rect key="frame" x="16" y="16" width="342" height="32"/>
@@ -2556,31 +2604,10 @@ Once these guidelines have been put into practice for some time, you will then b
                                                     <constraint firstAttribute="trailing" secondItem="Xky-Kg-OnH" secondAttribute="trailing" constant="16" id="GM2-Kh-Wbz"/>
                                                     <constraint firstAttribute="bottom" secondItem="Xky-Kg-OnH" secondAttribute="bottom" constant="16" id="Iid-lX-e0J"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="OPY-a2-zRe"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="X6D-AS-IjP"/>
                                                     <constraint firstItem="Xky-Kg-OnH" firstAttribute="top" secondItem="bWB-2K-MMI" secondAttribute="top" constant="16" id="ZMg-cb-w6L"/>
                                                     <constraint firstAttribute="height" constant="64" id="Zsa-g5-sGE"/>
                                                     <constraint firstItem="Xky-Kg-OnH" firstAttribute="leading" secondItem="bWB-2K-MMI" secondAttribute="leading" constant="16" id="eYX-b5-8QD"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-cJ-gSI">
-                                                <rect key="frame" x="20" y="2297" width="374" height="90"/>
-                                                <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="14. Set aside some time daily to reflect on how you are coping. If some of your strategies are not working, try others." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1p8-kq-SEl">
-                                                        <rect key="frame" x="16" y="16" width="342" height="65"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="65" id="ofy-BP-jSN"/>
-                                                        </constraints>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                                <color key="backgroundColor" name="GreenSecond"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="1p8-kq-SEl" secondAttribute="trailing" constant="16" id="9kx-g3-mLs"/>
-                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="top" secondItem="haZ-cJ-gSI" secondAttribute="top" constant="16" id="cDT-19-Qzm"/>
-                                                    <constraint firstItem="1p8-kq-SEl" firstAttribute="leading" secondItem="haZ-cJ-gSI" secondAttribute="leading" constant="16" id="nFl-4F-QgH"/>
-                                                    <constraint firstAttribute="height" constant="90" id="yda-4S-7QX"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="zfn-5y-8iD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -2590,6 +2617,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstItem="WPf-0v-4c0" firstAttribute="top" secondItem="CMT-Gh-DRJ" secondAttribute="bottom" constant="16" id="1wG-qj-Pl6"/>
                                             <constraint firstAttribute="trailing" secondItem="GWZ-xu-rTv" secondAttribute="trailing" constant="20" symbolic="YES" id="2RZ-hh-gqT"/>
                                             <constraint firstAttribute="trailing" secondItem="Gdr-EJ-HXs" secondAttribute="trailing" constant="20" symbolic="YES" id="3Wu-2b-HZN"/>
+                                            <constraint firstItem="bWB-2K-MMI" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="4N1-s7-zMR"/>
                                             <constraint firstAttribute="trailing" secondItem="G4M-el-bgS" secondAttribute="trailing" constant="20" id="51C-Cs-D8j"/>
                                             <constraint firstItem="HQF-VA-Mh4" firstAttribute="top" secondItem="G4M-el-bgS" secondAttribute="bottom" constant="44" id="7QG-cP-9IN"/>
                                             <constraint firstItem="8Ic-uj-nLc" firstAttribute="top" secondItem="D3T-wD-YCb" secondAttribute="bottom" constant="21" id="7Tv-xi-a8J"/>
@@ -2597,7 +2625,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstItem="bWB-2K-MMI" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="85D-Rp-DGV"/>
                                             <constraint firstItem="iGC-k4-gSg" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="9eU-3Y-z1M"/>
                                             <constraint firstItem="nwW-Pr-0rp" firstAttribute="top" secondItem="3ph-O9-X5e" secondAttribute="bottom" constant="16" id="B83-IM-2w0"/>
-                                            <constraint firstAttribute="height" constant="2600" id="BPq-HL-C2d"/>
+                                            <constraint firstAttribute="height" constant="2700" id="BPq-HL-C2d"/>
                                             <constraint firstItem="iGC-k4-gSg" firstAttribute="top" secondItem="nwW-Pr-0rp" secondAttribute="bottom" constant="16" id="CIL-Ud-s1o"/>
                                             <constraint firstItem="fem-lC-4eS" firstAttribute="top" secondItem="WPf-0v-4c0" secondAttribute="bottom" constant="16" id="CJC-Zi-SyG"/>
                                             <constraint firstAttribute="trailing" secondItem="DML-n1-IbF" secondAttribute="trailing" constant="20" symbolic="YES" id="CK4-pT-m6f"/>
@@ -2609,12 +2637,14 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstItem="WPf-0v-4c0" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="H7I-vp-qrN"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="trailing" secondItem="GWZ-xu-rTv" secondAttribute="trailing" id="Jzf-uA-KDR"/>
                                             <constraint firstItem="OhF-WI-fnZ" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="KDV-pf-qsW"/>
+                                            <constraint firstAttribute="trailing" secondItem="bWB-2K-MMI" secondAttribute="trailing" constant="20" symbolic="YES" id="LcH-kH-dg6"/>
                                             <constraint firstItem="fem-lC-4eS" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="MOB-Lb-qBd"/>
                                             <constraint firstAttribute="trailing" secondItem="bWB-2K-MMI" secondAttribute="trailing" constant="20" symbolic="YES" id="P00-uD-rJc"/>
+                                            <constraint firstAttribute="trailing" secondItem="oGy-WC-EdZ" secondAttribute="trailing" constant="20" symbolic="YES" id="PxH-ro-TI5"/>
                                             <constraint firstItem="CMT-Gh-DRJ" firstAttribute="trailing" secondItem="zgd-a3-yfh" secondAttribute="trailing" id="Qed-bu-VDj"/>
+                                            <constraint firstItem="bWB-2K-MMI" firstAttribute="top" secondItem="oGy-WC-EdZ" secondAttribute="bottom" constant="66" id="QkP-gz-9jm"/>
                                             <constraint firstItem="Gdr-EJ-HXs" firstAttribute="top" secondItem="OjF-vT-dRZ" secondAttribute="bottom" constant="16" id="RPO-xw-bI8"/>
                                             <constraint firstItem="zgd-a3-yfh" firstAttribute="top" secondItem="HQF-VA-Mh4" secondAttribute="bottom" constant="44" id="TgC-3O-REh"/>
-                                            <constraint firstItem="bWB-2K-MMI" firstAttribute="top" secondItem="9RZ-fn-axe" secondAttribute="top" constant="2416" id="Umx-5Y-xhH"/>
                                             <constraint firstItem="atM-SU-SjV" firstAttribute="top" secondItem="iGC-k4-gSg" secondAttribute="bottom" constant="16" id="Uzy-tb-V5g"/>
                                             <constraint firstItem="HQF-VA-Mh4" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="Vop-IH-2RO"/>
                                             <constraint firstItem="8Ic-uj-nLc" firstAttribute="leading" secondItem="D3T-wD-YCb" secondAttribute="leading" id="YcH-no-C2n"/>
@@ -2622,8 +2652,10 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstAttribute="trailing" secondItem="nwW-Pr-0rp" secondAttribute="trailing" constant="20" symbolic="YES" id="ciE-aw-KZY"/>
                                             <constraint firstItem="G4M-el-bgS" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" id="dsy-9L-6rC"/>
                                             <constraint firstItem="OhF-WI-fnZ" firstAttribute="top" secondItem="Gdr-EJ-HXs" secondAttribute="bottom" constant="16" id="eK5-Xe-E2r"/>
+                                            <constraint firstItem="oGy-WC-EdZ" firstAttribute="top" secondItem="haZ-cJ-gSI" secondAttribute="bottom" constant="16" id="euy-hT-glb"/>
                                             <constraint firstAttribute="trailing" secondItem="iGC-k4-gSg" secondAttribute="trailing" constant="20" symbolic="YES" id="fhm-lu-cqq"/>
                                             <constraint firstAttribute="trailing" secondItem="HQF-VA-Mh4" secondAttribute="trailing" constant="20" id="frR-rY-Y6W"/>
+                                            <constraint firstItem="oGy-WC-EdZ" firstAttribute="leading" secondItem="9RZ-fn-axe" secondAttribute="leading" constant="20" symbolic="YES" id="hIM-Uk-hfC"/>
                                             <constraint firstAttribute="trailing" secondItem="fem-lC-4eS" secondAttribute="trailing" constant="20" symbolic="YES" id="il1-ce-DhX"/>
                                             <constraint firstItem="D3T-wD-YCb" firstAttribute="top" secondItem="GWZ-xu-rTv" secondAttribute="bottom" constant="16" id="jeU-4e-mbq"/>
                                             <constraint firstItem="G4M-el-bgS" firstAttribute="top" secondItem="9RZ-fn-axe" secondAttribute="top" constant="16" id="jlq-Un-Axs"/>
@@ -2659,19 +2691,19 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <constraint firstAttribute="bottom" secondItem="9RZ-fn-axe" secondAttribute="bottom" id="Kki-HP-ftf"/>
                                     <constraint firstItem="9RZ-fn-axe" firstAttribute="width" secondItem="v5x-kO-HRk" secondAttribute="width" id="ZvL-Us-Kp9"/>
                                     <constraint firstAttribute="trailing" secondItem="9RZ-fn-axe" secondAttribute="trailing" id="abc-9Q-bov"/>
-                                    <constraint firstItem="9RZ-fn-axe" firstAttribute="top" secondItem="v5x-kO-HRk" secondAttribute="top" constant="18" id="dP7-u5-plg"/>
+                                    <constraint firstItem="9RZ-fn-axe" firstAttribute="top" secondItem="v5x-kO-HRk" secondAttribute="top" id="dP7-u5-plg"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="db2-J9-Crw"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="xlg-XG-fpS"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8GK-3L-ONg"/>
-                        <color key="backgroundColor" name="GreenMain"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v5x-kO-HRk" firstAttribute="leading" secondItem="8GK-3L-ONg" secondAttribute="leading" id="FMk-i1-DxU"/>
                             <constraint firstAttribute="bottom" secondItem="v5x-kO-HRk" secondAttribute="bottom" id="lX6-Wr-0Ef"/>
                             <constraint firstItem="v5x-kO-HRk" firstAttribute="trailing" secondItem="8GK-3L-ONg" secondAttribute="trailing" id="ldO-TO-fot"/>
-                            <constraint firstItem="v5x-kO-HRk" firstAttribute="top" secondItem="Mrr-mG-l5w" secondAttribute="top" constant="16" id="qVR-dd-ycT"/>
+                            <constraint firstItem="v5x-kO-HRk" firstAttribute="top" secondItem="Mrr-mG-l5w" secondAttribute="top" constant="44" id="qVR-dd-ycT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -2686,13 +2718,396 @@ Once these guidelines have been put into practice for some time, you will then b
                     <view key="view" contentMode="scaleToFill" id="VDU-ne-xbW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ao-Az-DjU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-S4-fmf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEU-zQ-m6N">
+                                                <rect key="frame" x="20" y="16" width="374" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="XqY-uK-o3i"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" name="GreenMain"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-Bg-Hb6">
+                                                <rect key="frame" x="20" y="81" width="374" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="23" id="mFj-S4-imL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-Ql-AJn">
+                                                <rect key="frame" x="20" y="148" width="374" height="360"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZZ-ww-I61">
+                                                        <rect key="frame" x="16" y="17" width="342" height="310"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="310" id="CJe-kh-rLE"/>
+                                                        </constraints>
+                                                        <mutableString key="text">• Bulimia Nervosa is an eating disorder whose symptoms vary in nature and severity - you don't have to have them all to be ill.
+
+• Binge-eating, feelings of loss of control, attempts to restrict intake/rid the body of food and an altered body image are core features of this condition.
+
+• There will be advantages and disadvantages to you in being bulimic.
+
+• Eating regular meals will help you break the vicious cycle of binge - purge/diet.
+
+• In order to take CONTROL you have to be MOTIVATED and willing to take RISKS.</mutableString>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="eZZ-ww-I61" secondAttribute="trailing" constant="16" id="0NZ-l5-jPD"/>
+                                                    <constraint firstItem="eZZ-ww-I61" firstAttribute="top" secondItem="qIg-Ql-AJn" secondAttribute="top" constant="17" id="7vZ-if-ai6"/>
+                                                    <constraint firstAttribute="height" constant="360" id="XVR-9R-HQL"/>
+                                                    <constraint firstItem="eZZ-ww-I61" firstAttribute="leading" secondItem="qIg-Ql-AJn" secondAttribute="leading" constant="16" id="icd-Yv-dSg"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vN8-Bg-Hb6" secondAttribute="trailing" constant="20" id="1qM-oZ-lDT"/>
+                                            <constraint firstItem="vN8-Bg-Hb6" firstAttribute="top" secondItem="cEU-zQ-m6N" secondAttribute="bottom" constant="44" id="R4s-k4-v4H"/>
+                                            <constraint firstItem="qIg-Ql-AJn" firstAttribute="top" secondItem="vN8-Bg-Hb6" secondAttribute="bottom" constant="44" id="Zkz-Sl-pRt"/>
+                                            <constraint firstItem="cEU-zQ-m6N" firstAttribute="leading" secondItem="LOg-S4-fmf" secondAttribute="leading" constant="20" id="cHj-ex-a3F"/>
+                                            <constraint firstItem="vN8-Bg-Hb6" firstAttribute="leading" secondItem="LOg-S4-fmf" secondAttribute="leading" constant="20" symbolic="YES" id="ezR-J8-ls4"/>
+                                            <constraint firstAttribute="height" constant="500" id="fsY-UO-3fo"/>
+                                            <constraint firstAttribute="trailing" secondItem="qIg-Ql-AJn" secondAttribute="trailing" constant="20" symbolic="YES" id="oUp-lZ-ii0"/>
+                                            <constraint firstAttribute="trailing" secondItem="cEU-zQ-m6N" secondAttribute="trailing" constant="20" id="pKu-IF-y5w"/>
+                                            <constraint firstItem="qIg-Ql-AJn" firstAttribute="leading" secondItem="LOg-S4-fmf" secondAttribute="leading" constant="20" symbolic="YES" id="pPO-pI-T4T"/>
+                                            <constraint firstItem="cEU-zQ-m6N" firstAttribute="top" secondItem="LOg-S4-fmf" secondAttribute="top" constant="16" id="wdF-SP-vcI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYq-S8-Rln">
+                                        <rect key="frame" x="0.0" y="500" width="414" height="1850"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation, you have come se far." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-5w-4h0">
+                                                <rect key="frame" x="20" y="131" width="374" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="M1U-Wv-ulM"/>
+                                                    <constraint firstAttribute="height" constant="23" id="p6k-hZ-SGP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="These steps help you in the following way to recovery." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVd-r1-DgW">
+                                                <rect key="frame" x="20" y="190" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kEI-Ln-rDd"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UU2-h7-qmf">
+                                                <rect key="frame" x="20" y="198" width="374" height="120"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-nd-txc">
+                                                        <rect key="frame" x="16" y="16" width="342" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="QfV-qM-Uju"/>
+                                                        </constraints>
+                                                        <string key="text">1)  Over the next week try to incorporate two steps from the 'principles of normal eating', one of which should be number 1., i.e. start to keep a diary of your eating.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="JDx-nd-txc" firstAttribute="top" secondItem="UU2-h7-qmf" secondAttribute="top" constant="16" id="FS6-rI-ZIh"/>
+                                                    <constraint firstItem="JDx-nd-txc" firstAttribute="leading" secondItem="UU2-h7-qmf" secondAttribute="leading" constant="16" id="Fs2-HZ-fFu"/>
+                                                    <constraint firstAttribute="height" constant="120" id="NaY-k1-5Rp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JDx-nd-txc" secondAttribute="trailing" constant="16" id="vkK-oE-K8Z"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-N3-5h4">
+                                                <rect key="frame" x="20" y="354" width="374" height="135"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r9Y-rL-GtO">
+                                                        <rect key="frame" x="16" y="16" width="342" height="110"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="Olf-hX-vMp"/>
+                                                        </constraints>
+                                                        <string key="text">2)  You will notice that the food diaries log feature has a sections for you to record what you eat, when you binge, when you vomit and when you use laxatives or diuretics - fill this in honestly and completely.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="r9Y-rL-GtO" secondAttribute="trailing" constant="16" id="NaZ-9E-cPj"/>
+                                                    <constraint firstItem="r9Y-rL-GtO" firstAttribute="leading" secondItem="Bak-N3-5h4" secondAttribute="leading" constant="16" id="SPC-YG-cSg"/>
+                                                    <constraint firstItem="r9Y-rL-GtO" firstAttribute="top" secondItem="Bak-N3-5h4" secondAttribute="top" constant="16" id="Xpe-XT-OIj"/>
+                                                    <constraint firstAttribute="height" constant="135" id="wJa-OC-YNy"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homework" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehb-D0-66R">
+                                                <rect key="frame" x="20" y="44" width="374" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="JjJ-Nc-P5x"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="cNL-NL-Ars"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" name="GreenMain"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-76-WcA">
+                                                <rect key="frame" x="20" y="1031" width="374" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I will use following principles:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arP-dJ-9dz">
+                                                        <rect key="frame" x="16" y="16" width="342" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="RuF-al-iOn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Em1-N3-GTl">
+                                                        <rect key="frame" x="16" y="57" width="342" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="owy-Uq-nh0"/>
+                                                        </constraints>
+                                                        <string key="text">1
+2
+3</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uez-fB-7o0">
+                                                        <rect key="frame" x="159.5" y="143" width="55.5" height="31"/>
+                                                        <color key="tintColor" name="GreenMain"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                                            <color key="baseBackgroundColor" name="GreenMain"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="Em1-N3-GTl" firstAttribute="leading" secondItem="pqk-76-WcA" secondAttribute="leading" constant="16" id="2Vz-Dk-ube"/>
+                                                    <constraint firstItem="arP-dJ-9dz" firstAttribute="leading" secondItem="pqk-76-WcA" secondAttribute="leading" constant="16" id="Bzw-wV-xLw"/>
+                                                    <constraint firstItem="arP-dJ-9dz" firstAttribute="top" secondItem="pqk-76-WcA" secondAttribute="top" constant="16" id="JDE-Cy-BQI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="arP-dJ-9dz" secondAttribute="trailing" constant="16" id="QQR-Fa-9xT"/>
+                                                    <constraint firstAttribute="height" constant="200" id="Yei-Fb-FPD"/>
+                                                    <constraint firstItem="Em1-N3-GTl" firstAttribute="top" secondItem="arP-dJ-9dz" secondAttribute="bottom" constant="8" id="a6i-1j-59I"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Em1-N3-GTl" secondAttribute="trailing" constant="16" id="dPq-EB-CMz"/>
+                                                    <constraint firstItem="uez-fB-7o0" firstAttribute="centerX" secondItem="pqk-76-WcA" secondAttribute="centerX" id="fbI-n2-npj"/>
+                                                    <constraint firstItem="uez-fB-7o0" firstAttribute="top" secondItem="Em1-N3-GTl" secondAttribute="bottom" constant="16" id="h5c-Av-a6K"/>
+                                                    <constraint firstItem="uez-fB-7o0" firstAttribute="top" secondItem="Em1-N3-GTl" secondAttribute="bottom" constant="16" id="uec-oF-DkL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzm-hU-wRh">
+                                                <rect key="frame" x="20" y="525" width="374" height="160"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h0E-He-Lv6">
+                                                        <rect key="frame" x="16" y="16" width="342" height="140"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="140" id="OIM-r0-4Ub"/>
+                                                        </constraints>
+                                                        <string key="text">3)  We will describe the thought diary in module 3. For the moment it may be helpful for you to begin to record general thoughts and feelings that you have had during the day - write something down each day in terms of how your mood has been, what stresses you have been under, relationship difficulties etc.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="h0E-He-Lv6" firstAttribute="leading" secondItem="Lzm-hU-wRh" secondAttribute="leading" constant="16" id="KDx-X3-DFe"/>
+                                                    <constraint firstItem="h0E-He-Lv6" firstAttribute="top" secondItem="Lzm-hU-wRh" secondAttribute="top" constant="16" id="TVR-uS-fRu"/>
+                                                    <constraint firstAttribute="height" constant="160" id="jbp-ys-rFc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="h0E-He-Lv6" secondAttribute="trailing" constant="16" id="qHO-Ay-ict"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODm-sF-gqY">
+                                                <rect key="frame" x="20" y="721" width="374" height="120"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tsp-4y-kBn">
+                                                        <rect key="frame" x="16" y="16" width="342" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="g2t-x7-JBo"/>
+                                                        </constraints>
+                                                        <string key="text">4)  It’s also helpful for you to record something positive – jot something down each day. Take these diaries seriously. They can become a valuable resource in your attempt to 'give-up' bulimia.</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
+                                                <constraints>
+                                                    <constraint firstItem="Tsp-4y-kBn" firstAttribute="leading" secondItem="ODm-sF-gqY" secondAttribute="leading" constant="16" id="G1M-BZ-s8J"/>
+                                                    <constraint firstAttribute="height" constant="120" id="KNo-bZ-1ek"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="P8Y-Pu-THg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Tsp-4y-kBn" secondAttribute="trailing" constant="16" id="cHo-nS-Wl2"/>
+                                                    <constraint firstItem="Tsp-4y-kBn" firstAttribute="top" secondItem="ODm-sF-gqY" secondAttribute="top" constant="16" id="syB-es-xBd"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltK-yI-pFB">
+                                                <rect key="frame" x="20" y="877" width="374" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="5fb-GC-UfF"/>
+                                                </constraints>
+                                                <string key="text">Write down which 'principles of normal eating' you are going to attempt this week (one of them should be number 1 from the list, choose one other then write them down below - use diaries</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wZ-if-8io">
+                                                <rect key="frame" x="20" y="1267" width="374" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="F2H-NL-KNn"/>
+                                                </constraints>
+                                                <string key="text">• You should try to complete each exercise in this module before moving on to the next one. If you have been unable to do this so far, go back and try again. Remember RISK TAKING is required to gain control over your bulimia.
+
+• If you have managed to complete the tasks, recognise your success by giving yourself a treat e.g.. go to the cinema or relax in a hot bath, etc....</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRh-Ko-iOQ">
+                                                <rect key="frame" x="20" y="1573" width="374" height="64"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H60-xn-F2O">
+                                                        <rect key="frame" x="16" y="16" width="342" height="32"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o5J-gS-6LT">
+                                                                <rect key="frame" x="308" y="0.5" width="34" height="33"/>
+                                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="ZQx-Oy-6AW"/>
+                                                                    <constraint firstAttribute="width" constant="34" id="fLf-6X-ozA"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as completed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-Bg-hhb">
+                                                                <rect key="frame" x="0.0" y="7.5" width="286" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="17" id="Ivp-0n-IGo"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="o5J-gS-6LT" secondAttribute="bottom" id="3IK-6g-Gbu"/>
+                                                            <constraint firstItem="o5J-gS-6LT" firstAttribute="top" secondItem="H60-xn-F2O" secondAttribute="top" id="6Qd-bl-sYL"/>
+                                                            <constraint firstAttribute="trailing" secondItem="o5J-gS-6LT" secondAttribute="trailing" id="ApK-SH-2qJ"/>
+                                                            <constraint firstItem="9Ab-Bg-hhb" firstAttribute="centerY" secondItem="H60-xn-F2O" secondAttribute="centerY" id="OQa-0E-RJr"/>
+                                                            <constraint firstItem="o5J-gS-6LT" firstAttribute="leading" secondItem="9Ab-Bg-hhb" secondAttribute="trailing" constant="22" id="VqG-2A-rAo"/>
+                                                            <constraint firstItem="9Ab-Bg-hhb" firstAttribute="leading" secondItem="H60-xn-F2O" secondAttribute="leading" id="bq4-yk-KY0"/>
+                                                            <constraint firstItem="o5J-gS-6LT" firstAttribute="trailing" secondItem="qWc-vm-PF9" secondAttribute="trailing" id="h2x-rR-ZVe"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="contentLayoutGuide" id="HBW-tU-hRL"/>
+                                                        <viewLayoutGuide key="frameLayoutGuide" id="qWc-vm-PF9"/>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenMain"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="H60-xn-F2O" secondAttribute="bottom" constant="16" id="0ml-vO-9ee"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H60-xn-F2O" secondAttribute="trailing" constant="16" id="JOJ-ey-ZCh"/>
+                                                    <constraint firstAttribute="height" constant="64" id="o0X-jO-M8z"/>
+                                                    <constraint firstItem="H60-xn-F2O" firstAttribute="leading" secondItem="gRh-Ko-iOQ" secondAttribute="leading" constant="16" id="qPj-VP-xPy"/>
+                                                    <constraint firstItem="H60-xn-F2O" firstAttribute="top" secondItem="gRh-Ko-iOQ" secondAttribute="top" constant="16" id="te4-PS-vF6"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Lzm-hU-wRh" secondAttribute="trailing" constant="20" symbolic="YES" id="0j4-mL-Ohg"/>
+                                            <constraint firstItem="UU2-h7-qmf" firstAttribute="top" secondItem="4EO-5w-4h0" secondAttribute="bottom" constant="44" id="3AB-Gl-iyB"/>
+                                            <constraint firstAttribute="trailing" secondItem="pqk-76-WcA" secondAttribute="trailing" constant="20" symbolic="YES" id="4zO-Lh-DMP"/>
+                                            <constraint firstItem="LVd-r1-DgW" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="7TN-Xb-vwZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="4EO-5w-4h0" secondAttribute="trailing" constant="20" id="9ye-XX-Qli"/>
+                                            <constraint firstItem="ODm-sF-gqY" firstAttribute="top" secondItem="Lzm-hU-wRh" secondAttribute="bottom" constant="36" id="BKF-8m-XyU"/>
+                                            <constraint firstItem="4wZ-if-8io" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="C3B-vG-Hb5"/>
+                                            <constraint firstItem="ltK-yI-pFB" firstAttribute="top" secondItem="ODm-sF-gqY" secondAttribute="bottom" constant="36" id="Fih-Gn-2tI"/>
+                                            <constraint firstItem="gRh-Ko-iOQ" firstAttribute="top" secondItem="4wZ-if-8io" secondAttribute="bottom" constant="66" id="Jxh-p5-ush"/>
+                                            <constraint firstAttribute="trailing" secondItem="gRh-Ko-iOQ" secondAttribute="trailing" constant="20" symbolic="YES" id="OPS-ma-gVz"/>
+                                            <constraint firstItem="pqk-76-WcA" firstAttribute="top" secondItem="ltK-yI-pFB" secondAttribute="bottom" constant="44" id="OXX-HU-4Sn"/>
+                                            <constraint firstItem="4EO-5w-4h0" firstAttribute="top" secondItem="Ehb-D0-66R" secondAttribute="bottom" constant="66" id="QKM-Ge-23h"/>
+                                            <constraint firstAttribute="height" constant="1850" id="RWM-uf-fcB"/>
+                                            <constraint firstAttribute="trailing" secondItem="gRh-Ko-iOQ" secondAttribute="trailing" constant="20" symbolic="YES" id="TMk-CB-MRZ"/>
+                                            <constraint firstItem="gRh-Ko-iOQ" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="Txy-6y-1el"/>
+                                            <constraint firstAttribute="trailing" secondItem="ltK-yI-pFB" secondAttribute="trailing" constant="20" symbolic="YES" id="WsC-Dk-sfH"/>
+                                            <constraint firstItem="Bak-N3-5h4" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="YCM-pV-fwP"/>
+                                            <constraint firstItem="gRh-Ko-iOQ" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="ZRX-d6-f0H"/>
+                                            <constraint firstItem="Lzm-hU-wRh" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="ZZb-Oc-6uy"/>
+                                            <constraint firstItem="Lzm-hU-wRh" firstAttribute="top" secondItem="Bak-N3-5h4" secondAttribute="bottom" constant="36" id="cbi-pk-1mT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ehb-D0-66R" secondAttribute="trailing" constant="20" symbolic="YES" id="cld-pe-eKE"/>
+                                            <constraint firstItem="pqk-76-WcA" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="d3o-E3-mPy"/>
+                                            <constraint firstItem="ltK-yI-pFB" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="dvZ-z2-uW4"/>
+                                            <constraint firstItem="LVd-r1-DgW" firstAttribute="top" secondItem="4EO-5w-4h0" secondAttribute="bottom" constant="36" id="iNl-pu-i7m"/>
+                                            <constraint firstItem="Ehb-D0-66R" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="iXF-3O-RUk"/>
+                                            <constraint firstItem="ODm-sF-gqY" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="jOe-1z-ViD"/>
+                                            <constraint firstAttribute="trailing" secondItem="LVd-r1-DgW" secondAttribute="trailing" constant="20" symbolic="YES" id="kWG-Hg-MWw"/>
+                                            <constraint firstItem="Bak-N3-5h4" firstAttribute="top" secondItem="UU2-h7-qmf" secondAttribute="bottom" constant="36" id="m43-4f-hVV"/>
+                                            <constraint firstItem="ltK-yI-pFB" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="oNK-eB-NM6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bak-N3-5h4" secondAttribute="trailing" constant="20" symbolic="YES" id="qPu-cT-Q1d"/>
+                                            <constraint firstItem="4EO-5w-4h0" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" id="syS-dt-DKf"/>
+                                            <constraint firstAttribute="trailing" secondItem="ltK-yI-pFB" secondAttribute="trailing" constant="20" symbolic="YES" id="t5p-cN-FXK"/>
+                                            <constraint firstItem="Ehb-D0-66R" firstAttribute="top" secondItem="gYq-S8-Rln" secondAttribute="top" constant="44" id="tmP-Xo-hU0"/>
+                                            <constraint firstAttribute="trailing" secondItem="ODm-sF-gqY" secondAttribute="trailing" constant="20" symbolic="YES" id="uTa-kB-Lg8"/>
+                                            <constraint firstItem="4wZ-if-8io" firstAttribute="top" secondItem="pqk-76-WcA" secondAttribute="bottom" constant="36" id="wxo-cn-k7l"/>
+                                            <constraint firstAttribute="trailing" secondItem="UU2-h7-qmf" secondAttribute="trailing" constant="20" symbolic="YES" id="x2L-jK-1mT"/>
+                                            <constraint firstAttribute="trailing" secondItem="4wZ-if-8io" secondAttribute="trailing" constant="20" symbolic="YES" id="zFu-kZ-GAi"/>
+                                            <constraint firstItem="UU2-h7-qmf" firstAttribute="leading" secondItem="gYq-S8-Rln" secondAttribute="leading" constant="20" symbolic="YES" id="zaA-Sc-Vkz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-aB-0es">
+                                        <rect key="frame" x="0.0" y="2350" width="414" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Eh7-54-E4R"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eJD-aB-0es" firstAttribute="leading" secondItem="8Ao-Az-DjU" secondAttribute="leading" id="05B-fX-nt8"/>
+                                    <constraint firstItem="LOg-S4-fmf" firstAttribute="width" secondItem="8Ao-Az-DjU" secondAttribute="width" id="CkI-Ak-481"/>
+                                    <constraint firstAttribute="trailing" secondItem="LOg-S4-fmf" secondAttribute="trailing" id="DT6-it-AI6"/>
+                                    <constraint firstItem="gYq-S8-Rln" firstAttribute="top" secondItem="LOg-S4-fmf" secondAttribute="bottom" id="EOQ-Ay-IkT"/>
+                                    <constraint firstItem="LOg-S4-fmf" firstAttribute="leading" secondItem="8Ao-Az-DjU" secondAttribute="leading" id="ERD-LO-IC5"/>
+                                    <constraint firstItem="gYq-S8-Rln" firstAttribute="leading" secondItem="8Ao-Az-DjU" secondAttribute="leading" id="Hll-kb-C5P"/>
+                                    <constraint firstAttribute="bottom" secondItem="eJD-aB-0es" secondAttribute="bottom" id="Ibi-Fu-SAu"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJD-aB-0es" secondAttribute="trailing" id="ROY-6Y-Gps"/>
+                                    <constraint firstAttribute="trailing" secondItem="gYq-S8-Rln" secondAttribute="trailing" id="WS8-Vx-eB0"/>
+                                    <constraint firstItem="eJD-aB-0es" firstAttribute="width" secondItem="8Ao-Az-DjU" secondAttribute="width" id="XQb-HX-6DJ"/>
+                                    <constraint firstItem="gYq-S8-Rln" firstAttribute="width" secondItem="8Ao-Az-DjU" secondAttribute="width" id="ZdW-vi-nYh"/>
+                                    <constraint firstItem="eJD-aB-0es" firstAttribute="top" secondItem="gYq-S8-Rln" secondAttribute="bottom" id="mZG-bG-6M3"/>
+                                    <constraint firstItem="LOg-S4-fmf" firstAttribute="top" secondItem="8Ao-Az-DjU" secondAttribute="top" id="ptS-34-7Rd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Bly-QW-Ldl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hYB-LT-imv"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1gN-YR-PzI"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Ao-Az-DjU" secondAttribute="bottom" id="0dX-mR-p3N"/>
+                            <constraint firstItem="8Ao-Az-DjU" firstAttribute="leading" secondItem="1gN-YR-PzI" secondAttribute="leading" id="12A-g8-zbu"/>
+                            <constraint firstItem="8Ao-Az-DjU" firstAttribute="trailing" secondItem="1gN-YR-PzI" secondAttribute="trailing" id="8JU-IN-nX3"/>
+                            <constraint firstItem="8Ao-Az-DjU" firstAttribute="top" secondItem="VDU-ne-xbW" secondAttribute="top" constant="44" id="QfL-c7-aG8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFU-l0-4KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5226" y="1730"/>
+            <point key="canvasLocation" x="-5226.0869565217399" y="1729.6875"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="sdG-g8-MlI">
