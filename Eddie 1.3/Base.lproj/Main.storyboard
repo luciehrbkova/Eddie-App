@@ -1668,63 +1668,41 @@ The examples below may help you get started:
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="The symptoms can vary in type and severity. Below is the currently accepted definition used by Psychiatrists and Psychologists:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-8R-oO6">
-                                                <rect key="frame" x="20" y="935" width="374" height="90"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-cW-a4W">
+                                                <rect key="frame" x="20" y="148" width="374" height="200"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="dN7-uB-DDL"/>
+                                                    <constraint firstAttribute="height" constant="200" id="oKO-jS-eKc"/>
                                                 </constraints>
+                                                <string key="text">THE VICIOUS CYCLE
+
+Below is a diagram showing the VICIOUS CYCLE which, although you may not have realised it, isalmost certainly controlling the way that you eat.
+How you got into this cycle is less important than what makes you stay there.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="04p-R2-vAY">
-                                                <rect key="frame" x="20" y="745" width="374" height="470"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltb-yA-0rG">
+                                                <rect key="frame" x="20" y="956" width="374" height="300"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="470" id="kVL-27-sZ3"/>
+                                                    <constraint firstAttribute="height" constant="300" id="pEW-Gc-w71"/>
+                                                </constraints>
+                                                <string key="text">WHAT INDUCES YOU TO BINGE?
+
+The diagram below suggests certain psychological triggers for bingeing but also shows the less obvious but nevertheless strong physiological factors which occur when someone is in a starvation state.
+
+You may say that the physiological drives can't apply to you because you are not underweight.
+
+This is in fact wrong as strict dieting, even at normal/above normal weights induces:</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2" translatesAutoresizingMaskIntoConstraints="NO" id="BCr-ek-RDL">
+                                                <rect key="frame" x="20" y="1318" width="374" height="335"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="335" id="rgU-OB-p5a"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owa-rJ-awO">
-                                                <rect key="frame" x="20" y="720" width="374" height="520"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criteria for Bulimia Nervosa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8d-Yo-lzV">
-                                                        <rect key="frame" x="16" y="16" width="212" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="VUT-Jz-nL6"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHz-xz-6ah">
-                                                        <rect key="frame" x="16" y="45" width="212" height="470"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="470" id="uiw-pd-lDN"/>
-                                                        </constraints>
-                                                        <string key="text">A. You must have recurrent episodes of binge-eating. This means rapid consumption of a large amount of food in a discrete period of time, usually less than two hours        
-B. During the eating binges you should feel a loss of control over your behaviour 
-C. You should regularly engage in either self-induced vomiting, use of laxatives, strict dieting, fasting or rigorous exercising in order to counteract the effects of your binge
-eating 
-D. You should have a minimum average of two binge-eating episodes per week for at least three months 
-E. You should have marked anxious over-concern with body shape and weight.
- This is what the 'experts' say you are supposed to do in order to have Bulimia Nervosa.
-Remember these are not all the features of Bulimia Nervosa, you may have other symptoms
-but not all the above.</string>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                                <color key="backgroundColor" name="GreenSecond"/>
-                                                <constraints>
-                                                    <constraint firstItem="C8d-Yo-lzV" firstAttribute="top" secondItem="owa-rJ-awO" secondAttribute="top" constant="16" id="Avg-ZM-2DZ"/>
-                                                    <constraint firstAttribute="height" constant="520" id="FP6-tn-WYo"/>
-                                                    <constraint firstAttribute="trailing" secondItem="C8d-Yo-lzV" secondAttribute="trailing" constant="16" id="Oe6-4M-Hof"/>
-                                                    <constraint firstItem="UHz-xz-6ah" firstAttribute="top" secondItem="C8d-Yo-lzV" secondAttribute="bottom" constant="8" symbolic="YES" id="TNK-AL-rml"/>
-                                                    <constraint firstItem="C8d-Yo-lzV" firstAttribute="leading" secondItem="owa-rJ-awO" secondAttribute="leading" constant="16" id="Y2n-Qy-OWO"/>
-                                                    <constraint firstItem="UHz-xz-6ah" firstAttribute="leading" secondItem="owa-rJ-awO" secondAttribute="leading" constant="16" id="r1p-yd-rV5"/>
-                                                    <constraint firstAttribute="trailing" secondItem="UHz-xz-6ah" secondAttribute="trailing" constant="16" id="wQH-a8-qbD"/>
-                                                </constraints>
-                                            </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obh-Pf-w6n">
                                                 <rect key="frame" x="20" y="1672" width="374" height="140"/>
                                                 <constraints>
@@ -1732,6 +1710,15 @@ but not all the above.</string>
                                                 </constraints>
                                                 <string key="text">Do you recognise yourself in any of these descriptions? 
 Perhaps no particular case fits you exactly but there may be parts from Deborah, George, Jill or Paul's stories that are familiar to you.</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="The symptoms can vary in type and severity. Below is the currently accepted definition used by Psychiatrists and Psychologists:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udt-8R-oO6">
+                                                <rect key="frame" x="20" y="1655" width="374" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="dN7-uB-DDL"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1782,23 +1769,44 @@ Perhaps no particular case fits you exactly but there may be parts from Deborah,
                                                     <constraint firstItem="mwx-eE-ITA" firstAttribute="top" secondItem="9aL-sZ-2QM" secondAttribute="top" constant="16" id="oZm-Bl-pGo"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-cW-a4W">
-                                                <rect key="frame" x="20" y="148" width="374" height="330"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-lm-kXG">
+                                                <rect key="frame" x="20" y="1170" width="374" height="140"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-Cs-Dur">
+                                                        <rect key="frame" x="16" y="16" width="342" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="kql-Jy-7aV"/>
+                                                        </constraints>
+                                                        <string key="text">1. Preoccupation with food       
+2. Carbohydrate cravings. 
+
+3. Strong drive to binge</string>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="330" id="DBV-it-h9S"/>
-                                                    <constraint firstAttribute="height" constant="330" id="oKO-jS-eKc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fyj-Cs-Dur" secondAttribute="trailing" constant="16" id="Byf-dK-l85"/>
+                                                    <constraint firstItem="fyj-Cs-Dur" firstAttribute="leading" secondItem="mj0-lm-kXG" secondAttribute="leading" constant="16" id="SlD-Dx-PD5"/>
+                                                    <constraint firstItem="fyj-Cs-Dur" firstAttribute="top" secondItem="mj0-lm-kXG" secondAttribute="top" constant="16" id="WeW-JE-AAx"/>
+                                                    <constraint firstAttribute="height" constant="140" id="YeR-6P-VMg"/>
                                                 </constraints>
-                                                <mutableString key="text">The diagram below suggests certain psychological triggers for bingeing but also shows the less obvious but nevertheless strong physiological factors which occur when someone is in a starvation state.
-You may say that the physiological drives can't apply to you because you are not underweight.This is in fact wrong as strict dieting, even at normal/above normal weights induces:</mutableString>
-                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="pic2" translatesAutoresizingMaskIntoConstraints="NO" id="04p-R2-vAY">
+                                                <rect key="frame" x="20" y="365" width="374" height="335"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="335" id="jHx-IW-iPj"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="PeachSecond"/>
                                         <constraints>
                                             <constraint firstItem="9aL-sZ-2QM" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" symbolic="YES" id="0qA-Nc-PxG"/>
+                                            <constraint firstItem="mj0-lm-kXG" firstAttribute="top" secondItem="ltb-yA-0rG" secondAttribute="bottom" constant="16" id="6fo-dD-zya"/>
                                             <constraint firstItem="SQ1-PT-gIn" firstAttribute="top" secondItem="Ush-1P-Hll" secondAttribute="top" constant="16" id="AaE-lN-SGO"/>
+                                            <constraint firstItem="04p-R2-vAY" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" symbolic="YES" id="BPO-rp-WVI"/>
                                             <constraint firstAttribute="height" constant="1960" id="Fj7-Wv-x6j"/>
                                             <constraint firstItem="emT-hg-xOB" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" symbolic="YES" id="Flp-rr-ac7"/>
                                             <constraint firstAttribute="trailing" secondItem="SQ1-PT-gIn" secondAttribute="trailing" constant="20" id="Khz-z5-4xM"/>
@@ -1808,9 +1816,11 @@ You may say that the physiological drives can't apply to you because you are not
                                             <constraint firstItem="9aL-sZ-2QM" firstAttribute="top" secondItem="obh-Pf-w6n" secondAttribute="bottom" constant="44" id="cb5-tb-WNU"/>
                                             <constraint firstAttribute="trailing" secondItem="emT-hg-xOB" secondAttribute="trailing" constant="20" id="f0q-dh-3Pd"/>
                                             <constraint firstItem="lXO-cW-a4W" firstAttribute="top" secondItem="emT-hg-xOB" secondAttribute="bottom" constant="44" id="jtP-wy-qfG"/>
+                                            <constraint firstItem="BCr-ek-RDL" firstAttribute="top" secondItem="mj0-lm-kXG" secondAttribute="bottom" constant="44" id="ksh-ai-c1n"/>
                                             <constraint firstAttribute="trailing" secondItem="9aL-sZ-2QM" secondAttribute="trailing" constant="20" symbolic="YES" id="sJg-q7-QfS"/>
                                             <constraint firstItem="obh-Pf-w6n" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" symbolic="YES" id="vWa-nK-WJq"/>
                                             <constraint firstItem="SQ1-PT-gIn" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" id="wBK-NA-hmY"/>
+                                            <constraint firstAttribute="trailing" secondItem="04p-R2-vAY" secondAttribute="trailing" constant="20" symbolic="YES" id="xoE-xo-TIr"/>
                                             <constraint firstItem="lXO-cW-a4W" firstAttribute="leading" secondItem="Ush-1P-Hll" secondAttribute="leading" constant="20" symbolic="YES" id="yGJ-X3-aAo"/>
                                         </constraints>
                                     </view>
@@ -2325,7 +2335,7 @@ The examples below may help you get started:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emx-7n-VB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7419" y="1718"/>
+            <point key="canvasLocation" x="-7420.289855072464" y="1717.6339285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LLK-Q1-SC3">
@@ -3740,6 +3750,7 @@ The examples below may help you get started:
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="pic1" width="710" height="874"/>
+        <image name="pic2" width="710" height="622"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
