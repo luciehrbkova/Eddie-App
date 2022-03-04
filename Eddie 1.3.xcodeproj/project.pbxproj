@@ -22,7 +22,7 @@
 		1892A9B827B7EF6C00C5C0E9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9B727B7EF6C00C5C0E9 /* CalendarViewController.swift */; };
 		1892A9BA27B7EF8800C5C0E9 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9B927B7EF8800C5C0E9 /* NotificationsViewController.swift */; };
 		1892A9BC27B7F0CC00C5C0E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9BB27B7F0CC00C5C0E9 /* HomeViewController.swift */; };
-		1892A9BE27B7F10500C5C0E9 /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9BD27B7F10500C5C0E9 /* MotivationViewController.swift */; };
+		1892A9BE27B7F10500C5C0E9 /* TetFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9BD27B7F10500C5C0E9 /* TetFirebaseViewController.swift */; };
 		1892A9C027B7F1AB00C5C0E9 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9BF27B7F1AB00C5C0E9 /* LogViewController.swift */; };
 		1892A9C227B7F20800C5C0E9 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */; };
 		1892A9C427B7F22A00C5C0E9 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892A9C327B7F22A00C5C0E9 /* AwardsViewController.swift */; };
@@ -76,7 +76,7 @@
 		1892A9B727B7EF6C00C5C0E9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1892A9B927B7EF8800C5C0E9 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		1892A9BB27B7F0CC00C5C0E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1892A9BD27B7F10500C5C0E9 /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
+		1892A9BD27B7F10500C5C0E9 /* TetFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetFirebaseViewController.swift; sourceTree = "<group>"; };
 		1892A9BF27B7F1AB00C5C0E9 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		1892A9C327B7F22A00C5C0E9 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				1892A9A427B7DC7100C5C0E9 /* ViewController.swift */,
 				1892A9B727B7EF6C00C5C0E9 /* CalendarViewController.swift */,
 				1892A9B927B7EF8800C5C0E9 /* NotificationsViewController.swift */,
-				1892A9BD27B7F10500C5C0E9 /* MotivationViewController.swift */,
+				1892A9BD27B7F10500C5C0E9 /* TetFirebaseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,7 +425,7 @@
 				1892A9A527B7DC7100C5C0E9 /* ViewController.swift in Sources */,
 				1892A9C927B8400900C5C0E9 /* award.swift in Sources */,
 				18F73FBB27BC703B00520F17 /* LogCollectionViewCell.swift in Sources */,
-				1892A9BE27B7F10500C5C0E9 /* MotivationViewController.swift in Sources */,
+				1892A9BE27B7F10500C5C0E9 /* TetFirebaseViewController.swift in Sources */,
 				1892A9C027B7F1AB00C5C0E9 /* LogViewController.swift in Sources */,
 				18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */,
 				1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */,

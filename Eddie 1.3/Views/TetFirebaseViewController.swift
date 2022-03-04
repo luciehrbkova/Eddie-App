@@ -8,7 +8,7 @@
 import UIKit
 //import FirebaseDatabase
 
-class MotivationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class TetFirebaseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
