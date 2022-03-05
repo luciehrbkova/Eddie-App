@@ -50,16 +50,48 @@ class DatabaseManager {
                 let userID = rrecord["userID"] as? String ?? ""
                 let date = rrecord["date"] as? String ?? ""
                 let time = rrecord["time"] as? String ?? ""
-                // problem
-                let node = snapshot.children.allObjects
-                let childNode = node[0]
+                
+                let mealCategory = rrecord["mealCategory"] as? [String:Any]
+                let mealCategoryTitle = mealCategory?["itemTitle"] as? String ?? ""
+                let breakfastMeal = rrecord["breakfastMeal"] as? [String:Any]
+                let breakfastMealTitle = breakfastMeal?["itemTitle"] as? String ?? ""
+                let lunchDinnerMeal = rrecord["lunchDinnerMeal"] as? [String:Any]
+                let lunchDinnerMealTitle = lunchDinnerMeal?["itemTitle"] as? String ?? ""
+                let snackMeal = rrecord["snackMeal"] as? [String:Any]
+                let snackMealTitle = snackMeal?["itemTitle"] as? String ?? ""
+                let treatMeal = rrecord["treatMeal"] as? [String:Any]
+                let treatMealTitle = treatMeal?["itemTitle"] as? String ?? ""
+                let drink = rrecord["drink"] as? [String:Any]
+                let drinkTitle = drink?["itemTitle"] as? String ?? ""
+                
                 let foodNote = rrecord["foodNote"] as? String ?? ""
+                
+                let place = rrecord["place"] as? [String:Any]
+                let placeTitle = place?["itemTitle"] as? String ?? ""
+                let mood = rrecord["mood"] as? [String:Any]
+                let moodTitle = mood?["itemTitle"] as? String ?? ""
+                let reaction = rrecord["reaction"] as? [String:Any]
+                let reactionTitle = reaction?["itemTitle"] as? String ?? ""
+//                let node = snapshot.children.allObjects
+//                let childNode = node[0]
+                
                 let moodNote = rrecord["moodNote"] as? String ?? ""
-                let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: "#imageLiteral(resourceName: 'Breakfast')"), breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
+                let actualRecord = Record(userID: userID, date: date, time: time,
+                                          mealCategory: ItemDetail(itemTitle: mealCategoryTitle, itemImage: mealCategoryTitle),
+                                          breakfastMeal: ItemDetail(itemTitle: breakfastMealTitle, itemImage: breakfastMealTitle),
+                                          lunchDinMeal: ItemDetail(itemTitle: lunchDinnerMealTitle, itemImage: lunchDinnerMealTitle),
+                                          snackMeal: ItemDetail(itemTitle: snackMealTitle, itemImage: snackMealTitle),
+                                          treatMeal: ItemDetail(itemTitle: treatMealTitle, itemImage: treatMealTitle),
+                                          drink: ItemDetail(itemTitle: drinkTitle, itemImage: drinkTitle),
+                                          foodNote: foodNote,
+                                          place: ItemDetail(itemTitle: placeTitle, itemImage: placeTitle),
+                                          mood: ItemDetail(itemTitle: moodTitle, itemImage: moodTitle),
+                                          reaction: ItemDetail(itemTitle: reactionTitle, itemImage: reactionTitle),
+                                          moodNote: moodNote)
                 self.records.append(actualRecord)
                 print(actualRecord)
-                print("This is snap:\(node)")
-                print("This is child:\(childNode)")
+//                print("This is snap:\(node)")
+//                print("This is child:\(childNode)")
                 reloadedTableView.reloadData()
 
             }

@@ -44,18 +44,18 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let record = database.records[indexPath.row]
         let cell = recordTableView.dequeueReusableCell(withIdentifier: "RecordsTableViewCell") as! RecordsTableViewCell
         cell.recordMealCellImage.image = UIImage(named: (record.mealCategory?.itemTitle)!)
-        print(record.mealCategory?.itemImage)
+//        print(record.mealCategory?.itemImage)
         cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
         cell.recordCellDate.text = record.date
         cell.recordMealCellNote.text = record.foodNote
-//        cell.recordMoodCellImage.image = record.mood?.itemImage
+        cell.recordMoodCellImage.image = UIImage(named: (record.mood?.itemTitle)!)
         cell.recordMoodCellTitle.text = "Feelings"
         cell.recordMoodCellNote.text = record.moodNote
         
-        cell.view1.backgroundColor = UIColor(named: "GreenSecond")
-        cell.view2.backgroundColor = UIColor(named: "GreenSecond")
-        cell.view3.backgroundColor = UIColor(named: "GreenSecond")
-        cell.view4.backgroundColor = UIColor(named: "GreenSecond")
+        cell.view1.backgroundColor = UIColor.systemBackground
+        cell.view2.backgroundColor = UIColor.systemBackground
+        cell.view3.backgroundColor = UIColor.systemBackground
+        cell.view4.backgroundColor = UIColor.systemBackground
         cell.view1.layer.cornerRadius = 10
         cell.view1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         cell.view4.layer.cornerRadius = 10
