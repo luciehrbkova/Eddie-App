@@ -44,20 +44,24 @@ class DatabaseManager {
     
     func readRecords(reloadedTableView: UITableView ){
         //Retreive the posts and listen for changes (.childAdded)
-        databaseHandle = ref?.child("Records").observe(.childAdded, with: { (snapshot) in
+        databaseHandle = ref?.child("Records").observe(.value, with: { (snapshot) in
             // Code to executed when a child is added under "Posts"
             // Tak the value from the snapsot and added it into postData array
             // Try to convert the value of the data to a string
-            let record = snapshot.value as? Record
-            // conditional bonding testing if there is data
-            if let actualRecord = record {
-                //Append data to our post data Array
-                self.records.append(actualRecord)
-                // Reload the table view
+            let value = snapshot.value as? NSDictionary
+            let userID = value?["userID"] as? String ?? ""
+            let record = Record(userID: userID, date: nil, treatMeal: nil, drink: nil, foodNote: nil, place: nil, mood: nil, reaction: nil, moodNote: nil)
+        
+//            if let actualRecord = record {
+//                //Append data to our post data Array
+//                self.records.append(actualRecord)
+//                // Reload the table view
                 reloadedTableView.reloadData()
-//                self.tableView.reloadData()
-            }
+            print(userID)
         })
+        { error in
+          print(error.localizedDescription)
+        }
     }
     
     func addPost(input: String){
