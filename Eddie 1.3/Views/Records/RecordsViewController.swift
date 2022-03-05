@@ -43,9 +43,9 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = database.records[indexPath.row]
         let cell = recordTableView.dequeueReusableCell(withIdentifier: "RecordsTableViewCell") as! RecordsTableViewCell
-//        cell.recordMealCellImage.image = record.mealCategory?.itemImage
-//        cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
-//        cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
+        cell.recordMealCellImage.image = UIImage(named: (record.mealCategory?.itemTitle)!)
+        print(record.mealCategory?.itemImage)
+        cell.recordMealCellTitle.text = record.mealCategory?.itemTitle
         cell.recordCellDate.text = record.date
         cell.recordMealCellNote.text = record.foodNote
 //        cell.recordMoodCellImage.image = record.mood?.itemImage

@@ -45,38 +45,56 @@ class DatabaseManager {
     }
     
     func readRecords(reloadedTableView: UITableView ){
-        //Retreive the posts and listen for changes (.childAdded)
         ref?.child("Records").observe(.childAdded, with: { (snapshot) in
             if let rrecord = snapshot.value as? [String: Any] {
                 let userID = rrecord["userID"] as? String ?? ""
                 let date = rrecord["date"] as? String ?? ""
                 let time = rrecord["time"] as? String ?? ""
+                // problem
+                let node = snapshot.children.allObjects
+                let childNode = node[0]
                 let foodNote = rrecord["foodNote"] as? String ?? ""
                 let moodNote = rrecord["moodNote"] as? String ?? ""
-                let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: nil, breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
+                let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: ItemDetail(itemTitle: "Breakfast", itemImage: "#imageLiteral(resourceName: 'Breakfast')"), breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
                 self.records.append(actualRecord)
                 print(actualRecord)
+                print("This is snap:\(node)")
+                print("This is child:\(childNode)")
                 reloadedTableView.reloadData()
-                
+
             }
-            // Code to executed when a child is added under "Posts"
-            // Tak the value from the snapsot and added it into postData array
-            // Try to convert the value of the data to a string
-//            let value = snapshot.value as? NSDictionary
-//            let userID = value?["userID"] as? String ?? ""
-//            let record = Record(userID: userID, date: nil, treatMeal: nil, drink: nil, foodNote: nil, place: nil, mood: nil, reaction: nil, moodNote: nil)
-        
-//            if let actualRecord = record {
-//                //Append data to our post data Array
-//                self.records.append(actualRecord)
-//                // Reload the table view
-//                reloadedTableView.reloadData()
-//            print(userID)
         })
         { error in
           print(error.localizedDescription)
         }
+        
+//                ref?.child("Records").observe(.childAdded, with: { (snapshot) in
+//                    for child in snapshot.children {
+//                        if let childSnapshot = child as? NSDictionary,
+//                           let dict = childSnapshot?.value as? [String?: Any],
+//                           let userID = dict["userID"] as? String,
+//                           let date = dict["date"] as? String,
+//                           let time = dict["time"] as? String,
+////                           let mealCategory = dict.childSnapshot(forPath: "MealCategory/itemTitle").value as? String,
+//                           let foodNote = dict["foodNote"] as? String,
+//                           let moodNote = dict["moodNote"] as? String {
+//
+//                           let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: nil, breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
+//
+//                            self.records.append(actualRecord)
+//                            print(actualRecord)
+//                            reloadedTableView.reloadData()
+//                        }
+//
+//                    }
+//                })
+//                    { error in
+//                      print(error.localizedDescription)
+//                    }
     }
+        
+        
+    
     
     func addPost(user: String, input: String){
         //TODO: Post the data to firebase
