@@ -4,6 +4,10 @@
 //
 //  Created by Lucie Hrbkova on 21/02/2022.
 //
+struct Post {
+    var user: String
+    var text: String
+}
 
 import Foundation
 import FirebaseDatabase
@@ -13,7 +17,7 @@ class DatabaseManager {
     var ref: DatabaseReference?
     var databaseHandle: DatabaseHandle?
     //????????
-    var postData = [String]()
+    var postData = [Post]()
     
     var records = [Record]()
     
@@ -23,23 +27,32 @@ class DatabaseManager {
     
     func readPosts(reloadedTableView: UITableView){
         //Retreive the posts and listen for changes (.childAdded)
-        databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
-            // Code to executed when a child is added under "Posts"
-            // Tak the value from the snapsot and added it into postData array
-            // Try to convert the value of the data to a string
-            let post = snapshot.value as? String
-            // conditional bonding testing if there is data
-            if let actualPost = post {
-                //Append data to our post data Array
+        ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
+            if let  post = snapshot.value as? [String: Any] {
+                let user = post["user"] as? String ?? ""
+                let text = post["text"] as? String ?? ""
+                let actualPost = Post(user: user, text: text)
+//                print(user)
+//                print(text)
                 self.postData.append(actualPost)
-                // Reload the table view
+                print(actualPost)
                 reloadedTableView.reloadData()
-//                self.tableView.reloadData()
             }
         })
-        { error in
-          print(error.localizedDescription)
-        }
+       
+            
+            
+//            let post = snapshot.value as? [String: Any] {
+//                let user = post["user"] as? String ?? ""
+//                let text = post["text"] as? String ?? ""
+//            }
+
+//                reloadedTableView.reloadData()
+
+//        })
+//        { error in
+//          print(error.localizedDescription)
+//        }
     }
     
     func readRecords(reloadedTableView: UITableView ){
@@ -64,10 +77,14 @@ class DatabaseManager {
         }
     }
     
-    func addPost(input: String){
+    func addPost(user: String, input: String){
         //TODO: Post the data to firebase
         //create automatically child by id
-        ref?.child("Posts").childByAutoId().setValue(input)
+        let object : [String: String] = [
+            "user": "lulu",
+            "text": input,
+        ]
+        ref?.child("Posts").childByAutoId().setValue(object)
     }
     
     func addRecord(userID: String,
