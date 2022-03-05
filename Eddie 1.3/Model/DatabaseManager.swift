@@ -39,38 +39,39 @@ class DatabaseManager {
                 reloadedTableView.reloadData()
             }
         })
-       
-            
-            
-//            let post = snapshot.value as? [String: Any] {
-//                let user = post["user"] as? String ?? ""
-//                let text = post["text"] as? String ?? ""
-//            }
-
-//                reloadedTableView.reloadData()
-
-//        })
-//        { error in
-//          print(error.localizedDescription)
-//        }
+        { error in
+          print(error.localizedDescription)
+        }
     }
     
     func readRecords(reloadedTableView: UITableView ){
         //Retreive the posts and listen for changes (.childAdded)
-        databaseHandle = ref?.child("Records").observe(.value, with: { (snapshot) in
+        ref?.child("Records").observe(.childAdded, with: { (snapshot) in
+            if let rrecord = snapshot.value as? [String: Any] {
+                let userID = rrecord["userID"] as? String ?? ""
+                let date = rrecord["date"] as? String ?? ""
+                let time = rrecord["time"] as? String ?? ""
+                let foodNote = rrecord["foodNote"] as? String ?? ""
+                let moodNote = rrecord["moodNote"] as? String ?? ""
+                let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: nil, breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
+                self.records.append(actualRecord)
+                print(actualRecord)
+                reloadedTableView.reloadData()
+                
+            }
             // Code to executed when a child is added under "Posts"
             // Tak the value from the snapsot and added it into postData array
             // Try to convert the value of the data to a string
-            let value = snapshot.value as? NSDictionary
-            let userID = value?["userID"] as? String ?? ""
-            let record = Record(userID: userID, date: nil, treatMeal: nil, drink: nil, foodNote: nil, place: nil, mood: nil, reaction: nil, moodNote: nil)
+//            let value = snapshot.value as? NSDictionary
+//            let userID = value?["userID"] as? String ?? ""
+//            let record = Record(userID: userID, date: nil, treatMeal: nil, drink: nil, foodNote: nil, place: nil, mood: nil, reaction: nil, moodNote: nil)
         
 //            if let actualRecord = record {
 //                //Append data to our post data Array
 //                self.records.append(actualRecord)
 //                // Reload the table view
-                reloadedTableView.reloadData()
-            print(userID)
+//                reloadedTableView.reloadData()
+//            print(userID)
         })
         { error in
           print(error.localizedDescription)
