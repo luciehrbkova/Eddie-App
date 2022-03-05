@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1851FB5527D3900800560FCB /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5427D3900800560FCB /* MotivationViewController.swift */; };
+		1851FB5727D3902400560FCB /* MotivationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */; };
+		1851FB5927D3915100560FCB /* quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5827D3915100560FCB /* quote.swift */; };
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
@@ -59,6 +62,9 @@
 
 /* Begin PBXFileReference section */
 		07BCA2922AC513AC35E85104 /* Pods_Eddie_1_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eddie_1_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1851FB5427D3900800560FCB /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
+		1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationTableViewCell.swift; sourceTree = "<group>"; };
+		1851FB5827D3915100560FCB /* quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quote.swift; sourceTree = "<group>"; };
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1851FB5327D38FE200560FCB /* MotivationView */ = {
+			isa = PBXGroup;
+			children = (
+				1851FB5427D3900800560FCB /* MotivationViewController.swift */,
+				1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */,
+			);
+			name = MotivationView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		188C60BD27BFE37E00A9B5FA /* Records */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +188,7 @@
 		1892A9B427B7EE4800C5C0E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1851FB5327D38FE200560FCB /* MotivationView */,
 				18A3539E27CD605B00B112C3 /* Level1 */,
 				188C60BD27BFE37E00A9B5FA /* Records */,
 				18F73FB527BC6B6E00520F17 /* LogRecordsView */,
@@ -196,6 +213,7 @@
 				188C60C027BFE63E00A9B5FA /* record.swift */,
 				188C60CA27C3C51F00A9B5FA /* DatabaseManager.swift */,
 				18A3539827CA995E00B112C3 /* User.swift */,
+				1851FB5827D3915100560FCB /* quote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,9 +434,11 @@
 				1892A9C427B7F22A00C5C0E9 /* AwardsViewController.swift in Sources */,
 				18F73FB227BAEAF500520F17 /* homeModuleGuide.swift in Sources */,
 				1892A9D827B9AFA500C5C0E9 /* AlertMessage.swift in Sources */,
+				1851FB5527D3900800560FCB /* MotivationViewController.swift in Sources */,
 				18A353A427CD6B7B00B112C3 /* L1M2ViewController.swift in Sources */,
 				1892A9B827B7EF6C00C5C0E9 /* CalendarViewController.swift in Sources */,
 				18F73FC527BD7B2200520F17 /* DrinksCollectionViewCell.swift in Sources */,
+				1851FB5927D3915100560FCB /* quote.swift in Sources */,
 				1892A9E027BAB23C00C5C0E9 /* RemindersViewController.swift in Sources */,
 				1892A9E327BABA7100C5C0E9 /* AvatarCollectionViewCell.swift in Sources */,
 				18F73FB727BC6CBB00520F17 /* foodCollections.swift in Sources */,
@@ -437,6 +457,7 @@
 				1892A9BA27B7EF8800C5C0E9 /* NotificationsViewController.swift in Sources */,
 				1892A9DA27BA922B00C5C0E9 /* AccountSettingViewController.swift in Sources */,
 				1892A9B627B7EF2100C5C0E9 /* ProfileSettingsViewController.swift in Sources */,
+				1851FB5727D3902400560FCB /* MotivationTableViewCell.swift in Sources */,
 				1892A9BC27B7F0CC00C5C0E9 /* HomeViewController.swift in Sources */,
 				18F73FBF27BD7A3F00520F17 /* LunchCollectionViewCell.swift in Sources */,
 				1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */,

@@ -90,18 +90,111 @@
         <!--Motivation-->
         <scene sceneID="u4H-gS-INc">
             <objects>
-                <viewController id="IOA-y1-Wj5" sceneMemberID="viewController">
+                <viewController id="IOA-y1-Wj5" customClass="MotivationViewController" customModule="Eddie_1_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fUY-9O-Sq0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1PV-dk-T62">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MotivationTableViewCell" rowHeight="243" id="st2-3X-nc8" customClass="MotivationTableViewCell" customModule="Eddie_1_3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="243"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="st2-3X-nc8" id="Vmb-Ib-pZQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-wc-LvF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="243"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/03/2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-BZ-j9w">
+                                                            <rect key="frame" x="288" y="4" width="70" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="JFJ-mf-zoR"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Nca-1x-WCC"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hW-Qx-Iho">
+                                                            <rect key="frame" x="0.0" y="23" width="374" height="216"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf4" translatesAutoresizingMaskIntoConstraints="NO" id="k8T-J2-Wm3">
+                                                                    <rect key="frame" x="326" y="168" width="40" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="40" id="gtg-ek-YgQ"/>
+                                                                        <constraint firstAttribute="height" constant="40" id="w8Q-6t-1w7"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.”" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sje-L3-BS3">
+                                                                    <rect key="frame" x="15" y="16" width="343" height="184"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="184" id="WAk-0Y-EQf"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="GreenSecond"/>
+                                                            <constraints>
+                                                                <constraint firstItem="sje-L3-BS3" firstAttribute="leading" secondItem="0hW-Qx-Iho" secondAttribute="leading" constant="15" id="VIY-Od-kpE"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sje-L3-BS3" secondAttribute="bottom" constant="16" id="Zvw-D4-sm5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="k8T-J2-Wm3" secondAttribute="trailing" constant="8" id="hzQ-x0-jVx"/>
+                                                                <constraint firstAttribute="bottom" secondItem="k8T-J2-Wm3" secondAttribute="bottom" constant="8" id="qyq-C4-Q35"/>
+                                                                <constraint firstItem="sje-L3-BS3" firstAttribute="top" secondItem="0hW-Qx-Iho" secondAttribute="top" constant="16" id="tN9-rE-Rxf"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sje-L3-BS3" secondAttribute="trailing" constant="16" id="xuC-mJ-ry7"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="aEg-BZ-j9w" secondAttribute="trailing" constant="16" id="Hw1-FF-E0b"/>
+                                                        <constraint firstItem="0hW-Qx-Iho" firstAttribute="top" secondItem="aEg-BZ-j9w" secondAttribute="bottom" constant="4" id="OzQ-pf-yGx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0hW-Qx-Iho" secondAttribute="trailing" id="Yb8-CY-EwM"/>
+                                                        <constraint firstItem="0hW-Qx-Iho" firstAttribute="leading" secondItem="hjb-wc-LvF" secondAttribute="leading" id="hOR-mP-jRL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0hW-Qx-Iho" secondAttribute="bottom" constant="4" id="lFJ-ux-TNq"/>
+                                                        <constraint firstItem="aEg-BZ-j9w" firstAttribute="top" secondItem="hjb-wc-LvF" secondAttribute="top" constant="4" id="wsv-kb-ei2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hjb-wc-LvF" secondAttribute="bottom" id="HaU-4O-bX2"/>
+                                                <constraint firstItem="hjb-wc-LvF" firstAttribute="top" secondItem="Vmb-Ib-pZQ" secondAttribute="top" id="Wyq-UZ-igH"/>
+                                                <constraint firstAttribute="trailing" secondItem="hjb-wc-LvF" secondAttribute="trailing" id="qzl-bS-6SK"/>
+                                                <constraint firstItem="hjb-wc-LvF" firstAttribute="leading" secondItem="Vmb-Ib-pZQ" secondAttribute="leading" id="ymb-oD-Y0o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="aEg-BZ-j9w" id="Y10-iM-2Rg"/>
+                                            <outlet property="decoImage" destination="k8T-J2-Wm3" id="tWJ-Oc-Apy"/>
+                                            <outlet property="quote" destination="sje-L3-BS3" id="1i6-eZ-X6L"/>
+                                            <outlet property="quoteView" destination="0hW-Qx-Iho" id="6hj-cc-GfN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xjT-RK-vAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xjT-RK-vAZ" firstAttribute="trailing" secondItem="1PV-dk-T62" secondAttribute="trailing" constant="20" id="4u2-BG-rK8"/>
+                            <constraint firstItem="1PV-dk-T62" firstAttribute="leading" secondItem="xjT-RK-vAZ" secondAttribute="leading" constant="20" id="TjL-1Z-QBl"/>
+                            <constraint firstAttribute="bottom" secondItem="1PV-dk-T62" secondAttribute="bottom" id="YNi-49-cls"/>
+                            <constraint firstItem="1PV-dk-T62" firstAttribute="top" secondItem="xjT-RK-vAZ" secondAttribute="top" id="zGJ-lY-pUZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Motivation" id="L9i-rc-mwU"/>
+                    <connections>
+                        <outlet property="motivationTableView" destination="1PV-dk-T62" id="mFj-lG-kJY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdV-3A-oWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291" y="1695"/>
+            <point key="canvasLocation" x="-291.304347826087" y="1694.8660714285713"/>
         </scene>
         <!--Log Your Record-->
         <scene sceneID="4km-d1-Uuw">
@@ -2751,7 +2844,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="310" id="CJe-kh-rLE"/>
                                                         </constraints>
-                                                        <mutableString key="text">• Bulimia Nervosa is an eating disorder whose symptoms vary in nature and severity - you don't have to have them all to be ill.
+                                                        <string key="text">• Bulimia Nervosa is an eating disorder whose symptoms vary in nature and severity - you don't have to have them all to be ill.
 
 • Binge-eating, feelings of loss of control, attempts to restrict intake/rid the body of food and an altered body image are core features of this condition.
 
@@ -2759,7 +2852,7 @@ Once these guidelines have been put into practice for some time, you will then b
 
 • Eating regular meals will help you break the vicious cycle of binge - purge/diet.
 
-• In order to take CONTROL you have to be MOTIVATED and willing to take RISKS.</mutableString>
+• In order to take CONTROL you have to be MOTIVATED and willing to take RISKS.</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -4475,6 +4568,7 @@ Once these guidelines have been put into practice for some time, you will then b
         <image name="fork.knife" catalog="system" width="92" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="leaf4" width="386" height="384"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="pic1" width="710" height="874"/>
         <image name="pic2" width="710" height="816"/>
