@@ -139,7 +139,7 @@
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
                                                             </subviews>
-                                                            <color key="backgroundColor" name="GreenSecond"/>
+                                                            <color key="backgroundColor" name="PeachSecond"/>
                                                             <constraints>
                                                                 <constraint firstItem="sje-L3-BS3" firstAttribute="leading" secondItem="0hW-Qx-Iho" secondAttribute="leading" constant="15" id="VIY-Od-kpE"/>
                                                                 <constraint firstAttribute="bottom" secondItem="sje-L3-BS3" secondAttribute="bottom" constant="16" id="Zvw-D4-sm5"/>
@@ -3774,6 +3774,11 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" id="l3i-KW-kss">
+                                                    <rect key="frame" x="0.0" y="62.5" width="374" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tQd-ha-lQX">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
                                                     <subviews>
@@ -3787,7 +3792,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                                         <constraint firstAttribute="height" constant="28" id="x00-rE-35M"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-xw-WSM">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-xw-WSM">
                                                                     <rect key="frame" x="60" y="19" width="135" height="21"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="H4g-G1-doo"/>
@@ -3797,12 +3802,24 @@ Once these guidelines have been put into practice for some time, you will then b
                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/3/2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-mo-wTC">
+                                                                    <rect key="frame" x="282" y="16" width="76" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="16" id="7Zi-Sm-yce"/>
+                                                                        <constraint firstAttribute="width" constant="76" id="bSF-hr-WTe"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="5JQ-f3-4DM"/>
                                                                 <constraint firstItem="jXm-Lz-KPE" firstAttribute="top" secondItem="Cnf-VI-fUh" secondAttribute="top" constant="16" id="9Z7-UT-Y69"/>
                                                                 <constraint firstItem="wPv-xw-WSM" firstAttribute="leading" secondItem="jXm-Lz-KPE" secondAttribute="trailing" constant="16" id="BJR-5e-ePK"/>
+                                                                <constraint firstItem="VIh-mo-wTC" firstAttribute="top" secondItem="Cnf-VI-fUh" secondAttribute="top" constant="16" id="SgQ-9N-vRL"/>
                                                                 <constraint firstItem="wPv-xw-WSM" firstAttribute="top" secondItem="Cnf-VI-fUh" secondAttribute="top" constant="19" id="aUM-DH-6AG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VIh-mo-wTC" secondAttribute="trailing" constant="16" id="bo9-gR-bTb"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wPv-xw-WSM" secondAttribute="trailing" constant="20" symbolic="YES" id="geG-rD-1zH"/>
                                                                 <constraint firstItem="jXm-Lz-KPE" firstAttribute="leading" secondItem="Cnf-VI-fUh" secondAttribute="leading" constant="16" id="lxD-Tq-UZJ"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ocs-NE-Mav"/>
@@ -3876,7 +3893,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                                                 <constraint firstAttribute="bottom" secondItem="7vn-go-4Jx" secondAttribute="bottom" constant="16" id="69h-oy-Y0r"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="TDk-0Y-WvV"/>
                                                                 <constraint firstItem="7vn-go-4Jx" firstAttribute="leading" secondItem="nid-PQ-Ccf" secondAttribute="leading" constant="60" id="kKM-QO-qZ0"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7vn-go-4Jx" secondAttribute="trailing" symbolic="YES" id="pnA-kN-xW4"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7vn-go-4Jx" secondAttribute="trailing" constant="20" symbolic="YES" id="pnA-kN-xW4"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-se-LW7">
@@ -3911,6 +3928,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="recordCellDate" destination="VIh-mo-wTC" id="KRR-t0-Eic"/>
                                             <outlet property="recordMealCellImage" destination="jXm-Lz-KPE" id="1Ex-xX-ly9"/>
                                             <outlet property="recordMealCellNote" destination="Ehk-cr-KjJ" id="1ob-Vf-Pgv"/>
                                             <outlet property="recordMealCellTitle" destination="wPv-xw-WSM" id="zsO-uZ-dIB"/>
@@ -3943,7 +3961,7 @@ Once these guidelines have been put into practice for some time, you will then b
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xvd-rH-S9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="1702"/>
+            <point key="canvasLocation" x="2586.9565217391305" y="1701.5625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AjF-lV-3eL">

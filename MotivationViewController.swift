@@ -30,7 +30,7 @@ class MotivationViewController: UIViewController, UITableViewDataSource, UITable
         cell.date.text = quoteList[indexPath.row].date
         cell.quote.text = quoteList[indexPath.row].quote
         cell.decoImage.image = quoteList[indexPath.row].image
-        cell.quoteView.layer.cornerRadius = 30
+        cell.quoteView.layer.cornerRadius = 10
         cell.quoteView.layer.masksToBounds = true
         return cell
     }
