@@ -67,6 +67,10 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "RecordDetailViewController")
+        self.navigationController?.pushViewController(viewController!, animated: true)
+    }
 
 }
 

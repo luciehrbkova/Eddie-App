@@ -10,6 +10,7 @@
 		1851FB5527D3900800560FCB /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5427D3900800560FCB /* MotivationViewController.swift */; };
 		1851FB5727D3902400560FCB /* MotivationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */; };
 		1851FB5927D3915100560FCB /* quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5827D3915100560FCB /* quote.swift */; };
+		1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */; };
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
@@ -65,6 +66,7 @@
 		1851FB5427D3900800560FCB /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
 		1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationTableViewCell.swift; sourceTree = "<group>"; };
 		1851FB5827D3915100560FCB /* quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quote.swift; sourceTree = "<group>"; };
+		1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */,
 				188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */,
 				188C60C227C017C200A9B5FA /* TestTableViewCell.swift */,
+				1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				18F73FB727BC6CBB00520F17 /* foodCollections.swift in Sources */,
 				1892A9A527B7DC7100C5C0E9 /* ViewController.swift in Sources */,
 				1892A9C927B8400900C5C0E9 /* award.swift in Sources */,
+				1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */,
 				18F73FBB27BC703B00520F17 /* LogCollectionViewCell.swift in Sources */,
 				1892A9BE27B7F10500C5C0E9 /* TetFirebaseViewController.swift in Sources */,
 				1892A9C027B7F1AB00C5C0E9 /* LogViewController.swift in Sources */,

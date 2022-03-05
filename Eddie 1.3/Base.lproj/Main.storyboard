@@ -129,7 +129,7 @@
                                                                         <constraint firstAttribute="height" constant="40" id="w8Q-6t-1w7"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.”" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sje-L3-BS3">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.”" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sje-L3-BS3">
                                                                     <rect key="frame" x="15" y="16" width="343" height="184"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="184" id="WAk-0Y-EQf"/>
@@ -908,7 +908,6 @@
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                             <connections>
                                 <action selector="clearButton:" destination="W9F-TR-BHB" id="iGs-it-82r"/>
-                                <segue destination="S9k-DT-IVu" kind="showDetail" id="yeQ-By-urS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3963,16 +3962,16 @@ Once these guidelines have been put into practice for some time, you will then b
             </objects>
             <point key="canvasLocation" x="2586.9565217391305" y="1701.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Detail View Controller-->
         <scene sceneID="AjF-lV-3eL">
             <objects>
-                <viewController id="S9k-DT-IVu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordDetailViewController" hidesBottomBarWhenPushed="YES" id="S9k-DT-IVu" customClass="RecordDetailViewController" customModule="Eddie_1_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVG-Su-VYj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6kP-fw-OgG">
-                                <rect key="frame" x="20" y="64" width="369" height="814"/>
+                                <rect key="frame" x="20" y="108" width="369" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gr2-rb-v7U">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
@@ -4358,7 +4357,7 @@ Once these guidelines have been put into practice for some time, you will then b
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-kG-8aR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="2399"/>
+            <point key="canvasLocation" x="2587" y="2425"/>
         </scene>
         <!--Home-->
         <scene sceneID="b1e-qi-PzW">
