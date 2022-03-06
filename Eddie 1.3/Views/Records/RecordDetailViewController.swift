@@ -9,23 +9,25 @@ import UIKit
 
 class RecordDetailViewController: UIViewController {
     
+    let database = DatabaseManager()
+    @IBOutlet weak var detailCategory: UILabel!
     var receivedData: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print(receivedData)
+        print(type(of: receivedData))
+        
+        // Set Database------------------
+        database.setDatabase()
+        database.readRecordDetail(variable: receivedData)
+////        database.readRecordDetail()
+//
+//        detailCategory.text = database.recordInDetail.foodNote
+//        print(database.recordInDetail)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

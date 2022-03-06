@@ -4356,6 +4356,9 @@ Once these guidelines have been put into practice for some time, you will then b
                             <constraint firstItem="6kP-fw-OgG" firstAttribute="top" secondItem="GU9-6U-S8x" secondAttribute="top" constant="64" id="kQp-H4-nhc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailCategory" destination="4Ji-14-vMx" id="0DI-pF-kV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-kG-8aR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

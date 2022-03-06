@@ -20,6 +20,7 @@ class DatabaseManager {
     var postData = [Post]()
     var records = [Record]()
     var displayedRecord = String()
+    var recordInDetail = Record(userID: "placeholder")
     
     func setDatabase() {
         ref = Database.database().reference()
@@ -47,6 +48,8 @@ class DatabaseManager {
     func readRecords(reloadedTableView: UITableView ){
         ref?.child("Records").observe(.childAdded, with: { (snapshot) in
             if let rrecord = snapshot.value as? [String: Any] {
+                let snapshotKey = snapshot.key
+                self.displayedRecord = snapshotKey
                 let userID = rrecord["userID"] as? String ?? ""
                 let date = rrecord["date"] as? String ?? ""
                 let time = rrecord["time"] as? String ?? ""
@@ -76,7 +79,7 @@ class DatabaseManager {
 //                let childNode = node[0]
                 
                 let moodNote = rrecord["moodNote"] as? String ?? ""
-                let actualRecord = Record(userID: userID, date: date, time: time,
+                let actualRecord = Record(userID: snapshotKey, date: date, time: time,
                                           mealCategory: ItemDetail(itemTitle: mealCategoryTitle, itemImage: mealCategoryTitle),
                                           breakfastMeal: ItemDetail(itemTitle: breakfastMealTitle, itemImage: breakfastMealTitle),
                                           lunchDinMeal: ItemDetail(itemTitle: lunchDinnerMealTitle, itemImage: lunchDinnerMealTitle),
@@ -103,9 +106,61 @@ class DatabaseManager {
     }
     
     
-    func readDetail(){
-        let key = ref?.child("Records").childByAutoId().key
-        displayedRecord = key!
+//    func getKey(){
+//        let key = ref?.child("Records").childByAutoId().key
+//        displayedRecord = key!
+//    }
+    
+    func readRecordDetail(variable: String) {
+//        ref?.child("Records/-MxVF9tI1CixLIf_hPm9").getData(completion: { error, snapshot in
+//            if let detailRecord = snapshot.value as? [String: Any] {
+//                let userID = detailRecord["userID"] as? String ?? ""
+//                let date = detailRecord["date"] as? String ?? ""
+//                let time = detailRecord["time"] as? String ?? ""
+//
+//                let mealCategory = detailRecord["mealCategory"] as? [String:Any]
+//                let mealCategoryTitle = mealCategory?["itemTitle"] as? String ?? ""
+//                let foodNote = detailRecord["foodNote"] as? String ?? ""
+//                print(detailRecord)
+//                print("hey")
+//                print(foodNote)
+//
+//            }
+//        })
+        
+
+        var adress2 = "Records/" + variable
+        var adress1 = "Records/\(variable)"
+        var adress = "Records/-MxVPcpSV98j2L0bqREX"
+        print(adress2)
+        print(adress1)
+        print(adress)
+        print(type(of: variable))
+        
+        print("Hello")
+        ref?.child(adress2).observe(.value, with:  { snapshot in
+            if let detailRecord = snapshot.value as? [String: Any] {
+                let userID = detailRecord["userID"] as? String ?? ""
+                let date = detailRecord["date"] as? String ?? ""
+                let time = detailRecord["time"] as? String ?? ""
+
+                let mealCategory = detailRecord["mealCategory"] as? [String:Any]
+                let mealCategoryTitle = mealCategory?["itemTitle"] as? String ?? ""
+                let foodNote = detailRecord["foodNote"] as? String ?? ""
+//                print(detailRecord)
+                print("hey")
+                print(foodNote)
+
+            }
+        })
+        { error in
+          print(error.localizedDescription)
+        }
+    }
+    
+    func removeRecord(key: String) {
+        let adress = ref?.child("Records/\(key)")
+        print(adress)
     }
         
         

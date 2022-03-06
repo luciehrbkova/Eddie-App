@@ -11,6 +11,7 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var recordTableView: UITableView!
     let database = DatabaseManager()
+    var recordKey = String()
     
 
 //    var records = RecordsDatabase
@@ -68,6 +69,8 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        recordKey = database.records[indexPath.row].userID
+    
 //        let viewController = storyboard?.instantiateViewController(withIdentifier: "RecordDetailViewController")
 //        database.readDetail()
 //        let recordKey = database.displayedRecord
@@ -80,18 +83,18 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    // _______Segue settings (target + data)__________________________________________
-    // This function is called before the segue
+//     _______Segue settings (target + data)__________________________________________
+//     This function is called before the segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRecordDetail" {
             // get a reference to the second view controller
             let targetViewController = segue.destination as! RecordDetailViewController
             // set a variable in the second view controller with the data to pass
-            database.readDetail()
-            let recordKey = database.displayedRecord
+            print("this is the key")
             print(recordKey)
             targetViewController.receivedData = recordKey
-            
+
         }
     }
 
