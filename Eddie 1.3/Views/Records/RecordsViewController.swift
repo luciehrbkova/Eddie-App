@@ -70,6 +70,9 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = storyboard?.instantiateViewController(withIdentifier: "RecordDetailViewController")
         self.navigationController?.pushViewController(viewController!, animated: true)
+        database.readDetail()
+        print(database.displayedRecord)
+        
     }
 
 }

@@ -18,8 +18,8 @@ class DatabaseManager {
     var databaseHandle: DatabaseHandle?
     //????????
     var postData = [Post]()
-    
     var records = [Record]()
+    var displayedRecord = String()
     
     func setDatabase() {
         ref = Database.database().reference()
@@ -100,29 +100,12 @@ class DatabaseManager {
           print(error.localizedDescription)
         }
         
-//                ref?.child("Records").observe(.childAdded, with: { (snapshot) in
-//                    for child in snapshot.children {
-//                        if let childSnapshot = child as? NSDictionary,
-//                           let dict = childSnapshot?.value as? [String?: Any],
-//                           let userID = dict["userID"] as? String,
-//                           let date = dict["date"] as? String,
-//                           let time = dict["time"] as? String,
-////                           let mealCategory = dict.childSnapshot(forPath: "MealCategory/itemTitle").value as? String,
-//                           let foodNote = dict["foodNote"] as? String,
-//                           let moodNote = dict["moodNote"] as? String {
-//
-//                           let actualRecord = Record(userID: userID, date: date, time: time, mealCategory: nil, breakfastMeal: nil, lunchDinMeal: nil, snackMeal: nil, treatMeal: nil, drink: nil, foodNote: foodNote, place: nil, mood: nil, reaction: nil, moodNote: moodNote)
-//
-//                            self.records.append(actualRecord)
-//                            print(actualRecord)
-//                            reloadedTableView.reloadData()
-//                        }
-//
-//                    }
-//                })
-//                    { error in
-//                      print(error.localizedDescription)
-//                    }
+    }
+    
+    
+    func readDetail(){
+        let key = ref?.child("Records").childByAutoId().key
+        displayedRecord = key!
     }
         
         
