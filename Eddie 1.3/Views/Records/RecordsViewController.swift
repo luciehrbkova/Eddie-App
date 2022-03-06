@@ -68,11 +68,31 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "RecordDetailViewController")
-        self.navigationController?.pushViewController(viewController!, animated: true)
-        database.readDetail()
-        print(database.displayedRecord)
+//        let viewController = storyboard?.instantiateViewController(withIdentifier: "RecordDetailViewController")
+//        database.readDetail()
+//        let recordKey = database.displayedRecord
+//        print(recordKey)
+//
+//        let viewController = RecordDetailViewController()
+//        viewController.receivedData = recordKey
+//        navigationController?.pushViewController(viewController, animated: true)
         
+        
+    }
+    
+    // _______Segue settings (target + data)__________________________________________
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRecordDetail" {
+            // get a reference to the second view controller
+            let targetViewController = segue.destination as! RecordDetailViewController
+            // set a variable in the second view controller with the data to pass
+            database.readDetail()
+            let recordKey = database.displayedRecord
+            print(recordKey)
+            targetViewController.receivedData = recordKey
+            
+        }
     }
 
 }
