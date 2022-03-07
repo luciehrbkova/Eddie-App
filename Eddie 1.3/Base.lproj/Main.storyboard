@@ -4262,6 +4262,21 @@ Once these guidelines have been put into practice for some time, you will then b
                     </view>
                     <connections>
                         <outlet property="detailCategory" destination="4Ji-14-vMx" id="0DI-pF-kV5"/>
+                        <outlet property="detailCategoryImage" destination="HPp-zJ-TcG" id="JT3-E0-woe"/>
+                        <outlet property="detailDrink" destination="XaQ-QS-CYf" id="D50-WK-fqq"/>
+                        <outlet property="detailDrinkImage" destination="E4J-7p-7yN" id="diN-om-3OA"/>
+                        <outlet property="detailFirstMeal" destination="CT9-yi-omu" id="9dy-gv-G28"/>
+                        <outlet property="detailFirstMealImage" destination="wUp-jc-2a1" id="7Hg-rg-NbR"/>
+                        <outlet property="detailFoodnote" destination="hEM-c1-7cP" id="7W7-Yh-w1u"/>
+                        <outlet property="detailMood" destination="JTR-2m-2fF" id="cA2-m3-Gls"/>
+                        <outlet property="detailMoodImage" destination="pLr-Ov-RYr" id="G7H-VU-iPU"/>
+                        <outlet property="detailMoodnote" destination="mrQ-6s-2yS" id="7sg-Cq-K2A"/>
+                        <outlet property="detailPlace" destination="kwd-of-847" id="29E-yh-tZ3"/>
+                        <outlet property="detailPlaceImage" destination="nov-wO-gKh" id="kQZ-KW-PD9"/>
+                        <outlet property="detailReaction" destination="R0x-Ol-E1h" id="nHC-qt-WbA"/>
+                        <outlet property="detailReactionImage" destination="3lF-iJ-1SZ" id="Btb-0N-srt"/>
+                        <outlet property="detailSecondMeal" destination="5nV-p5-1Zq" id="f0e-xt-lLN"/>
+                        <outlet property="detailSecondMealImage" destination="mdW-8P-Vuu" id="buE-7C-Yub"/>
                         <outlet property="detailTime" destination="wiM-2b-S6a" id="Ge5-ea-pzt"/>
                         <outlet property="generalView" destination="ZVG-Su-VYj" id="xiK-qQ-kdB"/>
                     </connections>
