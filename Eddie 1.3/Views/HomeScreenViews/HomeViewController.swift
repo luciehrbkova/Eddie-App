@@ -8,6 +8,8 @@
 import UIKit
 
 var currentLevel: Int = 1
+//Game Manager
+let gameManager = GameMananager()
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     

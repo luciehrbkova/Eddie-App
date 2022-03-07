@@ -9,6 +9,8 @@ import UIKit
 
 class L1M2ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    var isButtonPressed = false
     var receivedData = ""
 
     override func viewDidLoad() {
@@ -17,14 +19,20 @@ class L1M2ViewController: UIViewController {
         print(receivedData)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonPressed(_ sender: Any) {
+        checkState()
+        
     }
-    */
+    
+    func checkState() {
+        if isButtonPressed {
+            button.setTitle("Mark as completed", for: .normal)
+            isButtonPressed = false
+        } else {
+            button.setTitle("Done!", for: .normal)
+            isButtonPressed = true
+            gameManager.moduleGuide.moduleList[1].isCompleted = true
+        }
+    }
 
 }

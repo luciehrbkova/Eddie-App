@@ -1142,47 +1142,20 @@ Perhaps no particular case fits you exactly but there may be parts from Deborah,
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-0r-b8O">
                                                 <rect key="frame" x="20" y="1856" width="374" height="64"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-oD-sMo">
-                                                        <rect key="frame" x="16" y="16" width="342" height="32"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zh4-9b-LyT">
-                                                                <rect key="frame" x="308" y="0.5" width="34" height="33"/>
-                                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="APe-c9-NjH"/>
-                                                                    <constraint firstAttribute="width" constant="34" id="Dxz-2w-eOV"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as completed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s38-fo-pa1">
-                                                                <rect key="frame" x="0.0" y="7.5" width="286" height="17"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="17" id="hq7-OH-4ni"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="zh4-9b-LyT" secondAttribute="trailing" id="IPy-Js-len"/>
-                                                            <constraint firstItem="s38-fo-pa1" firstAttribute="centerY" secondItem="AJu-oD-sMo" secondAttribute="centerY" id="P13-Oe-0L0"/>
-                                                            <constraint firstItem="zh4-9b-LyT" firstAttribute="top" secondItem="AJu-oD-sMo" secondAttribute="top" id="RD7-TS-582"/>
-                                                            <constraint firstItem="zh4-9b-LyT" firstAttribute="trailing" secondItem="5Yj-c6-Z6A" secondAttribute="trailing" id="Zt7-LH-JCs"/>
-                                                            <constraint firstItem="s38-fo-pa1" firstAttribute="leading" secondItem="AJu-oD-sMo" secondAttribute="leading" id="bmK-JD-1cd"/>
-                                                            <constraint firstItem="zh4-9b-LyT" firstAttribute="leading" secondItem="s38-fo-pa1" secondAttribute="trailing" constant="22" id="kbz-Bp-Ryt"/>
-                                                            <constraint firstAttribute="bottom" secondItem="zh4-9b-LyT" secondAttribute="bottom" id="r8Q-BM-RHO"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="2Lf-pJ-q9w"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="5Yj-c6-Z6A"/>
-                                                    </scrollView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8t-hg-k3K">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system" title="   Mark as completed"/>
+                                                        <connections>
+                                                            <action selector="button1Pressed:" destination="fEd-S4-qzh" eventType="touchUpInside" id="bha-XA-cuT"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenMain"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="3IB-Vd-Ujk"/>
-                                                    <constraint firstItem="AJu-oD-sMo" firstAttribute="top" secondItem="5lH-0r-b8O" secondAttribute="top" constant="16" id="6JN-AV-vpQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="AJu-oD-sMo" secondAttribute="bottom" constant="16" id="8zV-2q-ewW"/>
-                                                    <constraint firstAttribute="trailing" secondItem="AJu-oD-sMo" secondAttribute="trailing" constant="16" id="CaY-8z-4dz"/>
-                                                    <constraint firstItem="AJu-oD-sMo" firstAttribute="leading" secondItem="5lH-0r-b8O" secondAttribute="leading" constant="16" id="wkz-Wt-nHa"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1298,48 +1271,21 @@ Obviously there is a continuum between a "normal" eating pattern and that of som
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otd-td-5HY">
                                                 <rect key="frame" x="20" y="1750" width="374" height="64"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-07-vA4">
-                                                        <rect key="frame" x="16" y="16" width="342" height="32"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YDv-JD-OQD">
-                                                                <rect key="frame" x="308" y="0.5" width="34" height="33"/>
-                                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="g3c-Kj-wR2"/>
-                                                                    <constraint firstAttribute="width" constant="34" id="rcL-M1-SZx"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as completed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddz-MR-CoC">
-                                                                <rect key="frame" x="0.0" y="7.5" width="286" height="17"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="17" id="5iR-3f-1b7"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="YDv-JD-OQD" firstAttribute="trailing" secondItem="H7I-tp-Jid" secondAttribute="trailing" id="8yB-cF-PYj"/>
-                                                            <constraint firstAttribute="bottom" secondItem="YDv-JD-OQD" secondAttribute="bottom" id="DoB-VK-V5u"/>
-                                                            <constraint firstItem="Ddz-MR-CoC" firstAttribute="leading" secondItem="xhK-07-vA4" secondAttribute="leading" id="LmI-Iv-3wR"/>
-                                                            <constraint firstItem="Ddz-MR-CoC" firstAttribute="centerY" secondItem="xhK-07-vA4" secondAttribute="centerY" id="RL8-nE-ReH"/>
-                                                            <constraint firstAttribute="trailing" secondItem="YDv-JD-OQD" secondAttribute="trailing" id="lKe-VI-5nh"/>
-                                                            <constraint firstItem="YDv-JD-OQD" firstAttribute="top" secondItem="xhK-07-vA4" secondAttribute="top" id="vKk-Yk-mlY"/>
-                                                            <constraint firstItem="YDv-JD-OQD" firstAttribute="leading" secondItem="Ddz-MR-CoC" secondAttribute="trailing" constant="22" id="vSf-Td-nHd"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="C0M-yB-UiL"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="H7I-tp-Jid"/>
-                                                    </scrollView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5Y-Vx-ell">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="   Mark as completed"/>
+                                                        <connections>
+                                                            <action selector="button2Pressed:" destination="fEd-S4-qzh" eventType="touchUpInside" id="QH4-dN-Lar"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenMain"/>
                                                 <constraints>
-                                                    <constraint firstItem="xhK-07-vA4" firstAttribute="leading" secondItem="otd-td-5HY" secondAttribute="leading" constant="16" id="0Ny-Pd-Hhr"/>
                                                     <constraint firstAttribute="height" constant="64" id="4Qe-MZ-4dA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="xhK-07-vA4" secondAttribute="trailing" constant="16" id="EFM-Nj-hMA"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="Obz-Ee-kOV"/>
-                                                    <constraint firstAttribute="bottom" secondItem="xhK-07-vA4" secondAttribute="bottom" constant="16" id="YKa-Te-YTJ"/>
-                                                    <constraint firstItem="xhK-07-vA4" firstAttribute="top" secondItem="otd-td-5HY" secondAttribute="top" constant="16" id="caG-Kh-NFv"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1602,47 +1548,20 @@ The examples below may help you get started:
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uT-a0-yXu">
                                                 <rect key="frame" x="20" y="1996" width="374" height="64"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-Rb-gcw">
-                                                        <rect key="frame" x="16" y="16" width="342" height="32"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fxe-cD-kiu">
-                                                                <rect key="frame" x="308" y="0.5" width="34" height="33"/>
-                                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="1Kz-zf-Ihz"/>
-                                                                    <constraint firstAttribute="width" constant="34" id="C35-Sx-l9y"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as completed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmI-Yf-4Sh">
-                                                                <rect key="frame" x="0.0" y="7.5" width="286" height="17"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="17" id="GHr-AB-n9z"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="Fxe-cD-kiu" firstAttribute="trailing" secondItem="2DN-93-r8E" secondAttribute="trailing" id="2ci-qi-fx4"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Fxe-cD-kiu" secondAttribute="bottom" id="GRI-Jb-VnT"/>
-                                                            <constraint firstItem="KmI-Yf-4Sh" firstAttribute="centerY" secondItem="Tta-Rb-gcw" secondAttribute="centerY" id="R0g-aM-si1"/>
-                                                            <constraint firstItem="Fxe-cD-kiu" firstAttribute="top" secondItem="Tta-Rb-gcw" secondAttribute="top" id="X3X-5B-6RC"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Fxe-cD-kiu" secondAttribute="trailing" id="cdf-21-Euy"/>
-                                                            <constraint firstItem="KmI-Yf-4Sh" firstAttribute="leading" secondItem="Tta-Rb-gcw" secondAttribute="leading" id="klv-TA-tQU"/>
-                                                            <constraint firstItem="Fxe-cD-kiu" firstAttribute="leading" secondItem="KmI-Yf-4Sh" secondAttribute="trailing" constant="22" id="qu2-eX-ObL"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="OZG-Eb-ZcR"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="2DN-93-r8E"/>
-                                                    </scrollView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNl-6G-DCW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="   Mark as completed"/>
+                                                        <connections>
+                                                            <action selector="button3Pressed:" destination="fEd-S4-qzh" eventType="touchUpInside" id="fLq-oC-Ncb"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenMain"/>
                                                 <constraints>
-                                                    <constraint firstItem="Tta-Rb-gcw" firstAttribute="top" secondItem="7uT-a0-yXu" secondAttribute="top" constant="16" id="TzS-yy-RVp"/>
-                                                    <constraint firstItem="Tta-Rb-gcw" firstAttribute="leading" secondItem="7uT-a0-yXu" secondAttribute="leading" constant="16" id="f4q-nC-O8h"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Tta-Rb-gcw" secondAttribute="bottom" constant="16" id="giT-iL-rTw"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="hEt-d2-2p0"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Tta-Rb-gcw" secondAttribute="trailing" constant="16" id="i9m-Sv-4H5"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="pM7-KZ-fOa"/>
                                                     <constraint firstAttribute="height" constant="64" id="wBC-fC-jSc"/>
                                                 </constraints>
@@ -1723,10 +1642,15 @@ The examples below may help you get started:
                             <constraint firstAttribute="bottom" secondItem="e4f-kn-P2J" secondAttribute="bottom" id="ikl-cW-q03"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="F8t-hg-k3K" id="X1L-8T-r9J"/>
+                        <outlet property="button2" destination="D5Y-Vx-ell" id="a4v-zC-n8O"/>
+                        <outlet property="button3" destination="aNl-6G-DCW" id="s0Y-yH-qZ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kL-mU-362" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8162" y="1730"/>
+            <point key="canvasLocation" x="-8162.3188405797109" y="1729.6875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zuD-Ey-68c">
@@ -1859,47 +1783,21 @@ It can thus be seen how the strong drive to diet/purge after bingeing inevitably
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aL-sZ-2QM">
                                                 <rect key="frame" x="20" y="2616" width="374" height="64"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwx-eE-ITA">
-                                                        <rect key="frame" x="16" y="16" width="342" height="32"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZLs-kd-08R">
-                                                                <rect key="frame" x="308" y="0.5" width="34" height="33"/>
-                                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="xAm-80-VYd"/>
-                                                                    <constraint firstAttribute="width" constant="34" id="xRl-Ln-icN"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark as completed!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksU-y8-nIc">
-                                                                <rect key="frame" x="0.0" y="7.5" width="286" height="17"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="17" id="V0D-gM-b7Q"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="ZLs-kd-08R" secondAttribute="trailing" id="0ty-Sy-gbn"/>
-                                                            <constraint firstItem="ksU-y8-nIc" firstAttribute="centerY" secondItem="mwx-eE-ITA" secondAttribute="centerY" id="2Rz-bj-eV0"/>
-                                                            <constraint firstItem="ksU-y8-nIc" firstAttribute="leading" secondItem="mwx-eE-ITA" secondAttribute="leading" id="8Jh-tp-5ef"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ZLs-kd-08R" secondAttribute="bottom" id="Cw2-ih-tQt"/>
-                                                            <constraint firstItem="ZLs-kd-08R" firstAttribute="top" secondItem="mwx-eE-ITA" secondAttribute="top" id="D13-mM-M78"/>
-                                                            <constraint firstItem="ZLs-kd-08R" firstAttribute="trailing" secondItem="Sfl-O3-9vc" secondAttribute="trailing" id="HeO-zW-AGp"/>
-                                                            <constraint firstItem="ZLs-kd-08R" firstAttribute="leading" secondItem="ksU-y8-nIc" secondAttribute="trailing" constant="22" id="dlX-hR-vcp"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="9OQ-yk-YIp"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="Sfl-O3-9vc"/>
-                                                    </scrollView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-rE-AWu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="   Mark as completed"/>
+                                                        <connections>
+                                                            <action selector="button3Pressed:" destination="fEd-S4-qzh" eventType="touchUpInside" id="dYo-Nc-zao"/>
+                                                            <action selector="buttonPressed:" destination="TtH-a9-Tjg" eventType="touchUpInside" id="xMW-bx-vgB"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="GreenMain"/>
                                                 <constraints>
-                                                    <constraint firstItem="mwx-eE-ITA" firstAttribute="leading" secondItem="9aL-sZ-2QM" secondAttribute="leading" constant="16" id="5MU-ei-iI6"/>
                                                     <constraint firstAttribute="height" constant="64" id="7wz-FP-4Zt"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mwx-eE-ITA" secondAttribute="bottom" constant="16" id="N8E-OJ-PJf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="mwx-eE-ITA" secondAttribute="trailing" constant="16" id="VYu-aC-6b8"/>
-                                                    <constraint firstItem="mwx-eE-ITA" firstAttribute="top" secondItem="9aL-sZ-2QM" secondAttribute="top" constant="16" id="oZm-Bl-pGo"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1964,6 +1862,9 @@ It can thus be seen how the strong drive to diet/purge after bingeing inevitably
                             <constraint firstItem="KCe-mK-XPW" firstAttribute="trailing" secondItem="7Le-cE-4Zz" secondAttribute="trailing" id="hJs-Bb-JVD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="Z0A-rE-AWu" id="zgh-aO-9re"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emx-7n-VB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3757,7 +3658,7 @@ Once these guidelines have been put into practice for some time, you will then b
         <!--Your Records-->
         <scene sceneID="sgr-1H-eaX">
             <objects>
-                <viewController id="GRM-3b-W7k" customClass="RecordsViewController" customModule="Eddie_1_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordsViewController" id="GRM-3b-W7k" customClass="RecordsViewController" customModule="Eddie_1_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRC-I4-0M8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4336,6 +4237,9 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <state key="normal" title="Delete" image="trash" catalog="system">
                                             <color key="titleColor" systemColor="secondaryLabelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteButtonpressed:" destination="S9k-DT-IVu" eventType="touchUpInside" id="Fub-hY-b10"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4358,6 +4262,8 @@ Once these guidelines have been put into practice for some time, you will then b
                     </view>
                     <connections>
                         <outlet property="detailCategory" destination="4Ji-14-vMx" id="0DI-pF-kV5"/>
+                        <outlet property="detailTime" destination="wiM-2b-S6a" id="Ge5-ea-pzt"/>
+                        <outlet property="generalView" destination="ZVG-Su-VYj" id="xiK-qQ-kdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t28-kG-8aR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

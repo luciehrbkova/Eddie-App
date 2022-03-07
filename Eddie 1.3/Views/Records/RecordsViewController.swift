@@ -30,6 +30,7 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Set Database------------------
         database.setDatabase()
         database.readRecords(reloadedTableView: self.recordTableView)
+        database.readRemovedRecords(reloadedTableView: self.recordTableView)
         
     }
     
