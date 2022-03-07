@@ -112,6 +112,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             progressStepMade(image: "fox4.png", motivation: "Lucie, \n you made it!!! \n have a nice evening")
         }
         
+        // testing Game manger
+        print(gameManager.moduleGuide)
+        
     }
     
     func animateProgress(from: Double, value: Double){

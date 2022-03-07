@@ -17,6 +17,8 @@ class L1M2ViewController: UIViewController {
         super.viewDidLoad()
 
         print(receivedData)
+        displayCorrectButtonBasedOnState()
+        
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
@@ -28,10 +30,20 @@ class L1M2ViewController: UIViewController {
         if isButtonPressed {
             button.setTitle("Mark as completed", for: .normal)
             isButtonPressed = false
+            gameManager.moduleGuide.moduleList[1].isCompleted = false
         } else {
             button.setTitle("Done!", for: .normal)
             isButtonPressed = true
             gameManager.moduleGuide.moduleList[1].isCompleted = true
+        }
+        print(gameManager.moduleGuide)
+    }
+    
+    func displayCorrectButtonBasedOnState() {
+        if (gameManager.moduleGuide.moduleList[1].isCompleted == true) {
+            button.setTitle("Done!", for: .normal)
+        } else {
+            button.setTitle("Mark as completed", for: .normal)
         }
     }
 
