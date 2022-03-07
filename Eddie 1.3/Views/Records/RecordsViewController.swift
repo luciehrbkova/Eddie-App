@@ -19,6 +19,8 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
 //    var records = [Record]()
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
         recordTableView.delegate = self

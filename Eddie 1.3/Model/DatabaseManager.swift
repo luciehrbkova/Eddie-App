@@ -9,6 +9,10 @@ struct Post {
     var text: String
 }
 
+var recordsInDetail = [Record]()
+var testString1 = String()
+var actualRecordDetail = Record(userID: "temporaryUser")
+
 import Foundation
 import FirebaseDatabase
 
@@ -20,10 +24,6 @@ class DatabaseManager {
     var postData = [Post]()
     var records = [Record]()
     var displayedRecord = String()
-    var recordsInDetail = [Record]()
-    
-    var testString1 = String()
-
     
     func setDatabase() {
         ref = Database.database().reference()
@@ -174,24 +174,7 @@ class DatabaseManager {
 //        displayedRecord = key!
 //    }
     
-    func readRecordDetail(variable: String) {
-//        ref?.child("Records/-MxVF9tI1CixLIf_hPm9").getData(completion: { error, snapshot in
-//            if let detailRecord = snapshot.value as? [String: Any] {
-//                let userID = detailRecord["userID"] as? String ?? ""
-//                let date = detailRecord["date"] as? String ?? ""
-//                let time = detailRecord["time"] as? String ?? ""
-//
-//                let mealCategory = detailRecord["mealCategory"] as? [String:Any]
-//                let mealCategoryTitle = mealCategory?["itemTitle"] as? String ?? ""
-//                let foodNote = detailRecord["foodNote"] as? String ?? ""
-//                print(detailRecord)
-//                print("hey")
-//                print(foodNote)
-//
-//            }
-//        })
-        
-        
+    func readRecordDetail(variable: String, reloadedView: UIView) {
         ref?.child("Records/\(variable)").observe(.value, with:  { snapshot in
             if let rrecord = snapshot.value as? [String: Any] {
                 let snapshotKey = snapshot.key
@@ -238,20 +221,22 @@ class DatabaseManager {
                                           mood: ItemDetail(itemTitle: moodTitle, itemImage: moodTitle),
                                           reaction: ItemDetail(itemTitle: reactionTitle, itemImage: reactionTitle),
                                           moodNote: moodNote)
+                actualRecordDetail = actualRecord
 //                if self.recordsInDetail.count == 0 {
 //                    self.recordsInDetail.append(actualRecord)
 //                } else {
 //                    self.recordsInDetail[0] = actualRecord
 //                }
-                self.recordsInDetail.append(actualRecord)
-                print("This is actual record")
-                print(actualRecord)
-                print("This is list of recordInDetail")
-                print(self.recordsInDetail)
-                print(self.recordsInDetail.count)
-                self.testString1 = mealCategoryTitle
-                
-        
+//                recordsInDetail.append(actualRecord)
+                print("This is actual record detail Database")
+                print(actualRecordDetail)
+//                print("This is list of recordInDetail")
+////                print(recordsInDetail)
+//                print(recordsInDetail.count)
+//                print("This is testString inside database")
+//                testString1 = mealCategoryTitle
+//                print(testString1)
+
 
             }
         })

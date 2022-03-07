@@ -25,13 +25,14 @@ class RecordDetailViewController: UIViewController {
         
         // Set Database------------------
         database.setDatabase()
-        database.readRecordDetail(variable: receivedData)
+        database.readRecordDetail(variable: receivedData, reloadedView: generalView)
         populateRecord()
-        print("This is test:\(database.testString1)")
+        print("This is tes of testString t:\(testString1)")
         print("This is record in detail on next screen:")
-        print(database.recordsInDetail.count
-        )
-        print(database.recordsInDetail)
+        print(recordsInDetail.count)
+//        print(recordsInDetail)
+        
+        viewWillAppear(true)
         
     }
     
@@ -41,8 +42,8 @@ class RecordDetailViewController: UIViewController {
     }
     
     func populateRecord() {
-        print(database.recordsInDetail.count)
-//        detailTime.text = database.recordsInDetail[0].date
-//        detailCategory.text = database.recordsInDetail[0].mealCategory?.itemTitle
+        print(recordsInDetail.count)
+        detailTime.text = actualRecordDetail.date
+        detailCategory.text = actualRecordDetail.mealCategory?.itemTitle
     }
 }
