@@ -12,11 +12,7 @@ class RecordsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var recordTableView: UITableView!
     let database = DatabaseManager()
     var recordKey = String()
-    
 
-//    var records = RecordsDatabase
-
-//    var records = [Record]()
     
     override func viewDidLoad() {
         
