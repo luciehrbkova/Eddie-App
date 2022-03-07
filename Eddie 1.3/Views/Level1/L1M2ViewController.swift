@@ -23,7 +23,7 @@ class L1M2ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: Any) {
         checkState()
-        
+        adjustImage(sectionOrderinList: 1)
     }
     
     func checkState() {

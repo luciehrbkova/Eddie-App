@@ -18,8 +18,8 @@ struct ModuleGuide {
 
 
 var moduleGuides1: [ModuleGuide] = [
-    ModuleGuide(moduleTitle: "1/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 0))! ),
-    ModuleGuide(moduleTitle: "2/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 1))! ),
+    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 0), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 0))! ),
+    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 1), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 1))! ),
     ModuleGuide(moduleTitle: "3/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
     ModuleGuide(moduleTitle: "4/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 3))! ),
     ModuleGuide(moduleTitle: "5/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 4))! ),
@@ -33,5 +33,16 @@ func adjustImage(sectionOrderinList: Int) -> String {
     } else {
         imageString = "checkmark.circle"
         return imageString
+    }
+}
+
+func adjustText(sectionOrderinList: Int) -> String {
+    let textString: String
+    if (gameManager.moduleGuide.moduleList[sectionOrderinList].isCompleted == false) {
+        textString = "\(sectionOrderinList)/5"
+        return textString
+    } else {
+        textString = "\(sectionOrderinList)/6"
+        return textString
     }
 }

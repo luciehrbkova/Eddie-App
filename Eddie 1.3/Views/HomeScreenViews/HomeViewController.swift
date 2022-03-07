@@ -114,6 +114,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         // testing Game manger
         print(gameManager.moduleGuide)
+        adjustText(sectionOrderinList: 0)
+        adjustText(sectionOrderinList: 1)
         
     }
     
