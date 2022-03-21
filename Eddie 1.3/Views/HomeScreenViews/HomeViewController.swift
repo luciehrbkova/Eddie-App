@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 var currentLevel: Int = 1
 //Game Manager
 let gameManager = GameMananager()
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UNUserNotificationCenterDelegate {
     
     // Outlets_________________
     @IBOutlet var homeView: UIView!
@@ -92,6 +93,71 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        
+        //notification-------------------------------------------------------------------------------------------------
+        //Permission
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.badge, .sound, .alert])
+//            { granted, error in
+//            if error == nil {
+//                print("User permission is granted : \(granted)")
+//            }
+//        }
+//        //Notification content
+//        let content = UNMutableNotificationContent()
+//        content.title = "Hello"
+//        content.body = "Welcome"
+//        //Trigger
+//        let date = Date().addingTimeInterval(5)
+//        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+//        //Request
+//        let uuid = UUID().uuidString
+//        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
+//        //Register
+//        center.add(request) { error in
+//            //check error parameter or handel any errors
+//        }
+        
+        
+        let center = UNUserNotificationCenter.current()
+        UNUserNotificationCenter.current().delegate = self
+        center.delegate = self
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+            if error == nil {
+                print("User permission is granted : \(granted)")
+            }
+        }
+        //Step-2 Create the notification content
+        let content = UNMutableNotificationContent()
+        content.title = "Hello"
+        content.body = "Welcome"
+
+        //Step-3 Create the notification trigger
+        let date = Date().addingTimeInterval(5)
+        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+
+        //Step-4 Create a request
+        let uuid = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
+
+        //Step-5 Register with Notification Center
+        center.add(request) { error in
+        }
+
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([.sound,.banner])
+        }
+//        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//            UNUserNotificationCenter.current().delegate = self
+//            return true
+//        }
+        
+        
+        
         
     }
     

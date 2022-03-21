@@ -12,6 +12,7 @@
 		1851FB5927D3915100560FCB /* quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5827D3915100560FCB /* quote.swift */; };
 		1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */; };
 		1851FB5D27D5769A00560FCB /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5C27D5769900560FCB /* GameManager.swift */; };
+		18568E4F27E7DF3D00C02946 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568E4E27E7DF3D00C02946 /* Notification.swift */; };
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		1851FB5827D3915100560FCB /* quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quote.swift; sourceTree = "<group>"; };
 		1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		1851FB5C27D5769900560FCB /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		18568E4E27E7DF3D00C02946 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				1892A9D727B9AFA500C5C0E9 /* AlertMessage.swift */,
 				1851FB5C27D5769900560FCB /* GameManager.swift */,
+				18568E4E27E7DF3D00C02946 /* Notification.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */,
 				1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */,
 				18F73FC327BD7AEC00520F17 /* TreatsCollectionViewCell.swift in Sources */,
+				18568E4F27E7DF3D00C02946 /* Notification.swift in Sources */,
 				18A3539927CA995E00B112C3 /* User.swift in Sources */,
 				1892A9E527BAC12B00C5C0E9 /* AvatarViewController.swift in Sources */,
 				188C60CB27C3C51F00A9B5FA /* DatabaseManager.swift in Sources */,
