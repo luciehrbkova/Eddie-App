@@ -13,6 +13,7 @@
 		1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */; };
 		1851FB5D27D5769A00560FCB /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5C27D5769900560FCB /* GameManager.swift */; };
 		18568E4F27E7DF3D00C02946 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568E4E27E7DF3D00C02946 /* Notification.swift */; };
+		18568E5527E9F58600C02946 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568E5427E9F58500C02946 /* PDFCreator.swift */; };
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
@@ -71,6 +72,7 @@
 		1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		1851FB5C27D5769900560FCB /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		18568E4E27E7DF3D00C02946 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		18568E5427E9F58500C02946 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				1892A9E127BABA1900C5C0E9 /* AvatarViews */,
 				1892A9DD27BAB1BF00C5C0E9 /* PdfViewController.swift */,
+				18568E5427E9F58500C02946 /* PDFCreator.swift */,
 				1892A9DF27BAB23C00C5C0E9 /* RemindersViewController.swift */,
 				1892A9D927BA922A00C5C0E9 /* AccountSettingViewController.swift */,
 				1892A9B527B7EF2100C5C0E9 /* ProfileSettingsViewController.swift */,
@@ -486,6 +489,7 @@
 				188C60C127BFE63E00A9B5FA /* record.swift in Sources */,
 				18C1619127CD7C9E00A0E1A7 /* L1M4ViewController.swift in Sources */,
 				18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */,
+				18568E5527E9F58600C02946 /* PDFCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

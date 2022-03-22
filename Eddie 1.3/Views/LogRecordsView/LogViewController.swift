@@ -125,6 +125,8 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
 //        let newViewController = storyBoard.instantiateViewController(withIdentifier: "RecordsViewController") as! RecordsViewController
 //        appDelegate.window!.rootViewController = newViewController
 //        self.present(newViewController, animated: true, completion: nil)
+        let sendValue = HomeViewController();
+        sendValue.runAnimationProgress()
     }
     
     

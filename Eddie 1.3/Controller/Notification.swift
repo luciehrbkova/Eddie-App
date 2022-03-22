@@ -6,6 +6,10 @@
 //
 
 import Foundation
-import UserNotifications
+
+class UserNotification {
+    var homeMessage: String = ""
+    
+}
 
 

@@ -94,75 +94,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             return layout
         }()
         
-        //notification-------------------------------------------------------------------------------------------------
-        //Permission
-//        let center = UNUserNotificationCenter.current()
-//        center.requestAuthorization(options: [.badge, .sound, .alert])
-//            { granted, error in
-//            if error == nil {
-//                print("User permission is granted : \(granted)")
-//            }
-//        }
-//        //Notification content
-//        let content = UNMutableNotificationContent()
-//        content.title = "Hello"
-//        content.body = "Welcome"
-//        //Trigger
-//        let date = Date().addingTimeInterval(5)
-//        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
-//        //Request
-//        let uuid = UUID().uuidString
-//        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
-//        //Register
-//        center.add(request) { error in
-//            //check error parameter or handel any errors
-//        }
+        self.loadData()
+        sendNotification()
         
-        
-        let center = UNUserNotificationCenter.current()
-        UNUserNotificationCenter.current().delegate = self
-        center.delegate = self
-        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
-            if error == nil {
-                print("User permission is granted : \(granted)")
-            }
-        }
-        //Step-2 Create the notification content
-        let content = UNMutableNotificationContent()
-        content.title = "Hello"
-        content.body = "Welcome"
 
-        //Step-3 Create the notification trigger
-        let date = Date().addingTimeInterval(5)
-        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
-
-        //Step-4 Create a request
-        let uuid = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
-
-        //Step-5 Register with Notification Center
-        center.add(request) { error in
-        }
-
-        func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                    willPresent notification: UNNotification,
-                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-            completionHandler([.sound,.banner])
-        }
-//        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-//            UNUserNotificationCenter.current().delegate = self
-//            return true
-//        }
-        
-        
-        
-        
     }
     
     
     @IBAction func didTapButton(_ sender: Any) {
+        runAnimationProgress()
+        
+        // testing Game manger
+        print(gameManager.moduleGuide)
+//        adjustText(sectionOrderinList: 0)
+//        adjustText(sectionOrderinList: 1)
+        
+    }
+    func runAnimationProgress() {
         if (nextProgressStep == 1) {
             animateProgress(from: 0, value: 0.33)
             nextProgressStep = 2
@@ -177,12 +125,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             nextProgressStep = 1
             progressStepMade(image: "fox4.png", motivation: "Lucie, \n you made it!!! \n have a nice evening")
         }
-        
-        // testing Game manger
-        print(gameManager.moduleGuide)
-        adjustText(sectionOrderinList: 0)
-        adjustText(sectionOrderinList: 1)
-        
     }
     
     func animateProgress(from: Double, value: Double){
@@ -291,5 +233,62 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
+    
+    @objc func loadData() {
+        moduleGuideCollectionView.reloadData()
+    }
 
+    func sendNotification() {
+        //Notification-----------------------------------------------------------------------------
+        let center = UNUserNotificationCenter.current()
+        UNUserNotificationCenter.current().delegate = self
+        center.delegate = self
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+            if error == nil {
+                print("User permission is granted : \(granted)")
+            }
+        }
+
+        let request = createNotification( title: "Breakfast Time", body: "Amazing! it is a time to have a breakfast.", hour: 8, minute: 0)
+        let request2 = createNotification( title: "Snack Time", body: "Get yourself something to eat.", hour: 10, minute: 30)
+        let request3 = createNotification( title: "Lunch Time", body: "You are in the middle of the day. Enjoy your lunch.", hour: 12, minute: 30)
+        let request4 = createNotification( title: "Snack Time", body: "Get yourself something to eat.", hour: 15, minute: 00)
+        let request5 = createNotification( title: "Dinner Time", body: "It's a time to have a dinner. Bon Appetite.", hour: 19, minute: 00)
+        
+        //Step-5 Register with Notification Center
+        center.add(request) { error in
+        }
+        center.add(request2) { error in
+        }
+        center.add(request3) { error in
+        }
+        center.add(request4) { error in
+        }
+        center.add(request5) { error in
+        }
+
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([.sound,.banner])
+        }
+        //End of notification--------------------------------------------------------------------
+    }
+    
+    func createNotification(title: String, body: String, hour: Int, minute: Int) -> UNNotificationRequest  {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = UNNotificationSound.defaultRingtone
+        content.badge = 1
+        // date
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let uuid = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
+        return request
+        
+    }
 }
