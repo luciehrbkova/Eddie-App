@@ -32,8 +32,25 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
 //        calendar.heightAnchor.constraint(equalToConstant: 275).isActive = true
 //        calendar.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
 //        self.calendar = calendar
+        
+        calendarView.register(FSCalendarCell.self, forCellReuseIdentifier: "calendarCell")
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calendarView)
     }
     
+    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+        let image = UIImage(named: "leaf4") {
+            image.frame.width = 20
+            image.frame.height = 20
+            return image
+        }
+    }
+    
+    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+        let cell = calendar.dequeueReusableCell(withIdentifier: "calendarCell", for: date, at: position)
+        cell.imageView.contentMode = .scaleAspectFit
+        return cell
+    }
 
 }
 
