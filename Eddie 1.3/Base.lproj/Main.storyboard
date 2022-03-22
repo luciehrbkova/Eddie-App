@@ -4321,14 +4321,29 @@ Once these guidelines have been put into practice for some time, you will then b
                     <view key="view" contentMode="scaleToFill" id="Jc1-mI-G1Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-7n-pus" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YyJ-xx-bAg"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="kmj-7n-pus" firstAttribute="leading" secondItem="YyJ-xx-bAg" secondAttribute="leading" constant="20" id="E8m-Xa-H8H"/>
+                            <constraint firstItem="kmj-7n-pus" firstAttribute="top" secondItem="YyJ-xx-bAg" secondAttribute="top" id="OfY-dV-14b"/>
+                            <constraint firstItem="YyJ-xx-bAg" firstAttribute="trailing" secondItem="kmj-7n-pus" secondAttribute="trailing" constant="20" id="tP8-TA-oFj"/>
+                            <constraint firstItem="kmj-7n-pus" firstAttribute="bottom" secondItem="YyJ-xx-bAg" secondAttribute="bottom" id="uCL-PI-MGf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="Pkp-zq-bwp"/>
+                    <connections>
+                        <outlet property="calendarView" destination="kmj-7n-pus" id="VXj-a5-ExG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0l-Yo-1er" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1859" y="2458"/>
+            <point key="canvasLocation" x="-1859.4202898550725" y="2457.5892857142858"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="00f-Pg-ay8">
