@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import FSCalendar
 
 var currentLevel: Int = 1
 //Game Manager
@@ -22,6 +23,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var viewProgress: UIView!
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteTextView: UITextView!
+    
+    @IBOutlet weak var weekCalendar: FSCalendar!
+    
     
     //Variables________________
     var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
@@ -52,6 +56,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        weekCalendar.scope = .week
+        weekCalendar.largeContentTitle = .none
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
         createProgressCircle()

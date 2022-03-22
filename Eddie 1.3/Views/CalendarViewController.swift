@@ -38,13 +38,12 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.addSubview(calendarView)
     }
     
-    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
-        let image = UIImage(named: "leaf4") {
-            image.frame.width = 20
-            image.frame.height = 20
-            return image
-        }
-    }
+//    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+//        let image = UIImage(named: "leaf4")
+////        image?.size.height = 15
+////        image?.size.width = 15
+//        return image
+//    }
     
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = calendar.dequeueReusableCell(withIdentifier: "calendarCell", for: date, at: position)

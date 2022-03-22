@@ -3113,30 +3113,23 @@ Once these guidelines have been put into practice for some time, you will then b
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-Ii-EPi">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo" customClass="FSCalendar">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzT-2H-zxD">
-                                                <rect key="frame" x="192" y="14" width="46" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" systemColor="secondaryLabelColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="play.circle" catalog="system"/>
-                                                <connections>
-                                                    <action selector="didTapButton:" destination="Na2-Se-BdQ" eventType="touchUpInside" id="tu7-Hh-VEZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yIH-AV-wDc"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-vD-ZlC">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="400"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="aEk-MK-MrG"/>
-                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-gN-Ban">
                                         <rect key="frame" x="0.0" y="456" width="414" height="800"/>
@@ -3326,6 +3319,12 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstAttribute="trailing" secondItem="b66-Dc-YFV" secondAttribute="trailing" id="x7a-j6-y5c"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-vD-ZlC">
+                                        <rect key="frame" x="0.0" y="48" width="414" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="aEk-MK-MrG"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="5wR-vD-ZlC" firstAttribute="top" secondItem="6Qk-Ii-EPi" secondAttribute="top" constant="56" id="0dD-bM-86v"/>
@@ -3365,11 +3364,22 @@ Once these guidelines have been put into practice for some time, you will then b
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MUD-wM-xhh">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" image="person.circle" catalog="system" id="nAc-J6-Mzn">
                             <connections>
                                 <segue destination="6p0-ca-mcY" kind="show" id="OWl-xb-vdD"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tzT-2H-zxD">
+                            <rect key="frame" x="184.5" y="6.5" width="45" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="play.circle" catalog="system"/>
+                            <connections>
+                                <action selector="didTapButton:" destination="Na2-Se-BdQ" eventType="touchUpInside" id="tu7-Hh-VEZ"/>
+                            </connections>
+                        </button>
                         <rightBarButtonItems>
                             <barButtonItem image="bell" catalog="system" id="x3T-s9-tlH">
                                 <connections>
@@ -3392,6 +3402,7 @@ Once these guidelines have been put into practice for some time, you will then b
                         <outlet property="scrollView" destination="6Qk-Ii-EPi" id="OH2-Wp-gzF"/>
                         <outlet property="testButton" destination="tzT-2H-zxD" id="Tb0-lA-5aQ"/>
                         <outlet property="viewProgress" destination="5wR-vD-ZlC" id="eRo-Vj-7TW"/>
+                        <outlet property="weekCalendar" destination="wJz-c7-dfo" id="YD6-jr-LbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1W-EH-GVp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
