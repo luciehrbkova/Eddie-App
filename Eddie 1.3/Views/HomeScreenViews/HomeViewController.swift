@@ -13,7 +13,7 @@ var currentLevel: Int = 1
 //Game Manager
 let gameManager = GameMananager()
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UNUserNotificationCenterDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UNUserNotificationCenterDelegate, FSCalendarDataSource, FSCalendarDelegate {
     
     // Outlets_________________
     @IBOutlet var homeView: UIView!
@@ -56,7 +56,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        weekCalendar.dataSource = self
+        weekCalendar.delegate = self
         weekCalendar.scope = .week
         weekCalendar.largeContentTitle = .none
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
