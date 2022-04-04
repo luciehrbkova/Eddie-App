@@ -101,8 +101,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        //Game
+        gameManager.checkCompletedSections()
         
-        self.loadData()
         sendNotification()
         
 
@@ -114,8 +115,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         // testing Game manger
         print(gameManager.moduleGuide)
-//        adjustText(sectionOrderinList: 0)
-//        adjustText(sectionOrderinList: 1)
+        adjustText(sectionOrderinList: 0)
+        adjustText(sectionOrderinList: 1)
+        
+        
         
     }
     func runAnimationProgress() {
@@ -242,9 +245,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
-    @objc func loadData() {
-        moduleGuideCollectionView.reloadData()
-    }
+//    @objc func loadData() {
+//        moduleGuides1.reloadData()
+//    }
 
     func sendNotification() {
         //Notification-----------------------------------------------------------------------------

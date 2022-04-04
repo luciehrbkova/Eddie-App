@@ -3323,8 +3323,8 @@ Once these guidelines have been put into practice for some time, you will then b
                                             <constraint firstAttribute="trailing" secondItem="b66-Dc-YFV" secondAttribute="trailing" id="x7a-j6-y5c"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-vD-ZlC">
-                                        <rect key="frame" x="0.0" y="48" width="414" height="400"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wR-vD-ZlC">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="aEk-MK-MrG"/>
                                         </constraints>
@@ -3718,10 +3718,9 @@ Once these guidelines have been put into practice for some time, you will then b
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/3/2022" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-mo-wTC">
-                                                                    <rect key="frame" x="282" y="16" width="76" height="16"/>
+                                                                    <rect key="frame" x="307" y="16" width="51" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="16" id="7Zi-Sm-yce"/>
-                                                                        <constraint firstAttribute="width" constant="76" id="bSF-hr-WTe"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -4568,16 +4567,13 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <rect key="frame" x="8" y="8" width="358" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast 8:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kal-Bj-u6D">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="P1x-ce-Qer"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEB-aD-IrJ">
-                                                <rect key="frame" x="300" y="0.0" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="0.0" width="51" height="32"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -4603,16 +4599,13 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <rect key="frame" x="8" y="8" width="358" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snack 10:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-eI-eg2">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="bhe-MS-WB0"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wu-2G-E9I">
-                                                <rect key="frame" x="300" y="0.0" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="0.0" width="51" height="32"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -4639,16 +4632,13 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <rect key="frame" x="8" y="8" width="358" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch 12:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD8-Xd-cQb">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="LPD-Ky-z4x"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTR-NZ-W0K">
-                                                <rect key="frame" x="300" y="0.0" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="0.0" width="51" height="32"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -4676,16 +4666,13 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <rect key="frame" x="8" y="8" width="358" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snack 15:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEK-oE-R4M">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="nGr-7q-8Ql"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-h0-Gk7">
-                                                <rect key="frame" x="300" y="0.0" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="0.0" width="51" height="32"/>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -4714,16 +4701,13 @@ Once these guidelines have been put into practice for some time, you will then b
                                         <rect key="frame" x="8" y="8" width="358" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner 19:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGS-w8-cne">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="SRg-GM-uxN"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-v3-l8g">
-                                                <rect key="frame" x="300" y="0.0" width="60" height="32"/>
+                                                <rect key="frame" x="309" y="0.0" width="51" height="32"/>
                                             </switch>
                                         </subviews>
                                         <constraints>

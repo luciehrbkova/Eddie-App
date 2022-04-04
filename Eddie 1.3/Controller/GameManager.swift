@@ -30,6 +30,9 @@ class GameMananager {
                                   isCompleted: false)
    
     func checkCompletedSections() {
+        for i in moduleGuide.moduleList {
+            print(i.name)
+        }
         print("Section")
     }
     
