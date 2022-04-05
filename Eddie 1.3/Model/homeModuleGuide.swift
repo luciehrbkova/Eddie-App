@@ -18,8 +18,9 @@ struct ModuleGuide {
 
 
 var moduleGuides1: [ModuleGuide] = [
-    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 0), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 0))! ),
+    ModuleGuide(moduleTitle: "0/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
     ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 1), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 1))! ),
+    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 2), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
     ModuleGuide(moduleTitle: "3/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
     ModuleGuide(moduleTitle: "4/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 3))! ),
     ModuleGuide(moduleTitle: "5/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 4))! ),

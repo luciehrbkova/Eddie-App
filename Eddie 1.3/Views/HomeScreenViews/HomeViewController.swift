@@ -68,7 +68,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         updateMotivation(state: "home")
         createProgressCircle()
         //Ids of storyboads
-        arrayOfIds = ["L1M1", "L1M2", "L1M3", "L1M4","L1M5"]
+        arrayOfIds = ["L1M0","L1M1", "L1M2", "L1M3", "L1M4","L1M5"]
         moduleGuideCollectionView.dataSource = self
         moduleGuideCollectionView.delegate = self
         //style CollectView
@@ -258,7 +258,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let viewController = storyboard?.instantiateViewController(withIdentifier: name)
         self.navigationController?.pushViewController(viewController!, animated: true)
         if (currentLevel == 1) {
-            if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
+            if (moduleGuides1[indexPath.row].moduleTitle == "0/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
             } else if (moduleGuides1[indexPath.row].moduleTitle == "2/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
