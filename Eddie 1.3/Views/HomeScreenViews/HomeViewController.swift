@@ -53,6 +53,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         foximage.contentMode = .scaleAspectFit
         return foximage
     }()
+    let bagdeImage: UIImageView = {
+        let badgeImage = UIImageView()
+        badgeImage.contentMode = .scaleAspectFit
+        return badgeImage
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,15 +149,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             animateProgress(from: 0.66, value: 1)
 //            nextProgressStep = 1
             progressStepMade(image: "fox4.png")
+            badgeDisplay(badgeImage: "AwardVictory.png")
             currentState = "threeMealsCompleted"
+            nextProgressStep = 0
             homeAwards.append(Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2))
+        } else {
+            
         }
     }
     
     func animateProgress(from: Double, value: Double){
         //Animate
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 3
+        animation.duration = 1
         animation.isRemovedOnCompletion = false
         animation.fillMode = .forwards
         animation.fromValue = from
@@ -162,8 +171,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func createProgressCircle() {
         //middle of the view
-        let positionX = viewProgress.center.x - 7
-        let positionY = viewProgress.center.y - 60 //radius
+        let positionX = viewProgress.center.x - 0
+        let positionY = viewProgress.center.y - 50 //radius
         
         let circlePath = UIBezierPath(arcCenter: .zero, radius: 160,
                                       startAngle: -(.pi / 2), endAngle: .pi * 2, clockwise: true)
@@ -187,16 +196,24 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // add fox
         viewProgress.addSubview(foxImage)
         viewProgress.addSubview(label)
+        viewProgress.addSubview(bagdeImage)
         foxImage.image = UIImage(named: "fox1.png")
-        foxImage.frame = CGRect(x: homeView.frame.size.width/2 - 70, y: 220, width: 140, height: 110)
-        label.frame = CGRect(x: 90 ,y: 100, width: homeView.frame.size.width - 180, height: 120)
+        foxImage.frame = CGRect(x: homeView.frame.size.width/2 - 70, y: 200, width: 140, height: 110)
+        label.frame = CGRect(x: 90 ,y: 80, width: homeView.frame.size.width - 180, height: 120)
         label.text = motivation
+        bagdeImage.image = UIImage(named: "")
+        bagdeImage.frame = CGRect(x: homeView.frame.size.width/2 - 22.5, y: 30, width: 45, height: 45)
 //        label.center = viewProgress.center
     }
     
     func progressStepMade(image: String) {
         let imagestring: String = image
         foxImage.image = UIImage(named: imagestring)
+    }
+    
+    func badgeDisplay(badgeImage: String) {
+        let badgeString : String = badgeImage
+        bagdeImage.image = UIImage(named: badgeString)
     }
     
     

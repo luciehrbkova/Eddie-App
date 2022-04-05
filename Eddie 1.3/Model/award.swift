@@ -39,7 +39,7 @@ let awards: [Award] = [
 ]
 
 var homeAwards: [Award] = [
-    Award(awardTitle: "medal", awardImage: #imageLiteral(resourceName: "AwardMedal"), awardsNumber: 1),
-    Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2),
-    Award(awardTitle: "bravery", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 3),
+//    Award(awardTitle: "medal", awardImage: #imageLiteral(resourceName: "AwardMedal"), awardsNumber: 1),
+//    Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2),
+//    Award(awardTitle: "bravery", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 3),
 ]
