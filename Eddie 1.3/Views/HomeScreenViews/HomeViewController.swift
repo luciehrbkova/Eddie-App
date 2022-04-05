@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.post(name: NSNotification.Name("load"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
         //update Motivation
@@ -114,6 +114,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("Current state from home: \(currentState)")
         label.text = motivation
         print(homeAwards.count)
+        NotificationCenter.default.post(name: NSNotification.Name("load"), object: nil)
 //        adjustText(sectionOrderinList: 0)
 //        adjustText(sectionOrderinList: 1)
     }
@@ -125,7 +126,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         print(gameManager.moduleGuide)
     }
     
-    func loadList(notification: NSNotification){
+    @objc func loadList(notification: NSNotification) {
         self.homeAwardCollectionView.reloadData()
     }
     
@@ -311,12 +312,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return request
         
     }
-    
-    override func viewWillAppear(_ animated: Bool)  {
-         //Trigger notification
-         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "update"), object: nil)
-
-          }
 }
 
 
