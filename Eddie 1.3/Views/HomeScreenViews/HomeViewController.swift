@@ -28,7 +28,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     //Variables________________
-    var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
+//    var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
     var quote: String = "“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.” \n \n ― Roy T. Bennett, The Light in the Heart"
     var arrayOfIds = [String]()
     
@@ -56,12 +56,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        weekCalendar.dataSource = self
-        weekCalendar.delegate = self
-        weekCalendar.scope = .week
-        weekCalendar.largeContentTitle = .none
+        NotificationCenter.default.post(name: NSNotification.Name("load"), object: nil)
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
+        //update Motivation
+        updateMotivation(state: "home")
         createProgressCircle()
         //Ids of storyboads
         arrayOfIds = ["L1M1", "L1M2", "L1M3", "L1M4","L1M5"]
@@ -110,31 +109,42 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
+    @IBAction func didRefreshScreen(_ sender: Any) {
+        updateMotivation(state: currentState)
+        print("Current state from home: \(currentState)")
+        label.text = motivation
+        print(homeAwards.count)
+//        adjustText(sectionOrderinList: 0)
+//        adjustText(sectionOrderinList: 1)
+    }
+    
+    
     @IBAction func didTapButton(_ sender: Any) {
         runAnimationProgress()
-        
         // testing Game manger
         print(gameManager.moduleGuide)
-        adjustText(sectionOrderinList: 0)
-        adjustText(sectionOrderinList: 1)
-        
-        
-        
     }
+    
+    func loadList(notification: NSNotification){
+        self.homeAwardCollectionView.reloadData()
+    }
+    
     func runAnimationProgress() {
         if (nextProgressStep == 1) {
             animateProgress(from: 0, value: 0.33)
             nextProgressStep = 2
-            progressStepMade(image: "fox2.png", motivation: "Lucie, \n congratulation to your first achievement of the day!")
+            progressStepMade(image: "fox2.png")
 //            foxImage.image = UIImage(named: "fox2.png")
         } else if (nextProgressStep == 2) {
             animateProgress(from: 0.33 , value: 0.66)
             nextProgressStep = 3
-            progressStepMade(image: "fox3.png", motivation: "Lucie, \n you are amazing! \n Keep going!")
+            progressStepMade(image: "fox3.png")
         } else if (nextProgressStep == 3) {
             animateProgress(from: 0.66, value: 1)
-            nextProgressStep = 1
-            progressStepMade(image: "fox4.png", motivation: "Lucie, \n you made it!!! \n have a nice evening")
+//            nextProgressStep = 1
+            progressStepMade(image: "fox4.png")
+            currentState = "threeMealsCompleted"
+            homeAwards.append(Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2))
         }
     }
     
@@ -183,10 +193,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 //        label.center = viewProgress.center
     }
     
-    func progressStepMade(image: String, motivation: String) {
+    func progressStepMade(image: String) {
         let imagestring: String = image
         foxImage.image = UIImage(named: imagestring)
-        label.text = motivation
     }
     
     
@@ -302,4 +311,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return request
         
     }
+    
+    override func viewWillAppear(_ animated: Bool)  {
+         //Trigger notification
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "update"), object: nil)
+
+          }
 }
+
+

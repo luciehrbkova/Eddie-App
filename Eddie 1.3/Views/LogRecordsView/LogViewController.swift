@@ -127,6 +127,8 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
 //        self.present(newViewController, animated: true, completion: nil)
         let sendValue = HomeViewController();
         sendValue.runAnimationProgress()
+        currentState = "mealRecorded"
+        print("Current after Log: \(currentState)")
     }
     
     

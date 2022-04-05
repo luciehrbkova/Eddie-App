@@ -826,7 +826,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="66J-om-Rka"/>
                                                                 </constraints>
-                                                                <color key="tintColor" name="GreenMain"/>
+                                                                <color key="tintColor" name="GreenSecond"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Button">
                                                                     <color key="baseBackgroundColor" name="GreenMain"/>
@@ -3113,7 +3113,7 @@ Once these guidelines have been put into practice for some time, you will then b
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-Ii-EPi">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo" customClass="FSCalendar">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJz-c7-dfo">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -3385,9 +3385,10 @@ Once these guidelines have been put into practice for some time, you will then b
                             </connections>
                         </button>
                         <rightBarButtonItems>
-                            <barButtonItem image="bell" catalog="system" id="x3T-s9-tlH">
+                            <barButtonItem systemItem="refresh" id="Xd4-OR-kKb">
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <connections>
-                                    <segue destination="TVc-MO-pd0" kind="show" id="zk2-ry-6Px"/>
+                                    <action selector="didRefreshScreen:" destination="Na2-Se-BdQ" id="7iR-LG-YbX"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="calendar" catalog="system" id="T6Q-JB-l9f">
@@ -3480,6 +3481,14 @@ Once these guidelines have been put into practice for some time, you will then b
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BQ-Fg-Uau">
+                                <rect key="frame" x="50" y="787" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Skip"/>
+                                <connections>
+                                    <segue destination="X4L-Am-gT2" kind="modal" modalPresentationStyle="fullScreen" id="ZyK-eI-SNJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YZN-UX-ntj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3492,9 +3501,12 @@ Once these guidelines have been put into practice for some time, you will then b
                             <constraint firstItem="YZN-UX-ntj" firstAttribute="trailing" secondItem="UTb-Zu-YKs" secondAttribute="trailing" constant="20" id="KRM-Do-V7I"/>
                             <constraint firstItem="tBg-V7-ZRo" firstAttribute="leading" secondItem="YZN-UX-ntj" secondAttribute="leading" constant="20" id="PVF-IC-5SW"/>
                             <constraint firstItem="tBg-V7-ZRo" firstAttribute="top" secondItem="YZN-UX-ntj" secondAttribute="top" constant="36" id="Xmr-pp-GNc"/>
+                            <constraint firstItem="4BQ-Fg-Uau" firstAttribute="leading" secondItem="YZN-UX-ntj" secondAttribute="leading" constant="50" id="bXL-ns-byG"/>
                             <constraint firstItem="YZN-UX-ntj" firstAttribute="trailing" secondItem="tBg-V7-ZRo" secondAttribute="trailing" constant="20" id="gns-e9-iHU"/>
                             <constraint firstItem="UTb-Zu-YKs" firstAttribute="leading" secondItem="YZN-UX-ntj" secondAttribute="leading" constant="20" id="hj2-9R-9o5"/>
+                            <constraint firstItem="YZN-UX-ntj" firstAttribute="trailing" secondItem="4BQ-Fg-Uau" secondAttribute="trailing" constant="50" id="nKL-yT-cEu"/>
                             <constraint firstItem="bPY-7h-e5b" firstAttribute="leading" secondItem="YZN-UX-ntj" secondAttribute="leading" constant="20" id="ngB-QK-VzT"/>
+                            <constraint firstItem="YZN-UX-ntj" firstAttribute="bottom" secondItem="4BQ-Fg-Uau" secondAttribute="bottom" constant="44" id="pnh-VH-rMl"/>
                             <constraint firstItem="uQC-DN-H8U" firstAttribute="top" secondItem="UTb-Zu-YKs" secondAttribute="bottom" constant="64" id="ycR-k9-Lag"/>
                         </constraints>
                     </view>
@@ -3535,7 +3547,6 @@ Once these guidelines have been put into practice for some time, you will then b
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y52-W3-ZTe">
                                 <rect key="frame" x="50" y="795" width="314" height="31"/>
-                                <color key="backgroundColor" name="GreenMain"/>
                                 <color key="tintColor" name="GreenMain"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="NEXT">
@@ -3545,7 +3556,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <segue destination="RBj-qE-S7O" kind="show" id="109-Va-rOO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox3" translatesAutoresizingMaskIntoConstraints="NO" id="pug-ze-Gax">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="pug-ze-Gax">
                                 <rect key="frame" x="143" y="558" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="I4c-fw-uVk"/>
@@ -3597,7 +3608,6 @@ Once these guidelines have been put into practice for some time, you will then b
                         <segue destination="uxa-sK-P4n" kind="relationship" relationship="viewControllers" id="fIF-z5-l75"/>
                         <segue destination="RNk-Pn-DYH" kind="relationship" relationship="viewControllers" id="2SM-7o-8LD"/>
                         <segue destination="xqa-Lz-Fd1" kind="relationship" relationship="viewControllers" id="fds-TS-QXL"/>
-                        <segue destination="7j1-Uv-Kaj" kind="relationship" relationship="viewControllers" id="z07-7a-ZYc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-L8-g4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4535,7 +4545,7 @@ Once these guidelines have been put into practice for some time, you will then b
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qvC-by-OxG">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notificationCell" id="OaB-aU-ura">
@@ -4949,7 +4959,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <segue destination="sMR-xa-jRo" kind="show" id="gQq-sy-kF5"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox3" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-iw-D2R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-iw-D2R">
                                 <rect key="frame" x="143" y="514" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="0X5-wx-8LN"/>
@@ -5003,7 +5013,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="PjI-q7-oK9"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Treatment Guide helps  ou in overcoming your condition and is available to you at all times." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozB-13-aeM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Treatment Guide helps  you in overcoming your condition and is available to you at all times." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozB-13-aeM">
                                 <rect key="frame" x="39" y="224" width="336" height="282"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="336" id="O1s-dF-CdN"/>
@@ -5025,7 +5035,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <segue destination="foP-9G-94a" kind="show" id="Tdg-CQ-2gm"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox3" translatesAutoresizingMaskIntoConstraints="NO" id="4as-fF-WvB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="4as-fF-WvB">
                                 <rect key="frame" x="143" y="514" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="crf-LJ-4ni"/>
@@ -5101,7 +5111,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                     <segue destination="X4L-Am-gT2" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="hmd-79-bQ8"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox3" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-mh-oZv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fox-shadow" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-mh-oZv">
                                 <rect key="frame" x="143" y="514" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="5YP-wg-98d"/>
@@ -5137,6 +5147,9 @@ Once these guidelines have been put into practice for some time, you will then b
             <point key="canvasLocation" x="3167" y="-1229"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZyK-eI-SNJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="BacgroundGradient2" width="1173" height="2045"/>
         <image name="Breakfast" width="104" height="104"/>
@@ -5147,12 +5160,11 @@ Once these guidelines have been put into practice for some time, you will then b
         <image name="Juice" width="104" height="104"/>
         <image name="Laxative" width="104" height="104"/>
         <image name="avatar0" width="150" height="150"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="clear" catalog="system" width="128" height="114"/>
         <image name="fork.knife" catalog="system" width="92" height="128"/>
-        <image name="fox3" width="266.5" height="209"/>
+        <image name="fox-shadow" width="577" height="456"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="indicator1" width="219" height="30"/>
