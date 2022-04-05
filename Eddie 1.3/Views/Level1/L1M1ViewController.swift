@@ -32,7 +32,8 @@ class L1M1ViewController: UIViewController {
     }
     
     @IBAction func button3Pressed(_ sender: Any) {
-        clickButton(button: button3, state: &isButton3Pressed)
+        checkState()
+        adjustImage(sectionOrderinList: 1)
         
     }
     
@@ -44,6 +45,29 @@ class L1M1ViewController: UIViewController {
         } else {
             button.setTitle("Done!", for: .normal)
             state = true
+        }
+    }
+    
+    
+    func checkState() {
+        if isButton3Pressed {
+            button3.setTitle("Mark as completed", for: .normal)
+            isButton3Pressed = false
+            gameManager.moduleGuide.moduleList[1].isCompleted = false
+        } else {
+            button3.setTitle("Done!", for: .normal)
+            isButton3Pressed = true
+            gameManager.moduleGuide.moduleList[1].isCompleted = true
+            currentState = "anotherModuleCompleted"
+        }
+        print(gameManager.moduleGuide)
+    }
+    
+    func displayCorrectButtonBasedOnState() {
+        if (gameManager.moduleGuide.moduleList[1].isCompleted == true) {
+            button3.setTitle("Done!", for: .normal)
+        } else {
+            button3.setTitle("Mark as completed", for: .normal)
         }
     }
     

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct ModuleGuide {
-    let moduleTitle: String
+    var moduleTitle: String
     var moduleImage: UIImage
 //    let level: Int
 //    let handler: (() -> Void)
@@ -18,22 +18,24 @@ struct ModuleGuide {
 
 
 var moduleGuides1: [ModuleGuide] = [
-    ModuleGuide(moduleTitle: "0/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
-    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 1), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 1))! ),
-    ModuleGuide(moduleTitle: adjustText(sectionOrderinList: 2), moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
-    ModuleGuide(moduleTitle: "3/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 2))! ),
-    ModuleGuide(moduleTitle: "4/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 3))! ),
-    ModuleGuide(moduleTitle: "5/5", moduleImage: UIImage(systemName: adjustImage(sectionOrderinList: 4))! ),
+    ModuleGuide(moduleTitle: "0/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
+    ModuleGuide(moduleTitle: "1/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
+    ModuleGuide(moduleTitle: "2/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
+    ModuleGuide(moduleTitle: "3/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
+    ModuleGuide(moduleTitle: "4/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
+    ModuleGuide(moduleTitle: "5/5", moduleImage: UIImage(systemName: "checkmark.circle.fill")! ),
 ]
 
-func adjustImage(sectionOrderinList: Int) -> String {
-    let imageString: String
+func adjustImage(sectionOrderinList: Int) -> UIImage {
+    let checkmarkImage: UIImage
+//    let imageString: String
     if (gameManager.moduleGuide.moduleList[sectionOrderinList].isCompleted == false) {
-        imageString = "checkmark.circle.fill"
-        return imageString
+//        imageString = "checkmark.circle.fill"
+        checkmarkImage = UIImage(systemName: "checkmark.circle.fill")!
+        return checkmarkImage
     } else {
-        imageString = "checkmark.circle"
-        return imageString
+        checkmarkImage = UIImage(systemName: "checkmark.circle")!
+        return checkmarkImage
     }
 }
 
@@ -43,7 +45,9 @@ func adjustText(sectionOrderinList: Int) -> String {
         textString = "\(sectionOrderinList)/5"
         return textString
     } else {
-        textString = "\(sectionOrderinList)/6"
+        textString = "DONE"
         return textString
     }
 }
+
+

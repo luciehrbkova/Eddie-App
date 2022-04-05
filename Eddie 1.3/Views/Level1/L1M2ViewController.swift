@@ -23,24 +23,25 @@ class L1M2ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: Any) {
         checkState()
-        adjustImage(sectionOrderinList: 1)
+//        adjustImage(sectionOrderinList: 2)
     }
     
     func checkState() {
         if isButtonPressed {
             button.setTitle("Mark as completed", for: .normal)
             isButtonPressed = false
-            gameManager.moduleGuide.moduleList[1].isCompleted = false
+            gameManager.moduleGuide.moduleList[2].isCompleted = false
         } else {
             button.setTitle("Done!", for: .normal)
             isButtonPressed = true
-            gameManager.moduleGuide.moduleList[1].isCompleted = true
+            gameManager.moduleGuide.moduleList[2].isCompleted = true
+            currentState = "anotherModuleCompleted"
         }
         print(gameManager.moduleGuide)
     }
     
     func displayCorrectButtonBasedOnState() {
-        if (gameManager.moduleGuide.moduleList[1].isCompleted == true) {
+        if (gameManager.moduleGuide.moduleList[2].isCompleted == true) {
             button.setTitle("Done!", for: .normal)
         } else {
             button.setTitle("Mark as completed", for: .normal)
@@ -48,3 +49,4 @@ class L1M2ViewController: UIViewController {
     }
 
 }
+

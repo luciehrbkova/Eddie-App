@@ -8,22 +8,53 @@
 import UIKit
 
 class L1M0ViewController: UIViewController {
-
+    
+    var homeVC = HomeViewController()
+    
+    
+    @IBOutlet weak var button: UIButton!
+    var isButtonPressed = false
+    var receivedData = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(receivedData)
+        displayCorrectButtonBasedOnState()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        checkState()
+        adjustImage(sectionOrderinList: 0)
     }
-    */
+    
+    func checkState() {
+        if isButtonPressed {
+            button.setTitle("Mark as completed", for: .normal)
+            isButtonPressed = false
+            gameManager.moduleGuide.moduleList[0].isCompleted = false
+        } else {
+            button.setTitle("Done!", for: .normal)
+            isButtonPressed = true
+            gameManager.moduleGuide.moduleList[0].isCompleted = true
+            homeAwards.append(Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 2))
+            currentState = "introCompleted"
+//            homeVC.badgeDisplay(badgeImage: "AwardBravery.png")
+        }
+        print(gameManager.moduleGuide)
+    }
+    
+    func displayCorrectButtonBasedOnState() {
+        if (gameManager.moduleGuide.moduleList[0].isCompleted == true) {
+            button.setTitle("Done!", for: .normal)
+            // call function
+//            homeVC.getBraveryBadge()
+        } else {
+            button.setTitle("Mark as completed", for: .normal)
+        }
+    }
+
 
 }

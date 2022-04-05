@@ -22,7 +22,8 @@ class GameMananager {
     }
     
     var moduleGuide = ModuleGuide(numberOfSections: 5,
-                                  moduleList: [ ModuleSection(name: "1/5", isCompleted: false),
+                                  moduleList: [ ModuleSection(name: "0/5", isCompleted: false),
+                                                ModuleSection(name: "1/5", isCompleted: false),
                                                 ModuleSection(name: "2/5", isCompleted: false),
                                                 ModuleSection(name: "3/5", isCompleted: false),
                                                 ModuleSection(name: "4/5", isCompleted: false),

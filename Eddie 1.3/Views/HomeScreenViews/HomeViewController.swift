@@ -61,7 +61,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(loadList(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadAwards(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadGuides(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
         //update Motivation
@@ -115,13 +116,28 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     @IBAction func didRefreshScreen(_ sender: Any) {
-        updateMotivation(state: currentState)
-        print("Current state from home: \(currentState)")
-        label.text = motivation
+        
         print(homeAwards.count)
+        for i in [0,1,2,3,4,5] {
+            moduleGuides1[i].moduleTitle = adjustText(sectionOrderinList: i)
+            print(moduleGuides1[i].moduleTitle)
+            moduleGuides1[i].moduleImage = adjustImage(sectionOrderinList: i)
+        }
+        if currentState == "introCompleted" {
+            badgeDisplay(badgeImage: "AwardBravery.png")
+        } else if currentState == "allSectionCompleted" {
+            badgeDisplay(badgeImage: "AwardMedal.png")
+        }
+        print("Current state from home: \(currentState)")
+        updateMotivation(state: currentState)
+        label.text = motivation
         NotificationCenter.default.post(name: NSNotification.Name("load"), object: nil)
-//        adjustText(sectionOrderinList: 0)
-//        adjustText(sectionOrderinList: 1)
+
+    }
+    
+    func getBraveryBadge() {
+//        currentState = "introCompleted"
+        homeAwards.append(Award(awardTitle: "bravery", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 1))
     }
     
     
@@ -131,8 +147,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         print(gameManager.moduleGuide)
     }
     
-    @objc func loadList(notification: NSNotification) {
+    @objc func loadAwards(notification: NSNotification) {
         self.homeAwardCollectionView.reloadData()
+    }
+    
+    @objc func loadGuides(notification: NSNotification) {
+        self.moduleGuideCollectionView.reloadData()
     }
     
     func runAnimationProgress() {
