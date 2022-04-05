@@ -18,6 +18,7 @@ class PdfViewController: UIViewController {
       title: "Eddie App Report",
       body: "We know that you're here because you value your time. If you wanted to watch someone program for hours and hours without explaining what they're doing, you'd be on YouTube.By getting this course, you can be rest assured that the course is carefully thought out and edited. There are beautiful animations that explain all the difficult concepts and the videos are fully up to date with the latest versions of Swift and Xcode.",
       image: #imageLiteral(resourceName: "LaunchLogo"),
+      image2: #imageLiteral(resourceName: "pdf-db"),
       contact: "Lucie Hrbkova"
     )
 
