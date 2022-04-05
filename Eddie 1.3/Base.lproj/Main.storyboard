@@ -5122,7 +5122,7 @@ Once these guidelines have been put into practice for some time, you will then b
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aI8-71-kPE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1650"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1v-UI-ZlR">
                                                 <rect key="frame" x="20" y="16" width="374" height="21"/>
@@ -5149,15 +5149,17 @@ Once these guidelines have been put into practice for some time, you will then b
                                                 </constraints>
                                                 <string key="text">Welcome to the Eddie app and this Treatment Guide.
 
-How should this Treatment Guide be used?</string>
+How should this Treatment Guide be used?
+
+First and foremost, your Motivation is essential for this Guide to be successful. Begin working on it when you feel ready, but keep in mind that there may never be a perfect time to begin addressing your eating disorder.</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sz-TY-Z8s">
-                                                <rect key="frame" x="20" y="384" width="374" height="280"/>
+                                                <rect key="frame" x="20" y="384" width="374" height="230"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Self-induced vomiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-bk-Wq1">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Treatment Game guidelines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-bk-Wq1">
                                                         <rect key="frame" x="16" y="16" width="342" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="iin-tW-jXV"/>
@@ -5167,21 +5169,17 @@ How should this Treatment Guide be used?</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IY5-Qk-YSB">
-                                                        <rect key="frame" x="16" y="45" width="342" height="230"/>
+                                                        <rect key="frame" x="16" y="45" width="342" height="170"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="230" id="edz-2T-SDs"/>
+                                                            <constraint firstAttribute="height" constant="170" id="edz-2T-SDs"/>
                                                         </constraints>
-                                                        <string key="text">Effectiveness in Controlling Weight:
--Absorb at least 25% of binge calorie load
+                                                        <string key="text">There are four levels, and you are now on the first.
+You should concentrate on two activities:
 
-Perceived Benefits/Losses:
--"Permits" bingeing but reduces motivation to change
 
-Possible Adverse Effects on Body:
-- Sore bleeding throat
-- Swollen glands (makes face look fat)
-- Disturbs body salt levels
-- Reduces tolerance of stomach to food</string>
+1) Keep a journal of your meals, thoughts, and emotions.
+
+2) Complete all modules of this Treatment Guide.</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5191,7 +5189,7 @@ Possible Adverse Effects on Body:
                                                 <constraints>
                                                     <constraint firstItem="wmt-bk-Wq1" firstAttribute="leading" secondItem="6Sz-TY-Z8s" secondAttribute="leading" constant="16" id="C2Y-eu-MQw"/>
                                                     <constraint firstAttribute="trailing" secondItem="IY5-Qk-YSB" secondAttribute="trailing" constant="16" id="HQo-ac-2rD"/>
-                                                    <constraint firstAttribute="height" constant="280" id="Nn5-ml-4EJ"/>
+                                                    <constraint firstAttribute="height" constant="230" id="Nn5-ml-4EJ"/>
                                                     <constraint firstItem="IY5-Qk-YSB" firstAttribute="leading" secondItem="6Sz-TY-Z8s" secondAttribute="leading" constant="16" id="VXU-dV-xgL"/>
                                                     <constraint firstItem="wmt-bk-Wq1" firstAttribute="top" secondItem="6Sz-TY-Z8s" secondAttribute="top" constant="16" id="a08-5r-iVM"/>
                                                     <constraint firstItem="IY5-Qk-YSB" firstAttribute="top" secondItem="wmt-bk-Wq1" secondAttribute="bottom" constant="8" symbolic="YES" id="bIZ-IE-aHT"/>
@@ -5199,9 +5197,9 @@ Possible Adverse Effects on Body:
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-T7-66T">
-                                                <rect key="frame" x="20" y="708" width="374" height="280"/>
+                                                <rect key="frame" x="20" y="658" width="374" height="170"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Laxative Abuse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-zW-1kU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Goals is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbo-zW-1kU">
                                                         <rect key="frame" x="16" y="16" width="342" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="d4g-6d-rMZ"/>
@@ -5211,20 +5209,13 @@ Possible Adverse Effects on Body:
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7v5-eJ-SH1">
-                                                        <rect key="frame" x="16" y="45" width="342" height="230"/>
+                                                        <rect key="frame" x="16" y="45" width="342" height="110"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="230" id="b3d-uK-bb6"/>
+                                                            <constraint firstAttribute="height" constant="110" id="b3d-uK-bb6"/>
                                                         </constraints>
-                                                        <string key="text">Effectiveness in Controlling Weight:
-- Lose water not calories
+                                                        <string key="text">The aim for the day is to log three meals.
 
-Perceived Benefits/Losses:
-- Creates feeling of "emptiness" but without ridding body of food
-
-Possible Adverse Effects on Body:
-- Dehydration
-- "Lazy" bowel
-- On attempting to stop causes bloating/ water retention/ constipation</string>
+To advance to the next level, you must accomplish your daily goal 7 times in a row and complete all Treatment Guide Modules.</string>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -5233,77 +5224,33 @@ Possible Adverse Effects on Body:
                                                 <color key="backgroundColor" name="GreenSecond"/>
                                                 <constraints>
                                                     <constraint firstItem="dbo-zW-1kU" firstAttribute="leading" secondItem="P4K-T7-66T" secondAttribute="leading" constant="16" id="Pu5-G2-ohc"/>
-                                                    <constraint firstAttribute="height" constant="280" id="Xre-80-amk"/>
                                                     <constraint firstAttribute="trailing" secondItem="dbo-zW-1kU" secondAttribute="trailing" constant="16" id="b5P-xb-5od"/>
                                                     <constraint firstItem="7v5-eJ-SH1" firstAttribute="top" secondItem="dbo-zW-1kU" secondAttribute="bottom" constant="8" symbolic="YES" id="chC-9R-aVt"/>
                                                     <constraint firstAttribute="trailing" secondItem="7v5-eJ-SH1" secondAttribute="trailing" constant="16" id="ilx-Ud-HqA"/>
                                                     <constraint firstItem="7v5-eJ-SH1" firstAttribute="leading" secondItem="P4K-T7-66T" secondAttribute="leading" constant="16" id="onS-sC-6zo"/>
                                                     <constraint firstItem="dbo-zW-1kU" firstAttribute="top" secondItem="P4K-T7-66T" secondAttribute="top" constant="16" id="vf2-sh-NsM"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="yAj-tX-w3V"/>
+                                                    <constraint firstAttribute="height" constant="170" id="yAj-tX-w3V"/>
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlc-Rl-saC">
-                                                <rect key="frame" x="20" y="1326" width="374" height="250"/>
+                                                <rect key="frame" x="20" y="892" width="374" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="IIQ-cw-VFb"/>
                                                 </constraints>
-                                                <string key="text">It is important to remember that:
+                                                <string key="text">Do not rush!
 
-• Recovery from bulimia nervosa involves you TAKING CONTROL of your eating rather than
-letting it take control of you.
+It is not about making the most rapid progress, but about making long-term improvements.
 
-• Recovery involves RISK TAKING and CHALLENGING your previous patterns of eating.
+And don't forget that Eddie is here to help you on your important road to recovery.
 
-• CHANGES may seem daunting, even terrifying but try to remember how miserable you were
-feeling when you initially asked for help.</string>
+Good luck
+Team Eddie</string>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mer-ja-Ryl">
-                                                <rect key="frame" x="20" y="1032" width="374" height="250"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Diuretics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51C-Nh-icw">
-                                                        <rect key="frame" x="16" y="16" width="342" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="5oX-0d-rgE"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-op-cf4">
-                                                        <rect key="frame" x="16" y="45" width="342" height="200"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="mVD-LN-16Z"/>
-                                                        </constraints>
-                                                        <string key="text">Effectiveness in Controlling Weight:
-- Lose water not calories
-
-Perceived Benefits/Losses:
-- Creates feeling of "emptiness" but without ridding body of food
-
-Possible Adverse Effects on Body:
-- Dehydration
-- Kidney damage (if used long term)</string>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                                <color key="backgroundColor" name="GreenSecond"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="vF5-op-cf4" secondAttribute="trailing" constant="16" id="3JP-Nw-7ny"/>
-                                                    <constraint firstItem="51C-Nh-icw" firstAttribute="top" secondItem="mer-ja-Ryl" secondAttribute="top" constant="16" id="6Rk-1h-JaK"/>
-                                                    <constraint firstItem="vF5-op-cf4" firstAttribute="leading" secondItem="mer-ja-Ryl" secondAttribute="leading" constant="16" id="Ih6-6Y-skg"/>
-                                                    <constraint firstItem="51C-Nh-icw" firstAttribute="leading" secondItem="mer-ja-Ryl" secondAttribute="leading" constant="16" id="Mm7-45-hmH"/>
-                                                    <constraint firstAttribute="trailing" secondItem="51C-Nh-icw" secondAttribute="trailing" constant="16" id="Ukd-ig-D8V"/>
-                                                    <constraint firstAttribute="height" constant="250" id="c70-os-X9Z"/>
-                                                    <constraint firstItem="vF5-op-cf4" firstAttribute="top" secondItem="51C-Nh-icw" secondAttribute="bottom" constant="8" symbolic="YES" id="nUb-Y9-A1Q"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-ey-2ox">
-                                                <rect key="frame" x="20" y="1644" width="374" height="64"/>
+                                                <rect key="frame" x="20" y="1210" width="374" height="64"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-PD-WDR">
                                                         <rect key="frame" x="16" y="16" width="342" height="32"/>
@@ -5353,9 +5300,8 @@ Possible Adverse Effects on Body:
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="iB4-ey-2ox" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="17J-MC-d1u"/>
-                                            <constraint firstAttribute="height" constant="1650" id="3Bk-iq-EG5"/>
+                                            <constraint firstAttribute="height" constant="1400" id="3Bk-iq-EG5"/>
                                             <constraint firstAttribute="trailing" secondItem="hlc-Rl-saC" secondAttribute="trailing" constant="20" symbolic="YES" id="5Wc-ox-mUJ"/>
-                                            <constraint firstItem="mer-ja-Ryl" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="74l-RA-eqO"/>
                                             <constraint firstItem="P1v-UI-ZlR" firstAttribute="top" secondItem="aI8-71-kPE" secondAttribute="top" constant="16" id="84l-cU-jk8"/>
                                             <constraint firstItem="P1v-UI-ZlR" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" id="9Jh-4A-Izq"/>
                                             <constraint firstItem="iB4-ey-2ox" firstAttribute="top" secondItem="hlc-Rl-saC" secondAttribute="bottom" constant="68" id="DyV-6K-apd"/>
@@ -5363,14 +5309,11 @@ Possible Adverse Effects on Body:
                                             <constraint firstAttribute="trailing" secondItem="6Sz-TY-Z8s" secondAttribute="trailing" constant="20" symbolic="YES" id="G5D-Ef-D87"/>
                                             <constraint firstItem="6Sz-TY-Z8s" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="Gu5-Rg-Tbb"/>
                                             <constraint firstAttribute="trailing" secondItem="iB4-ey-2ox" secondAttribute="trailing" constant="20" symbolic="YES" id="Hie-Nn-jB1"/>
-                                            <constraint firstAttribute="trailing" secondItem="mer-ja-Ryl" secondAttribute="trailing" constant="20" symbolic="YES" id="PQ5-GZ-ZAh"/>
                                             <constraint firstItem="yVo-AW-E35" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="Rsw-B6-0rs"/>
                                             <constraint firstItem="iB4-ey-2ox" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="S9u-pa-JIs"/>
                                             <constraint firstItem="hlc-Rl-saC" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="Sfb-J2-2db"/>
-                                            <constraint firstItem="hlc-Rl-saC" firstAttribute="top" secondItem="mer-ja-Ryl" secondAttribute="bottom" constant="44" id="Sj5-U5-xQp"/>
                                             <constraint firstItem="P4K-T7-66T" firstAttribute="top" secondItem="6Sz-TY-Z8s" secondAttribute="bottom" constant="44" id="Wko-fG-W0Q"/>
                                             <constraint firstAttribute="trailing" secondItem="P1v-UI-ZlR" secondAttribute="trailing" constant="20" id="Wty-V1-ogh"/>
-                                            <constraint firstItem="mer-ja-Ryl" firstAttribute="top" secondItem="P4K-T7-66T" secondAttribute="bottom" constant="44" id="YAH-ec-cbW"/>
                                             <constraint firstAttribute="trailing" secondItem="0hi-M9-skX" secondAttribute="trailing" constant="20" id="YJ2-aR-w6Z"/>
                                             <constraint firstItem="P4K-T7-66T" firstAttribute="leading" secondItem="aI8-71-kPE" secondAttribute="leading" constant="20" symbolic="YES" id="bD7-Ax-8C1"/>
                                             <constraint firstAttribute="trailing" secondItem="iB4-ey-2ox" secondAttribute="trailing" constant="20" symbolic="YES" id="dxV-jP-Opg"/>
@@ -5378,6 +5321,7 @@ Possible Adverse Effects on Body:
                                             <constraint firstAttribute="trailing" secondItem="yVo-AW-E35" secondAttribute="trailing" constant="20" symbolic="YES" id="fVs-xk-XHv"/>
                                             <constraint firstItem="6Sz-TY-Z8s" firstAttribute="top" secondItem="yVo-AW-E35" secondAttribute="bottom" constant="16" id="h0G-e9-ysz"/>
                                             <constraint firstAttribute="trailing" secondItem="P4K-T7-66T" secondAttribute="trailing" constant="20" symbolic="YES" id="qBC-yA-ri5"/>
+                                            <constraint firstItem="hlc-Rl-saC" firstAttribute="top" secondItem="P4K-T7-66T" secondAttribute="bottom" constant="64" id="rQ4-zd-cy5"/>
                                             <constraint firstItem="0hi-M9-skX" firstAttribute="top" secondItem="P1v-UI-ZlR" secondAttribute="bottom" constant="44" id="xf8-LD-rim"/>
                                         </constraints>
                                     </view>
