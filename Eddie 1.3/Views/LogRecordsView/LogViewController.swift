@@ -119,6 +119,16 @@ class LogViewController: UIViewController, UICollectionViewDataSource, UICollect
                            moodTitle: record.mood?.itemTitle, moodImage: record.mood?.itemImage,
                            reactionTitle: record.reaction?.itemTitle, reactionImage: record.reaction?.itemImage,
                            moodNote: record.moodNote)
+        //go to all records
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "RecordsViewController") as! RecordsViewController
+//        appDelegate.window!.rootViewController = newViewController
+//        self.present(newViewController, animated: true, completion: nil)
+        let sendValue = HomeViewController();
+        sendValue.runAnimationProgress()
+        currentState = "mealRecorded"
+        print("Current after Log: \(currentState)")
     }
     
     

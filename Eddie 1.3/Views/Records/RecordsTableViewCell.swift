@@ -9,6 +9,7 @@ import UIKit
 
 class RecordsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var recordCellDate: UILabel!
     @IBOutlet weak var recordMealCellImage: UIImageView!
     @IBOutlet weak var recordMealCellTitle: UILabel!
     @IBOutlet weak var recordMealCellNote: UILabel!

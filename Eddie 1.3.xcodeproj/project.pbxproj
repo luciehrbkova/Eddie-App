@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1851FB5527D3900800560FCB /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5427D3900800560FCB /* MotivationViewController.swift */; };
+		1851FB5727D3902400560FCB /* MotivationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */; };
+		1851FB5927D3915100560FCB /* quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5827D3915100560FCB /* quote.swift */; };
+		1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */; };
+		1851FB5D27D5769A00560FCB /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851FB5C27D5769900560FCB /* GameManager.swift */; };
+		18568E4F27E7DF3D00C02946 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568E4E27E7DF3D00C02946 /* Notification.swift */; };
+		18568E5527E9F58600C02946 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18568E5427E9F58500C02946 /* PDFCreator.swift */; };
+		1869569E27FC5C5900BB9B92 /* Motivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869569D27FC5C5900BB9B92 /* Motivation.swift */; };
 		188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */; };
 		188C60C127BFE63E00A9B5FA /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C027BFE63E00A9B5FA /* record.swift */; };
 		188C60C327C017C300A9B5FA /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C60C227C017C200A9B5FA /* TestTableViewCell.swift */; };
@@ -42,6 +50,7 @@
 		18C1618F27CD7C8100A0E1A7 /* L1M3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */; };
 		18C1619127CD7C9E00A0E1A7 /* L1M4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */; };
 		18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */; };
+		18E307A427FCEBEF00CB9776 /* L1M0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E307A327FCEBEE00CB9776 /* L1M0ViewController.swift */; };
 		18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FAF27BAE82600520F17 /* ModuleGuideCollectionViewCell.swift */; };
 		18F73FB227BAEAF500520F17 /* homeModuleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FB127BAEAF500520F17 /* homeModuleGuide.swift */; };
 		18F73FB727BC6CBB00520F17 /* foodCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73FB627BC6CBB00520F17 /* foodCollections.swift */; };
@@ -59,6 +68,14 @@
 
 /* Begin PBXFileReference section */
 		07BCA2922AC513AC35E85104 /* Pods_Eddie_1_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eddie_1_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1851FB5427D3900800560FCB /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
+		1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationTableViewCell.swift; sourceTree = "<group>"; };
+		1851FB5827D3915100560FCB /* quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quote.swift; sourceTree = "<group>"; };
+		1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
+		1851FB5C27D5769900560FCB /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		18568E4E27E7DF3D00C02946 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		18568E5427E9F58500C02946 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		1869569D27FC5C5900BB9B92 /* Motivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motivation.swift; sourceTree = "<group>"; };
 		188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewCell.swift; sourceTree = "<group>"; };
 		188C60C027BFE63E00A9B5FA /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		188C60C227C017C200A9B5FA /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +113,7 @@
 		18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M3ViewController.swift; sourceTree = "<group>"; };
 		18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M4ViewController.swift; sourceTree = "<group>"; };
 		18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M5ViewController.swift; sourceTree = "<group>"; };
+		18E307A327FCEBEE00CB9776 /* L1M0ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1M0ViewController.swift; sourceTree = "<group>"; };
 		18F73FAF27BAE82600520F17 /* ModuleGuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleGuideCollectionViewCell.swift; sourceTree = "<group>"; };
 		18F73FB127BAEAF500520F17 /* homeModuleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeModuleGuide.swift; sourceTree = "<group>"; };
 		18F73FB627BC6CBB00520F17 /* foodCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodCollections.swift; sourceTree = "<group>"; };
@@ -124,12 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1851FB5327D38FE200560FCB /* MotivationView */ = {
+			isa = PBXGroup;
+			children = (
+				1851FB5427D3900800560FCB /* MotivationViewController.swift */,
+				1851FB5627D3902400560FCB /* MotivationTableViewCell.swift */,
+			);
+			name = MotivationView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		188C60BD27BFE37E00A9B5FA /* Records */ = {
 			isa = PBXGroup;
 			children = (
 				1892A9C127B7F20800C5C0E9 /* RecordsViewController.swift */,
 				188C60BE27BFE39D00A9B5FA /* RecordsTableViewCell.swift */,
 				188C60C227C017C200A9B5FA /* TestTableViewCell.swift */,
+				1851FB5A27D4164700560FCB /* RecordDetailViewController.swift */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -172,6 +201,7 @@
 		1892A9B427B7EE4800C5C0E9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1851FB5327D38FE200560FCB /* MotivationView */,
 				18A3539E27CD605B00B112C3 /* Level1 */,
 				188C60BD27BFE37E00A9B5FA /* Records */,
 				18F73FB527BC6B6E00520F17 /* LogRecordsView */,
@@ -196,6 +226,7 @@
 				188C60C027BFE63E00A9B5FA /* record.swift */,
 				188C60CA27C3C51F00A9B5FA /* DatabaseManager.swift */,
 				18A3539827CA995E00B112C3 /* User.swift */,
+				1851FB5827D3915100560FCB /* quote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +245,7 @@
 			children = (
 				1892A9E127BABA1900C5C0E9 /* AvatarViews */,
 				1892A9DD27BAB1BF00C5C0E9 /* PdfViewController.swift */,
+				18568E5427E9F58500C02946 /* PDFCreator.swift */,
 				1892A9DF27BAB23C00C5C0E9 /* RemindersViewController.swift */,
 				1892A9D927BA922A00C5C0E9 /* AccountSettingViewController.swift */,
 				1892A9B527B7EF2100C5C0E9 /* ProfileSettingsViewController.swift */,
@@ -226,6 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				1892A9D727B9AFA500C5C0E9 /* AlertMessage.swift */,
+				1869569D27FC5C5900BB9B92 /* Motivation.swift */,
+				1851FB5C27D5769900560FCB /* GameManager.swift */,
+				18568E4E27E7DF3D00C02946 /* Notification.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +282,7 @@
 				18C1618E27CD7C8100A0E1A7 /* L1M3ViewController.swift */,
 				18C1619027CD7C9E00A0E1A7 /* L1M4ViewController.swift */,
 				18C1619227CD7CE300A0E1A7 /* L1M5ViewController.swift */,
+				18E307A327FCEBEE00CB9776 /* L1M0ViewController.swift */,
 			);
 			path = Level1;
 			sourceTree = "<group>";
@@ -411,25 +447,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				1892A9D327B97A5300C5C0E9 /* SettingTableViewCell.swift in Sources */,
+				1851FB5D27D5769A00560FCB /* GameManager.swift in Sources */,
 				18F73FCB27BD7C1700520F17 /* ReactionsCollectionViewCell.swift in Sources */,
 				18F73FC927BD7BC600520F17 /* MoodsCollectionViewCell.swift in Sources */,
 				1892A9C427B7F22A00C5C0E9 /* AwardsViewController.swift in Sources */,
 				18F73FB227BAEAF500520F17 /* homeModuleGuide.swift in Sources */,
 				1892A9D827B9AFA500C5C0E9 /* AlertMessage.swift in Sources */,
+				1851FB5527D3900800560FCB /* MotivationViewController.swift in Sources */,
 				18A353A427CD6B7B00B112C3 /* L1M2ViewController.swift in Sources */,
 				1892A9B827B7EF6C00C5C0E9 /* CalendarViewController.swift in Sources */,
 				18F73FC527BD7B2200520F17 /* DrinksCollectionViewCell.swift in Sources */,
+				1869569E27FC5C5900BB9B92 /* Motivation.swift in Sources */,
+				1851FB5927D3915100560FCB /* quote.swift in Sources */,
 				1892A9E027BAB23C00C5C0E9 /* RemindersViewController.swift in Sources */,
 				1892A9E327BABA7100C5C0E9 /* AvatarCollectionViewCell.swift in Sources */,
 				18F73FB727BC6CBB00520F17 /* foodCollections.swift in Sources */,
 				1892A9A527B7DC7100C5C0E9 /* ViewController.swift in Sources */,
 				1892A9C927B8400900C5C0E9 /* award.swift in Sources */,
+				1851FB5B27D4164700560FCB /* RecordDetailViewController.swift in Sources */,
 				18F73FBB27BC703B00520F17 /* LogCollectionViewCell.swift in Sources */,
 				1892A9BE27B7F10500C5C0E9 /* TetFirebaseViewController.swift in Sources */,
 				1892A9C027B7F1AB00C5C0E9 /* LogViewController.swift in Sources */,
 				18C1619327CD7CE300A0E1A7 /* L1M5ViewController.swift in Sources */,
 				1892A9A127B7DC7100C5C0E9 /* AppDelegate.swift in Sources */,
 				18F73FC327BD7AEC00520F17 /* TreatsCollectionViewCell.swift in Sources */,
+				18568E4F27E7DF3D00C02946 /* Notification.swift in Sources */,
 				18A3539927CA995E00B112C3 /* User.swift in Sources */,
 				1892A9E527BAC12B00C5C0E9 /* AvatarViewController.swift in Sources */,
 				188C60CB27C3C51F00A9B5FA /* DatabaseManager.swift in Sources */,
@@ -437,8 +479,10 @@
 				1892A9BA27B7EF8800C5C0E9 /* NotificationsViewController.swift in Sources */,
 				1892A9DA27BA922B00C5C0E9 /* AccountSettingViewController.swift in Sources */,
 				1892A9B627B7EF2100C5C0E9 /* ProfileSettingsViewController.swift in Sources */,
+				1851FB5727D3902400560FCB /* MotivationTableViewCell.swift in Sources */,
 				1892A9BC27B7F0CC00C5C0E9 /* HomeViewController.swift in Sources */,
 				18F73FBF27BD7A3F00520F17 /* LunchCollectionViewCell.swift in Sources */,
+				18E307A427FCEBEF00CB9776 /* L1M0ViewController.swift in Sources */,
 				1892A9A327B7DC7100C5C0E9 /* SceneDelegate.swift in Sources */,
 				188C60BF27BFE39D00A9B5FA /* RecordsTableViewCell.swift in Sources */,
 				18C1618F27CD7C8100A0E1A7 /* L1M3ViewController.swift in Sources */,
@@ -453,6 +497,7 @@
 				188C60C127BFE63E00A9B5FA /* record.swift in Sources */,
 				18C1619127CD7C9E00A0E1A7 /* L1M4ViewController.swift in Sources */,
 				18F73FB027BAE82600520F17 /* ModuleGuideCollectionViewCell.swift in Sources */,
+				18568E5527E9F58600C02946 /* PDFCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

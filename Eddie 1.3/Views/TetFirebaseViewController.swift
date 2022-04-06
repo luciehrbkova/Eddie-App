@@ -30,7 +30,7 @@ class TetFirebaseViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func addPost(_ sender: Any) {
         if textField.text != "" {
-            database.addPost(input: textField.text!)
+            database.addPost(user: "lulu", input: textField.text! )
             print(textField.text!)
             textField.text?.removeAll()
         }
@@ -45,7 +45,7 @@ class TetFirebaseViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
-        cell.textLabel?.text = database.postData.reversed()[indexPath.row]
+        cell.textLabel?.text = database.postData.reversed()[indexPath.row].text
         return cell
     }
     

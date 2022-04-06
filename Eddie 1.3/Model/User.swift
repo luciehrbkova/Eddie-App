@@ -17,4 +17,12 @@ struct User {
     }
 }
 
+var thisUser = User(email: "hrbkova.lucka@gmail.com", username: "Lucie", password: "p4ssword")
+
+//let testUserList : [User] = [
+//    User(email: "hrbkova.lucka@gmail.com", username: "Lucie", password: "p4ssword"),
+//    User(email: "hrbkova.lucka@gmail.com", username: "Lucie", password: "p4ssword"),
+//    User(email: "hrbkova.lucka@gmail.com", username: "Lucie", password: "p4ssword"),
+//]
+
 

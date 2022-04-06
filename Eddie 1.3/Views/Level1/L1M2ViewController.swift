@@ -9,22 +9,44 @@ import UIKit
 
 class L1M2ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    var isButtonPressed = false
     var receivedData = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print(receivedData)
+        displayCorrectButtonBasedOnState()
+        
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonPressed(_ sender: Any) {
+        checkState()
+//        adjustImage(sectionOrderinList: 2)
     }
-    */
+    
+    func checkState() {
+        if isButtonPressed {
+            button.setTitle("Mark as completed", for: .normal)
+            isButtonPressed = false
+            gameManager.moduleGuide.moduleList[2].isCompleted = false
+        } else {
+            button.setTitle("Done!", for: .normal)
+            isButtonPressed = true
+            gameManager.moduleGuide.moduleList[2].isCompleted = true
+            currentState = "anotherModuleCompleted"
+        }
+        print(gameManager.moduleGuide)
+    }
+    
+    func displayCorrectButtonBasedOnState() {
+        if (gameManager.moduleGuide.moduleList[2].isCompleted == true) {
+            button.setTitle("Done!", for: .normal)
+        } else {
+            button.setTitle("Mark as completed", for: .normal)
+        }
+    }
 
 }
+

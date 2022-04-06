@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import UserNotifications
+import FSCalendar
 
 var currentLevel: Int = 1
+//Game Manager
+let gameManager = GameMananager()
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UNUserNotificationCenterDelegate, FSCalendarDataSource, FSCalendarDelegate {
     
     // Outlets_________________
     @IBOutlet var homeView: UIView!
@@ -20,12 +24,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteTextView: UITextView!
     
+    @IBOutlet weak var weekCalendar: FSCalendar!
+    
+    
     //Variables________________
-    var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
+//    var motivation: String = "Motivation:Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects, and convert textual representations of dates "
     var quote: String = "“Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.” \n \n ― Roy T. Bennett, The Light in the Heart"
     var arrayOfIds = [String]()
     
-    //testButton
+    //testButto
     @IBOutlet weak var testButton: UIButton!
     let circleProgress = CAShapeLayer()
     var nextProgressStep: Int = 1
@@ -46,14 +53,23 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         foximage.contentMode = .scaleAspectFit
         return foximage
     }()
+    let bagdeImage: UIImageView = {
+        let badgeImage = UIImageView()
+        badgeImage.contentMode = .scaleAspectFit
+        return badgeImage
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadAwards(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadGuides(notification:)), name: NSNotification.Name(rawValue: "load"), object: nil)
 //        homeView.addGradient(colors: [ .init(red: 0.84, green: 0.99, blue: 0.80, alpha: 1.00), .white], locations: [0, 3])
         // progressCircle
+        //update Motivation
+        updateMotivation(state: "home")
         createProgressCircle()
         //Ids of storyboads
-        arrayOfIds = ["L1M1", "L1M2", "L1M3", "L1M4","L1M5"]
+        arrayOfIds = ["L1M0","L1M1", "L1M2", "L1M3", "L1M4","L1M5"]
         moduleGuideCollectionView.dataSource = self
         moduleGuideCollectionView.delegate = self
         //style CollectView
@@ -90,32 +106,82 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             layout.scrollDirection = .horizontal
             return layout
         }()
+        //Game
+        gameManager.checkCompletedSections()
         
+        sendNotification()
+        
+
+    }
+    
+    
+    @IBAction func didRefreshScreen(_ sender: Any) {
+        
+        print(homeAwards.count)
+        for i in [0,1,2,3,4,5] {
+            moduleGuides1[i].moduleTitle = adjustText(sectionOrderinList: i)
+            print(moduleGuides1[i].moduleTitle)
+            moduleGuides1[i].moduleImage = adjustImage(sectionOrderinList: i)
+        }
+        if currentState == "introCompleted" {
+            badgeDisplay(badgeImage: "AwardBravery.png")
+        } else if currentState == "allSectionCompleted" {
+            badgeDisplay(badgeImage: "AwardMedal.png")
+        }
+        print("Current state from home: \(currentState)")
+        updateMotivation(state: currentState)
+        label.text = motivation
+        NotificationCenter.default.post(name: NSNotification.Name("load"), object: nil)
+
+    }
+    
+    func getBraveryBadge() {
+//        currentState = "introCompleted"
+        homeAwards.append(Award(awardTitle: "bravery", awardImage: #imageLiteral(resourceName: "AwardBravery"), awardsNumber: 1))
     }
     
     
     @IBAction func didTapButton(_ sender: Any) {
+        runAnimationProgress()
+        // testing Game manger
+        print(gameManager.moduleGuide)
+    }
+    
+    @objc func loadAwards(notification: NSNotification) {
+        self.homeAwardCollectionView.reloadData()
+    }
+    
+    @objc func loadGuides(notification: NSNotification) {
+        self.moduleGuideCollectionView.reloadData()
+    }
+    
+    func runAnimationProgress() {
         if (nextProgressStep == 1) {
             animateProgress(from: 0, value: 0.33)
             nextProgressStep = 2
-            progressStepMade(image: "fox2.png", motivation: "Lucie, \n congratulation to your first achievement of the day!")
+            progressStepMade(image: "fox2.png")
 //            foxImage.image = UIImage(named: "fox2.png")
         } else if (nextProgressStep == 2) {
             animateProgress(from: 0.33 , value: 0.66)
             nextProgressStep = 3
-            progressStepMade(image: "fox3.png", motivation: "Lucie, \n you are amazing! \n Keep going!")
+            progressStepMade(image: "fox3.png")
         } else if (nextProgressStep == 3) {
             animateProgress(from: 0.66, value: 1)
-            nextProgressStep = 1
-            progressStepMade(image: "fox4.png", motivation: "Lucie, \n you made it!!! \n have a nice evening")
+//            nextProgressStep = 1
+            progressStepMade(image: "fox4.png")
+            badgeDisplay(badgeImage: "AwardVictory.png")
+            currentState = "threeMealsCompleted"
+            nextProgressStep = 0
+            homeAwards.append(Award(awardTitle: "victory", awardImage: #imageLiteral(resourceName: "AwardVictory"), awardsNumber: 2))
+        } else {
+            
         }
-        
     }
     
     func animateProgress(from: Double, value: Double){
         //Animate
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 3
+        animation.duration = 1
         animation.isRemovedOnCompletion = false
         animation.fillMode = .forwards
         animation.fromValue = from
@@ -125,8 +191,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func createProgressCircle() {
         //middle of the view
-        let positionX = viewProgress.center.x - 7
-        let positionY = viewProgress.center.y - 60 //radius
+        let positionX = viewProgress.center.x - 0
+        let positionY = viewProgress.center.y - 50 //radius
         
         let circlePath = UIBezierPath(arcCenter: .zero, radius: 160,
                                       startAngle: -(.pi / 2), endAngle: .pi * 2, clockwise: true)
@@ -150,17 +216,24 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // add fox
         viewProgress.addSubview(foxImage)
         viewProgress.addSubview(label)
+        viewProgress.addSubview(bagdeImage)
         foxImage.image = UIImage(named: "fox1.png")
-        foxImage.frame = CGRect(x: homeView.frame.size.width/2 - 70, y: 220, width: 140, height: 110)
-        label.frame = CGRect(x: 90 ,y: 100, width: homeView.frame.size.width - 180, height: 120)
+        foxImage.frame = CGRect(x: homeView.frame.size.width/2 - 70, y: 200, width: 140, height: 110)
+        label.frame = CGRect(x: 90 ,y: 80, width: homeView.frame.size.width - 180, height: 120)
         label.text = motivation
+        bagdeImage.image = UIImage(named: "")
+        bagdeImage.frame = CGRect(x: homeView.frame.size.width/2 - 22.5, y: 30, width: 45, height: 45)
 //        label.center = viewProgress.center
     }
     
-    func progressStepMade(image: String, motivation: String) {
+    func progressStepMade(image: String) {
         let imagestring: String = image
         foxImage.image = UIImage(named: imagestring)
-        label.text = motivation
+    }
+    
+    func badgeDisplay(badgeImage: String) {
+        let badgeString : String = badgeImage
+        bagdeImage.image = UIImage(named: badgeString)
     }
     
     
@@ -205,7 +278,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let viewController = storyboard?.instantiateViewController(withIdentifier: name)
         self.navigationController?.pushViewController(viewController!, animated: true)
         if (currentLevel == 1) {
-            if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
+            if (moduleGuides1[indexPath.row].moduleTitle == "0/5") {
+                print(moduleGuides1[indexPath.row].moduleTitle)
+            } else if (moduleGuides1[indexPath.row].moduleTitle == "1/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
             } else if (moduleGuides1[indexPath.row].moduleTitle == "2/5") {
                 print(moduleGuides1[indexPath.row].moduleTitle)
@@ -218,23 +293,64 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
+    
+//    @objc func loadData() {
+//        moduleGuides1.reloadData()
+//    }
 
+    func sendNotification() {
+        //Notification-----------------------------------------------------------------------------
+        let center = UNUserNotificationCenter.current()
+        UNUserNotificationCenter.current().delegate = self
+        center.delegate = self
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+            if error == nil {
+                print("User permission is granted : \(granted)")
+            }
+        }
+
+        let request = createNotification( title: "Breakfast Time", body: "Amazing! it is a time to have a breakfast.", hour: 8, minute: 0)
+        let request2 = createNotification( title: "Snack Time", body: "Get yourself something to eat.", hour: 10, minute: 30)
+        let request3 = createNotification( title: "Lunch Time", body: "You are in the middle of the day. Enjoy your lunch.", hour: 12, minute: 30)
+        let request4 = createNotification( title: "Snack Time", body: "Get yourself something to eat.", hour: 15, minute: 00)
+        let request5 = createNotification( title: "Dinner Time", body: "It's a time to have a dinner. Bon Appetite.", hour: 19, minute: 00)
+        
+        //Step-5 Register with Notification Center
+        center.add(request) { error in
+        }
+        center.add(request2) { error in
+        }
+        center.add(request3) { error in
+        }
+        center.add(request4) { error in
+        }
+        center.add(request5) { error in
+        }
+
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            completionHandler([.sound,.banner])
+        }
+        //End of notification--------------------------------------------------------------------
+    }
+    
+    func createNotification(title: String, body: String, hour: Int, minute: Int) -> UNNotificationRequest  {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = UNNotificationSound.defaultRingtone
+        content.badge = 1
+        // date
+        var dateComponents = DateComponents()
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let uuid = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
+        return request
+        
+    }
 }
 
-// Gradient Extension
-//extension UIView {
-//    func addGradient(colors: [UIColor] = [.blue, .white], locations: [NSNumber] = [0, 2], startPoint: CGPoint = CGPoint(x: 0.0, y: 0.0), endPoint: CGPoint = CGPoint(x: 0.0, y: 1.0), type: CAGradientLayerType = .radial){
-//        let gradient = CAGradientLayer()
-//        gradient.frame.size = self.frame.size
-//        gradient.frame.origin = CGPoint(x: 0.0, y: 0.0)
-//        // Iterates through the colors array and casts the individual elements to cgColor
-//        // Alternatively, one could use a CGColor Array in the first place or do this cast in a for-loop
-//        gradient.colors = colors.map{ $0.cgColor }
-//        gradient.locations = locations
-//        gradient.startPoint = startPoint
-//        gradient.endPoint = endPoint
-//        // Insert the new layer at the bottom-most position
-//        // This way we won't cover any other elements
-//        self.layer.insertSublayer(gradient, at: 0)
-//    }
-//}
+

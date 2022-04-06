@@ -8,5 +8,6 @@ target 'Eddie 1.3' do
   # Pods for Eddie 1.3
 pod 'Firebase/Core'
 pod 'Firebase/Database' 
+pod 'FSCalendar'
 
 end
